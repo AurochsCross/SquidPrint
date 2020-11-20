@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 class AppEnvironment: ObservableObject {
-    
+    let apiManager = ApiManager(configuration: ApiConfiguration.empty)
 }

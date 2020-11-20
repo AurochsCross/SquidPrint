@@ -11,11 +11,12 @@ class ApiManager {
     private var currentConfiguration: ApiConfiguration
     
     init(configuration: ApiConfiguration) {
-        self.currentConfiguration = configuration
+        self.currentConfiguration = .empty
         configure(withSettings: configuration)
     }
     
     func configure(withSettings settings: ApiConfiguration) {
-        
+        self.currentConfiguration = settings
+        ApiConfigurationUtility.configureApi(settings)
     }
 }

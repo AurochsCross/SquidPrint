@@ -6,6 +6,34 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>01B6400C-2DF7-4BEA-B49C-D59D23DE1593</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.PackageLog</string>
+			<key>fileName</key>
+			<string>01B6400C-2DF7-4BEA-B49C-D59D23DE1593.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Add Swift Package</string>
+			<key>timeStartedRecording</key>
+			<real>627568999.11379099</real>
+			<key>timeStoppedRecording</key>
+			<real>627569009.03361201</real>
+			<key>title</key>
+			<string>Add Swift Package</string>
+			<key>uniqueIdentifier</key>
+			<string>01B6400C-2DF7-4BEA-B49C-D59D23DE1593</string>
+		</dict>
 		<key>0B6EB275-88F7-403A-81F5-6ECA70C286B3</key>
 		<dict>
 			<key>className</key>
@@ -229,6 +257,34 @@
 			<string>Resolve Swift Packages</string>
 			<key>uniqueIdentifier</key>
 			<string>7151EC2B-2387-4B83-9AF2-5FAC585CE0F3</string>
+		</dict>
+		<key>760BF642-DAE6-4EE4-96E9-DFF39064079B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.PackageLog</string>
+			<key>fileName</key>
+			<string>760BF642-DAE6-4EE4-96E9-DFF39064079B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Resolve Swift Packages</string>
+			<key>timeStartedRecording</key>
+			<real>627569011.57429004</real>
+			<key>timeStoppedRecording</key>
+			<real>627569011.72163498</real>
+			<key>title</key>
+			<string>Resolve Swift Packages</string>
+			<key>uniqueIdentifier</key>
+			<string>760BF642-DAE6-4EE4-96E9-DFF39064079B</string>
 		</dict>
 		<key>77D2ABBB-C154-4F0E-AA47-C821E1381ED7</key>
 		<dict>

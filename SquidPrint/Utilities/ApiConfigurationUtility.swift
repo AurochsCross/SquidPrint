@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import OpenAPIClient
 
 class ApiConfigurationUtility {
     static func configureApi(_ configuration: ApiConfiguration) {
-        
+        OpenAPIClientAPI.basePath = configuration.basePath
+        OpenAPIClientAPI.customHeaders["X-Api-Key"] = configuration.apiKey
     }
 }

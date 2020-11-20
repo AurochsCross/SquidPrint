@@ -6,34 +6,6 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>641AFB79-8ED1-40C2-832F-7DBAEB63C637</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>641AFB79-8ED1-40C2-832F-7DBAEB63C637.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>SquidPrint-brnrdeohilxnjoewxibbfndtxhtk</string>
-			<key>timeStartedRecording</key>
-			<real>627567699.74804997</real>
-			<key>timeStoppedRecording</key>
-			<real>627567704.70198596</real>
-			<key>title</key>
-			<string>Build target SquidPrint</string>
-			<key>uniqueIdentifier</key>
-			<string>641AFB79-8ED1-40C2-832F-7DBAEB63C637</string>
-		</dict>
 		<key>84504E5C-F283-4D0D-9132-407D40ADFC68</key>
 		<dict>
 			<key>className</key>
@@ -90,33 +62,33 @@
 			<key>uniqueIdentifier</key>
 			<string>9A71C87F-BBD2-4E16-913E-D73BBEB94DB2</string>
 		</dict>
-		<key>A26DE2D5-BDFB-4093-9EE2-90B0C64747FC</key>
+		<key>C79DA783-F361-4F7A-9E25-F39A7E423DE1</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
 			<key>documentTypeString</key>
 			<string>&lt;nil&gt;</string>
 			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>A26DE2D5-BDFB-4093-9EE2-90B0C64747FC.xcactivitylog</string>
+			<string>C79DA783-F361-4F7A-9E25-F39A7E423DE1.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>S</string>
+				<string>E</string>
 			</dict>
 			<key>signature</key>
-			<string>OpenAPIClient-bzcyawgwklhmricuchealrzsfugj</string>
+			<string>SquidPrint-brnrdeohilxnjoewxibbfndtxhtk</string>
 			<key>timeStartedRecording</key>
-			<real>627567699.74578595</real>
+			<real>627568152.78671396</real>
 			<key>timeStoppedRecording</key>
-			<real>627567702.08025706</real>
+			<real>627568152.93152297</real>
 			<key>title</key>
-			<string>Build target OpenAPIClient</string>
+			<string>Build target SquidPrint</string>
 			<key>uniqueIdentifier</key>
-			<string>A26DE2D5-BDFB-4093-9EE2-90B0C64747FC</string>
+			<string>C79DA783-F361-4F7A-9E25-F39A7E423DE1</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
