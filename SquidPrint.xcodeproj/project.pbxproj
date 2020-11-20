@@ -16,6 +16,12 @@
 		B16F81992567E89A0014290E /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = B16F81982567E89A0014290E /* OpenAPIClient */; };
 		B18735FE2567EFBF00714DF3 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18735FD2567EFBF00714DF3 /* ApiSettings.swift */; };
 		B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = B18736012567F17300714DF3 /* SwiftKeychainWrapper */; };
+		B187360D2567F3DB00714DF3 /* SquidPrintData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B187360B2567F3DB00714DF3 /* SquidPrintData.xcdatamodeld */; };
+		B18736102567F53D00714DF3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187360F2567F53D00714DF3 /* CoreDataManager.swift */; };
+		B18736192567F6D200714DF3 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18736182567F6D200714DF3 /* GenericError.swift */; };
+		B187361D2567F74400714DF3 /* CoreDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187361C2567F74400714DF3 /* CoreDataRetriever.swift */; };
+		B18736222567F95600714DF3 /* CoreDataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18736212567F95600714DF3 /* CoreDataWriter.swift */; };
+		B187362A2567FAA800714DF3 /* CoreDataExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18736252567F9AA00714DF3 /* CoreDataExecutor.swift */; };
 		B1EA6A552567122B0097B262 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A542567122B0097B262 /* AppView.swift */; };
 		B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A58256712640097B262 /* AppViewModel.swift */; };
 		B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */; };
@@ -34,6 +40,12 @@
 		B16F81922567E5B60014290E /* ApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfiguration.swift; sourceTree = "<group>"; };
 		B16F81952567E7160014290E /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		B18735FD2567EFBF00714DF3 /* ApiSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
+		B187360C2567F3DB00714DF3 /* SquidPrintData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintData.xcdatamodel; sourceTree = "<group>"; };
+		B187360F2567F53D00714DF3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B18736182567F6D200714DF3 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		B187361C2567F74400714DF3 /* CoreDataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRetriever.swift; sourceTree = "<group>"; };
+		B18736212567F95600714DF3 /* CoreDataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWriter.swift; sourceTree = "<group>"; };
+		B18736252567F9AA00714DF3 /* CoreDataExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExecutor.swift; sourceTree = "<group>"; };
 		B1EA6A542567122B0097B262 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		B1EA6A58256712640097B262 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		B1F600EC2566FE1E0014BB4B /* SquidPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquidPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +91,7 @@
 		B16F81852567E51A0014290E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B187361B2567F71F00714DF3 /* CoreDataWorkers */,
 				B16F81862567E5310014290E /* Managers */,
 			);
 			path = Models;
@@ -88,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B16F81872567E53D0014290E /* ApiManager.swift */,
+				B187360F2567F53D00714DF3 /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -124,6 +138,40 @@
 			path = ServerSettings;
 			sourceTree = "<group>";
 		};
+		B18736122567F59D00714DF3 /* CoreDataRetrievers */ = {
+			isa = PBXGroup;
+			children = (
+				B187361C2567F74400714DF3 /* CoreDataRetriever.swift */,
+			);
+			path = CoreDataRetrievers;
+			sourceTree = "<group>";
+		};
+		B18736172567F6C700714DF3 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B18736182567F6D200714DF3 /* GenericError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		B187361B2567F71F00714DF3 /* CoreDataWorkers */ = {
+			isa = PBXGroup;
+			children = (
+				B18736202567F94300714DF3 /* CoreDataWriters */,
+				B18736122567F59D00714DF3 /* CoreDataRetrievers */,
+				B18736252567F9AA00714DF3 /* CoreDataExecutor.swift */,
+			);
+			path = CoreDataWorkers;
+			sourceTree = "<group>";
+		};
+		B18736202567F94300714DF3 /* CoreDataWriters */ = {
+			isa = PBXGroup;
+			children = (
+				B18736212567F95600714DF3 /* CoreDataWriter.swift */,
+			);
+			path = CoreDataWriters;
+			sourceTree = "<group>";
+		};
 		B1EA6A4E2567120D0097B262 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +194,7 @@
 		B1EA6A5C256712AB0097B262 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				B187360B2567F3DB00714DF3 /* SquidPrintData.xcdatamodeld */,
 				B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */,
 				B1F600F82566FE1F0014BB4B /* Info.plist */,
 			);
@@ -188,6 +237,7 @@
 		B1F600EE2566FE1E0014BB4B /* SquidPrint */ = {
 			isa = PBXGroup;
 			children = (
+				B18736172567F6C700714DF3 /* Errors */,
 				B1EA6A5C256712AB0097B262 /* Config */,
 				B1EA6A5D256712BC0097B262 /* Content */,
 				B16F81902567E5A40014290E /* Entities */,
@@ -339,14 +389,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */,
+				B18736222567F95600714DF3 /* CoreDataWriter.swift in Sources */,
 				B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */,
 				B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */,
 				B18735FE2567EFBF00714DF3 /* ApiSettings.swift in Sources */,
+				B187361D2567F74400714DF3 /* CoreDataRetriever.swift in Sources */,
+				B187362A2567FAA800714DF3 /* CoreDataExecutor.swift in Sources */,
 				B16F81932567E5B60014290E /* ApiConfiguration.swift in Sources */,
 				B16F81882567E53D0014290E /* ApiManager.swift in Sources */,
 				B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */,
 				B16F818D2567E5620014290E /* ApiConfigurationUtility.swift in Sources */,
+				B187360D2567F3DB00714DF3 /* SquidPrintData.xcdatamodeld in Sources */,
 				B1EA6A552567122B0097B262 /* AppView.swift in Sources */,
+				B18736192567F6D200714DF3 /* GenericError.swift in Sources */,
+				B18736102567F53D00714DF3 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +616,19 @@
 			productName = SwiftKeychainWrapper;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B187360B2567F3DB00714DF3 /* SquidPrintData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B187360C2567F3DB00714DF3 /* SquidPrintData.xcdatamodel */,
+			);
+			currentVersion = B187360C2567F3DB00714DF3 /* SquidPrintData.xcdatamodel */;
+			path = SquidPrintData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B1F600E42566FE1E0014BB4B /* Project object */;
 }
