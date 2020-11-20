@@ -5,10 +5,7 @@ import PackageDescription
 let package = Package(
     name: "OpenAPIClient",
     platforms: [
-        .iOS(.v9),
-        .macOS(.v10_11),
-        .tvOS(.v9),
-        .watchOS(.v3)
+        .iOS("13")
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
@@ -25,7 +22,8 @@ let package = Package(
         .target(
             name: "OpenAPIClient",
             dependencies: [],
-            path: "OpenAPIClient/Classes"
-        ),
+            path: "OpenAPIClient/Classes",
+            linkerSettings: [.linkedFramework("Combine")]
+        )
     ]
 )

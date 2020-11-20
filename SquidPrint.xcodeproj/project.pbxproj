@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */; };
-		B1710E1C2567191C00A45EB7 /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = B1710E1B2567191C00A45EB7 /* OpenAPIClient */; };
+		B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F81812567E13D0014290E /* AppEnvironment.swift */; };
+		B16F81882567E53D0014290E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F81872567E53D0014290E /* ApiManager.swift */; };
+		B16F818D2567E5620014290E /* ApiConfigurationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F818C2567E5620014290E /* ApiConfigurationUtility.swift */; };
+		B16F81932567E5B60014290E /* ApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F81922567E5B60014290E /* ApiConfiguration.swift */; };
+		B16F81962567E7160014290E /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F81952567E7160014290E /* Combine.framework */; };
+		B16F81992567E89A0014290E /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = B16F81982567E89A0014290E /* OpenAPIClient */; };
 		B1EA6A552567122B0097B262 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A542567122B0097B262 /* AppView.swift */; };
 		B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A58256712640097B262 /* AppViewModel.swift */; };
 		B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */; };
@@ -21,7 +26,11 @@
 		46F9F2A9B0C0904E789FF5FD /* Pods-SquidPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquidPrint.debug.xcconfig"; path = "Target Support Files/Pods-SquidPrint/Pods-SquidPrint.debug.xcconfig"; sourceTree = "<group>"; };
 		901DD300CD7950C5ABE1AA29 /* Pods-SquidPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquidPrint.release.xcconfig"; path = "Target Support Files/Pods-SquidPrint/Pods-SquidPrint.release.xcconfig"; sourceTree = "<group>"; };
 		B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquidPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1710E1A256718EB00A45EB7 /* generated */ = {isa = PBXFileReference; lastKnownFileType = folder; name = generated; path = OctoprintOpenApi/generated; sourceTree = "<group>"; };
+		B16F81812567E13D0014290E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		B16F81872567E53D0014290E /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		B16F818C2567E5620014290E /* ApiConfigurationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfigurationUtility.swift; sourceTree = "<group>"; };
+		B16F81922567E5B60014290E /* ApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfiguration.swift; sourceTree = "<group>"; };
+		B16F81952567E7160014290E /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		B1EA6A542567122B0097B262 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		B1EA6A58256712640097B262 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		B1F600EC2566FE1E0014BB4B /* SquidPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquidPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1710E1C2567191C00A45EB7 /* OpenAPIClient in Frameworks */,
+				B16F81992567E89A0014290E /* OpenAPIClient in Frameworks */,
+				B16F81962567E7160014290E /* Combine.framework in Frameworks */,
 				7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,9 +58,58 @@
 		1C33F0A2F0A0E7FA4895BA5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B16F81952567E7160014290E /* Combine.framework */,
 				B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B16F81802567E1140014290E /* EnvironmentObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B16F81812567E13D0014290E /* AppEnvironment.swift */,
+			);
+			path = EnvironmentObjects;
+			sourceTree = "<group>";
+		};
+		B16F81852567E51A0014290E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B16F81862567E5310014290E /* Managers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B16F81862567E5310014290E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B16F81872567E53D0014290E /* ApiManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B16F818B2567E5570014290E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B16F818C2567E5620014290E /* ApiConfigurationUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B16F81902567E5A40014290E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B16F81912567E5B00014290E /* Api */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B16F81912567E5B00014290E /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				B16F81922567E5B60014290E /* ApiConfiguration.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		B1EA6A4E2567120D0097B262 /* Views */ = {
@@ -101,7 +160,6 @@
 				B1F600EE2566FE1E0014BB4B /* SquidPrint */,
 				B1F600ED2566FE1E0014BB4B /* Products */,
 				D8342776915F7F8D7E078D5F /* Pods */,
-				B1710E1A256718EB00A45EB7 /* generated */,
 				1C33F0A2F0A0E7FA4895BA5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -117,8 +175,12 @@
 		B1F600EE2566FE1E0014BB4B /* SquidPrint */ = {
 			isa = PBXGroup;
 			children = (
+				B16F81902567E5A40014290E /* Entities */,
+				B16F818B2567E5570014290E /* Utilities */,
+				B16F81852567E51A0014290E /* Models */,
 				B1EA6A5C256712AB0097B262 /* Config */,
 				B1EA6A5D256712BC0097B262 /* Content */,
+				B16F81802567E1140014290E /* EnvironmentObjects */,
 				B1F600F52566FE1F0014BB4B /* Preview Content */,
 				B1EA6A572567125A0097B262 /* ViewModels */,
 				B1EA6A4E2567120D0097B262 /* Views */,
@@ -162,7 +224,7 @@
 			);
 			name = SquidPrint;
 			packageProductDependencies = (
-				B1710E1B2567191C00A45EB7 /* OpenAPIClient */,
+				B16F81982567E89A0014290E /* OpenAPIClient */,
 			);
 			productName = SquidPrint;
 			productReference = B1F600EC2566FE1E0014BB4B /* SquidPrint.app */;
@@ -259,9 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */,
 				B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */,
 				B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */,
+				B16F81932567E5B60014290E /* ApiConfiguration.swift in Sources */,
+				B16F81882567E53D0014290E /* ApiManager.swift in Sources */,
 				B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */,
+				B16F818D2567E5620014290E /* ApiConfigurationUtility.swift in Sources */,
 				B1EA6A552567122B0097B262 /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +461,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SquidPrint/Preview Content\"";
 				DEVELOPMENT_TEAM = B7T2B8ZK4X;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SquidPrint/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SquidPrint/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,7 +484,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SquidPrint/Preview Content\"";
 				DEVELOPMENT_TEAM = B7T2B8ZK4X;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SquidPrint/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SquidPrint/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +521,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B1710E1B2567191C00A45EB7 /* OpenAPIClient */ = {
+		B16F81982567E89A0014290E /* OpenAPIClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = OpenAPIClient;
 		};

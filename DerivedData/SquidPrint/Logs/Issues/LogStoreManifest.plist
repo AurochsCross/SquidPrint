@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>797B93AC-D1BB-4FE3-AB69-1B33DA1B38ED</key>
+		<key>641AFB79-8ED1-40C2-832F-7DBAEB63C637</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,26 +15,26 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>797B93AC-D1BB-4FE3-AB69-1B33DA1B38ED.xcactivitylog</string>
+			<string>641AFB79-8ED1-40C2-832F-7DBAEB63C637.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>E</string>
+				<string>S</string>
 			</dict>
 			<key>signature</key>
 			<string>SquidPrint-brnrdeohilxnjoewxibbfndtxhtk</string>
 			<key>timeStartedRecording</key>
-			<real>627512299.01821196</real>
+			<real>627567699.74804997</real>
 			<key>timeStoppedRecording</key>
-			<real>627512300.59628999</real>
+			<real>627567704.70198596</real>
 			<key>title</key>
 			<string>Build target SquidPrint</string>
 			<key>uniqueIdentifier</key>
-			<string>797B93AC-D1BB-4FE3-AB69-1B33DA1B38ED</string>
+			<string>641AFB79-8ED1-40C2-832F-7DBAEB63C637</string>
 		</dict>
-		<key>8E2E529C-116A-4BC0-A319-0CC5C1040799</key>
+		<key>84504E5C-F283-4D0D-9132-407D40ADFC68</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -43,7 +43,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>8E2E529C-116A-4BC0-A319-0CC5C1040799.xcactivitylog</string>
+			<string>84504E5C-F283-4D0D-9132-407D40ADFC68.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -54,15 +54,15 @@
 			<key>signature</key>
 			<string>Pods-SquidPrint-gzmwolrorgjjpgdvcmadrwwytkej</string>
 			<key>timeStartedRecording</key>
-			<real>627512299.01539004</real>
+			<real>627567699.74852097</real>
 			<key>timeStoppedRecording</key>
-			<real>627512300.26032698</real>
+			<real>627567703.78469205</real>
 			<key>title</key>
 			<string>Build target Pods-SquidPrint</string>
 			<key>uniqueIdentifier</key>
-			<string>8E2E529C-116A-4BC0-A319-0CC5C1040799</string>
+			<string>84504E5C-F283-4D0D-9132-407D40ADFC68</string>
 		</dict>
-		<key>FC878044-80F0-4035-AC61-B2856C763F2B</key>
+		<key>9A71C87F-BBD2-4E16-913E-D73BBEB94DB2</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -71,7 +71,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>FC878044-80F0-4035-AC61-B2856C763F2B.xcactivitylog</string>
+			<string>9A71C87F-BBD2-4E16-913E-D73BBEB94DB2.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -82,13 +82,41 @@
 			<key>signature</key>
 			<string>Alamofire-gzmwolrorgjjpgdvcmadrwwytkej</string>
 			<key>timeStartedRecording</key>
-			<real>627512295.81722295</real>
+			<real>627567699.74907601</real>
 			<key>timeStoppedRecording</key>
-			<real>627512299.03120601</real>
+			<real>627567703.77607203</real>
 			<key>title</key>
 			<string>Build target Alamofire</string>
 			<key>uniqueIdentifier</key>
-			<string>FC878044-80F0-4035-AC61-B2856C763F2B</string>
+			<string>9A71C87F-BBD2-4E16-913E-D73BBEB94DB2</string>
+		</dict>
+		<key>A26DE2D5-BDFB-4093-9EE2-90B0C64747FC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
+			<key>fileName</key>
+			<string>A26DE2D5-BDFB-4093-9EE2-90B0C64747FC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>OpenAPIClient-bzcyawgwklhmricuchealrzsfugj</string>
+			<key>timeStartedRecording</key>
+			<real>627567699.74578595</real>
+			<key>timeStoppedRecording</key>
+			<real>627567702.08025706</real>
+			<key>title</key>
+			<string>Build target OpenAPIClient</string>
+			<key>uniqueIdentifier</key>
+			<string>A26DE2D5-BDFB-4093-9EE2-90B0C64747FC</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

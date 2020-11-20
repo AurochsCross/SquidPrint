@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import Combine
-import OpenAPIClient
 
 class AppViewModel: ObservableObject {
+    
 }

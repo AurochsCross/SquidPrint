@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>FD9103E9-4358-42D5-9430-0C4622864F44</key>
+		<key>05509138-DBA5-48E8-9C8D-A7ECBE0155AD</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>FD9103E9-4358-42D5-9430-0C4622864F44.xcactivitylog</string>
+			<string>05509138-DBA5-48E8-9C8D-A7ECBE0155AD.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,13 +32,625 @@
 			<key>signature</key>
 			<string>Build SquidPrint</string>
 			<key>timeStartedRecording</key>
-			<real>627512295.71996105</real>
+			<real>627567401.69627798</real>
 			<key>timeStoppedRecording</key>
-			<real>627512300.60569799</real>
+			<real>627567401.75441802</real>
 			<key>title</key>
 			<string>Build SquidPrint</string>
 			<key>uniqueIdentifier</key>
-			<string>FD9103E9-4358-42D5-9430-0C4622864F44</string>
+			<string>05509138-DBA5-48E8-9C8D-A7ECBE0155AD</string>
+		</dict>
+		<key>14B28750-B1B6-4B56-A160-BF509042B604</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>14B28750-B1B6-4B56-A160-BF509042B604.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Clean SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567300.51014102</real>
+			<key>timeStoppedRecording</key>
+			<real>627567300.78054094</real>
+			<key>title</key>
+			<string>Clean SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>14B28750-B1B6-4B56-A160-BF509042B604</string>
+		</dict>
+		<key>17CB6B06-C224-4B1F-B533-F2F0029CACE0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>17CB6B06-C224-4B1F-B533-F2F0029CACE0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567266.32845604</real>
+			<key>timeStoppedRecording</key>
+			<real>627567266.82116604</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>17CB6B06-C224-4B1F-B533-F2F0029CACE0</string>
+		</dict>
+		<key>32C4532F-8161-4844-BBB9-AEC57E64E8C8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>32C4532F-8161-4844-BBB9-AEC57E64E8C8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567464.93913496</real>
+			<key>timeStoppedRecording</key>
+			<real>627567469.38407397</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>32C4532F-8161-4844-BBB9-AEC57E64E8C8</string>
+		</dict>
+		<key>34B7AC74-3395-4E87-824D-9EA813D21867</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>34B7AC74-3395-4E87-824D-9EA813D21867.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567660.85589302</real>
+			<key>timeStoppedRecording</key>
+			<real>627567664.46981001</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>34B7AC74-3395-4E87-824D-9EA813D21867</string>
+		</dict>
+		<key>4E23EF55-84B2-4B09-B924-B929FB3C15C4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4E23EF55-84B2-4B09-B924-B929FB3C15C4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Clean SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567461.97258699</real>
+			<key>timeStoppedRecording</key>
+			<real>627567462.22310305</real>
+			<key>title</key>
+			<string>Clean SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>4E23EF55-84B2-4B09-B924-B929FB3C15C4</string>
+		</dict>
+		<key>51EA7E51-8D7B-4000-9085-74CA2C1C5FFA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>51EA7E51-8D7B-4000-9085-74CA2C1C5FFA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567295.26851594</real>
+			<key>timeStoppedRecording</key>
+			<real>627567295.74597597</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>51EA7E51-8D7B-4000-9085-74CA2C1C5FFA</string>
+		</dict>
+		<key>540A3455-D720-4BE0-8221-9768281509BA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>540A3455-D720-4BE0-8221-9768281509BA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567699.31957304</real>
+			<key>timeStoppedRecording</key>
+			<real>627567704.70939803</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>540A3455-D720-4BE0-8221-9768281509BA</string>
+		</dict>
+		<key>5507D889-2D6D-4463-B59F-FE79455D9B16</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5507D889-2D6D-4463-B59F-FE79455D9B16.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567302.30938196</real>
+			<key>timeStoppedRecording</key>
+			<real>627567304.24209499</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>5507D889-2D6D-4463-B59F-FE79455D9B16</string>
+		</dict>
+		<key>60530926-BF35-4081-8D93-72C3AE0E3434</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>60530926-BF35-4081-8D93-72C3AE0E3434.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567456.40534604</real>
+			<key>timeStoppedRecording</key>
+			<real>627567456.46455002</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>60530926-BF35-4081-8D93-72C3AE0E3434</string>
+		</dict>
+		<key>620AABA9-EF91-493B-8E67-4D331DFD8DE1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>620AABA9-EF91-493B-8E67-4D331DFD8DE1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567553.51454794</real>
+			<key>timeStoppedRecording</key>
+			<real>627567556.47691596</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>620AABA9-EF91-493B-8E67-4D331DFD8DE1</string>
+		</dict>
+		<key>6358CE03-43D6-4937-AA3C-B79EEB7B7992</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6358CE03-43D6-4937-AA3C-B79EEB7B7992.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567072.92021406</real>
+			<key>timeStoppedRecording</key>
+			<real>627567073.10327101</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>6358CE03-43D6-4937-AA3C-B79EEB7B7992</string>
+		</dict>
+		<key>657DA14E-2342-44FD-998B-83FD20D60CAC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>657DA14E-2342-44FD-998B-83FD20D60CAC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567181.93858397</real>
+			<key>timeStoppedRecording</key>
+			<real>627567181.99348795</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>657DA14E-2342-44FD-998B-83FD20D60CAC</string>
+		</dict>
+		<key>8F2471DB-98B2-403E-9453-8690FA86D7B7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8F2471DB-98B2-403E-9453-8690FA86D7B7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Clean SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567696.52074599</real>
+			<key>timeStoppedRecording</key>
+			<real>627567696.78658998</real>
+			<key>title</key>
+			<string>Clean SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>8F2471DB-98B2-403E-9453-8690FA86D7B7</string>
+		</dict>
+		<key>CC91A1DC-DC0A-455A-B14A-25E08BDD82A4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CC91A1DC-DC0A-455A-B14A-25E08BDD82A4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567193.099424</real>
+			<key>timeStoppedRecording</key>
+			<real>627567195.77011704</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>CC91A1DC-DC0A-455A-B14A-25E08BDD82A4</string>
+		</dict>
+		<key>D0B37BFC-79BE-46BA-9072-C3D04BF27546</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D0B37BFC-79BE-46BA-9072-C3D04BF27546.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567688.46927798</real>
+			<key>timeStoppedRecording</key>
+			<real>627567689.66389096</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>D0B37BFC-79BE-46BA-9072-C3D04BF27546</string>
+		</dict>
+		<key>DDABAFED-3DDD-491A-8D38-0AEF2075FB8C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DDABAFED-3DDD-491A-8D38-0AEF2075FB8C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567693.73415995</real>
+			<key>timeStoppedRecording</key>
+			<real>627567693.95592904</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>DDABAFED-3DDD-491A-8D38-0AEF2075FB8C</string>
+		</dict>
+		<key>F43F059A-2DDD-4C3F-8B92-7BFB0321D3BB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F43F059A-2DDD-4C3F-8B92-7BFB0321D3BB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627566854.54444206</real>
+			<key>timeStoppedRecording</key>
+			<real>627566873.79347801</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>F43F059A-2DDD-4C3F-8B92-7BFB0321D3BB</string>
+		</dict>
+		<key>F7DC7E6C-FCF5-49DC-A006-7EFFCCAEF5FE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F7DC7E6C-FCF5-49DC-A006-7EFFCCAEF5FE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627567062.48013794</real>
+			<key>timeStoppedRecording</key>
+			<real>627567063.47676098</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>F7DC7E6C-FCF5-49DC-A006-7EFFCCAEF5FE</string>
 		</dict>
 	</dict>
 </dict>
