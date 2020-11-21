@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct SquidPrintApp: App {
     let appEnvironment = AppEnvironment()
+    let appViewModel = AppViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView(viewModel: appViewModel)
                 .environmentObject(appEnvironment)
         }
     }

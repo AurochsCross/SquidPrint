@@ -7,7 +7,8 @@
 
 import Foundation
 import Combine
+import SquidPrintLogic
 
 class AppEnvironment: ObservableObject {
-    let apiManager = ApiManager(configuration: ApiConfiguration.empty)
+    
 }
