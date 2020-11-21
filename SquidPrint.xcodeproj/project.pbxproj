@@ -3,17 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */; };
+		B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F81812567E13D0014290E /* AppEnvironment.swift */; };
+		B16F81962567E7160014290E /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F81952567E7160014290E /* Combine.framework */; };
+		B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = B18736012567F17300714DF3 /* SwiftKeychainWrapper */; };
+		B1B73F7E256802F1000AE39A /* SquidPrintLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; };
+		B1B73F7F256802F1000AE39A /* SquidPrintLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1B73FA125681E4F000AE39A /* ServerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FA025681E4F000AE39A /* ServerSettingsViewModel.swift */; };
+		B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FB62568298D000AE39A /* ServiceContainer.swift */; };
+		B1B73FBC25682C3B000AE39A /* ServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */; };
+		B1B73FBF2569531F000AE39A /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = B1B73FBE2569531F000AE39A /* XCGLogger */; };
+		B1EA6A552567122B0097B262 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A542567122B0097B262 /* AppView.swift */; };
+		B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A58256712640097B262 /* AppViewModel.swift */; };
 		B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */; };
 		B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600F12566FE1E0014BB4B /* ContentView.swift */; };
 		B1F600F42566FE1F0014BB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F600F32566FE1F0014BB4B /* Assets.xcassets */; };
 		B1F600F72566FE1F0014BB4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F600F62566FE1F0014BB4B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B1B73F80256802F1000AE39A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1B73F7F256802F1000AE39A /* SquidPrintLogic.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		46F9F2A9B0C0904E789FF5FD /* Pods-SquidPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquidPrint.debug.xcconfig"; path = "Target Support Files/Pods-SquidPrint/Pods-SquidPrint.debug.xcconfig"; sourceTree = "<group>"; };
+		901DD300CD7950C5ABE1AA29 /* Pods-SquidPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquidPrint.release.xcconfig"; path = "Target Support Files/Pods-SquidPrint/Pods-SquidPrint.release.xcconfig"; sourceTree = "<group>"; };
+		B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquidPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16F81812567E13D0014290E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		B16F81952567E7160014290E /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
+		B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B73FA025681E4F000AE39A /* ServerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel.swift; sourceTree = "<group>"; };
+		B1B73FB62568298D000AE39A /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView.swift; sourceTree = "<group>"; };
+		B1EA6A542567122B0097B262 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		B1EA6A58256712640097B262 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		B1F600EC2566FE1E0014BB4B /* SquidPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquidPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidPrintApp.swift; sourceTree = "<group>"; };
 		B1F600F12566FE1E0014BB4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,17 +64,110 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B73F7E256802F1000AE39A /* SquidPrintLogic.framework in Frameworks */,
+				B16F81962567E7160014290E /* Combine.framework in Frameworks */,
+				B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */,
+				7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */,
+				B1B73FBF2569531F000AE39A /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C33F0A2F0A0E7FA4895BA5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */,
+				B16F81952567E7160014290E /* Combine.framework */,
+				B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B16F81802567E1140014290E /* EnvironmentObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B16F81812567E13D0014290E /* AppEnvironment.swift */,
+			);
+			path = EnvironmentObjects;
+			sourceTree = "<group>";
+		};
+		B18736042567F2EA00714DF3 /* ServerSettings */ = {
+			isa = PBXGroup;
+			children = (
+				B1B73FA025681E4F000AE39A /* ServerSettingsViewModel.swift */,
+			);
+			path = ServerSettings;
+			sourceTree = "<group>";
+		};
+		B1B73FB525682982000AE39A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B1B73FB62568298D000AE39A /* ServiceContainer.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B1B73FB825682C22000AE39A /* ServerSettings */ = {
+			isa = PBXGroup;
+			children = (
+				B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */,
+			);
+			path = ServerSettings;
+			sourceTree = "<group>";
+		};
+		B1EA6A4E2567120D0097B262 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1B73FB825682C22000AE39A /* ServerSettings */,
+				B1EA6A5E256712DF0097B262 /* Bases */,
+				B1F600F12566FE1E0014BB4B /* ContentView.swift */,
+				B1EA6A542567122B0097B262 /* AppView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1EA6A572567125A0097B262 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B18736042567F2EA00714DF3 /* ServerSettings */,
+				B1EA6A58256712640097B262 /* AppViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B1EA6A5C256712AB0097B262 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */,
+				B1F600F82566FE1F0014BB4B /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B1EA6A5D256712BC0097B262 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				B1F600F32566FE1F0014BB4B /* Assets.xcassets */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		B1EA6A5E256712DF0097B262 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
 		B1F600E32566FE1E0014BB4B = {
 			isa = PBXGroup;
 			children = (
 				B1F600EE2566FE1E0014BB4B /* SquidPrint */,
 				B1F600ED2566FE1E0014BB4B /* Products */,
+				D8342776915F7F8D7E078D5F /* Pods */,
+				1C33F0A2F0A0E7FA4895BA5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +182,13 @@
 		B1F600EE2566FE1E0014BB4B /* SquidPrint */ = {
 			isa = PBXGroup;
 			children = (
-				B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */,
-				B1F600F12566FE1E0014BB4B /* ContentView.swift */,
-				B1F600F32566FE1F0014BB4B /* Assets.xcassets */,
-				B1F600F82566FE1F0014BB4B /* Info.plist */,
+				B1B73FB525682982000AE39A /* Managers */,
+				B1EA6A5C256712AB0097B262 /* Config */,
+				B1EA6A5D256712BC0097B262 /* Content */,
+				B16F81802567E1140014290E /* EnvironmentObjects */,
 				B1F600F52566FE1F0014BB4B /* Preview Content */,
+				B1EA6A572567125A0097B262 /* ViewModels */,
+				B1EA6A4E2567120D0097B262 /* Views */,
 			);
 			path = SquidPrint;
 			sourceTree = "<group>";
@@ -69,6 +201,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D8342776915F7F8D7E078D5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46F9F2A9B0C0904E789FF5FD /* Pods-SquidPrint.debug.xcconfig */,
+				901DD300CD7950C5ABE1AA29 /* Pods-SquidPrint.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,15 +217,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1F600FB2566FE1F0014BB4B /* Build configuration list for PBXNativeTarget "SquidPrint" */;
 			buildPhases = (
+				224A1B5B7247D5A708B20AF0 /* [CP] Check Pods Manifest.lock */,
 				B1F600E82566FE1E0014BB4B /* Sources */,
 				B1F600E92566FE1E0014BB4B /* Frameworks */,
 				B1F600EA2566FE1E0014BB4B /* Resources */,
+				9F0BAB5AA8AEDFFFDC2EDAF8 /* [CP] Embed Pods Frameworks */,
+				B1B73F80256802F1000AE39A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SquidPrint;
+			packageProductDependencies = (
+				B18736012567F17300714DF3 /* SwiftKeychainWrapper */,
+				B1B73FBE2569531F000AE39A /* XCGLogger */,
+			);
 			productName = SquidPrint;
 			productReference = B1F600EC2566FE1E0014BB4B /* SquidPrint.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +260,10 @@
 				Base,
 			);
 			mainGroup = B1F600E32566FE1E0014BB4B;
+			packageReferences = (
+				B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */,
+			);
 			productRefGroup = B1F600ED2566FE1E0014BB4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,13 +285,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		224A1B5B7247D5A708B20AF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SquidPrint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0BAB5AA8AEDFFFDC2EDAF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquidPrint/Pods-SquidPrint-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquidPrint/Pods-SquidPrint-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SquidPrint/Pods-SquidPrint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1F600E82566FE1E0014BB4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */,
 				B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */,
+				B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */,
 				B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */,
+				B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */,
+				B1B73FA125681E4F000AE39A /* ServerSettingsViewModel.swift in Sources */,
+				B1B73FBC25682C3B000AE39A /* ServerSettingsView.swift in Sources */,
+				B1EA6A552567122B0097B262 /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,21 +464,24 @@
 		};
 		B1F600FC2566FE1F0014BB4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46F9F2A9B0C0904E789FF5FD /* Pods-SquidPrint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SquidPrint/Preview Content\"";
-				DEVELOPMENT_TEAM = B7T2B8ZK4X;
+				DEVELOPMENT_TEAM = 6NWE5EW54P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SquidPrint/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SquidPrint/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AurochsCross.SquidPrint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AurochsCross.SquidPrintWip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,21 +489,24 @@
 		};
 		B1F600FD2566FE1F0014BB4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 901DD300CD7950C5ABE1AA29 /* Pods-SquidPrint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SquidPrint/Preview Content\"";
-				DEVELOPMENT_TEAM = B7T2B8ZK4X;
+				DEVELOPMENT_TEAM = 6NWE5EW54P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SquidPrint/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SquidPrint/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AurochsCross.SquidPrint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AurochsCross.SquidPrintWip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +534,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+		B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B18736012567F17300714DF3 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+		B1B73FBE2569531F000AE39A /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1F600E42566FE1E0014BB4B /* Project object */;
 }
