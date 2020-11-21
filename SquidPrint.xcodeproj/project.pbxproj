@@ -16,6 +16,7 @@
 		B1B73FA125681E4F000AE39A /* ServerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FA025681E4F000AE39A /* ServerSettingsViewModel.swift */; };
 		B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FB62568298D000AE39A /* ServiceContainer.swift */; };
 		B1B73FBC25682C3B000AE39A /* ServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */; };
+		B1B73FBF2569531F000AE39A /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = B1B73FBE2569531F000AE39A /* XCGLogger */; };
 		B1EA6A552567122B0097B262 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A542567122B0097B262 /* AppView.swift */; };
 		B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A58256712640097B262 /* AppViewModel.swift */; };
 		B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */; };
@@ -67,6 +68,7 @@
 				B16F81962567E7160014290E /* Combine.framework in Frameworks */,
 				B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */,
 				7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */,
+				B1B73FBF2569531F000AE39A /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +231,7 @@
 			name = SquidPrint;
 			packageProductDependencies = (
 				B18736012567F17300714DF3 /* SwiftKeychainWrapper */,
+				B1B73FBE2569531F000AE39A /* XCGLogger */,
 			);
 			productName = SquidPrint;
 			productReference = B1F600EC2566FE1E0014BB4B /* SquidPrint.app */;
@@ -259,6 +262,7 @@
 			mainGroup = B1F600E32566FE1E0014BB4B;
 			packageReferences = (
 				B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */,
 			);
 			productRefGroup = B1F600ED2566FE1E0014BB4B /* Products */;
 			projectDirPath = "";
@@ -540,6 +544,14 @@
 				minimumVersion = 4.0.1;
 			};
 		};
+		B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -547,6 +559,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
+		};
+		B1B73FBE2569531F000AE39A /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

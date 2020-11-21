@@ -210,6 +210,40 @@
 			<key>uniqueIdentifier</key>
 			<string>13FDCE39-A6BB-4106-BAA0-9662235A5333</string>
 		</dict>
+		<key>1B5C7463-8C73-4377-8B80-79E58BE8888F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1B5C7463-8C73-4377-8B80-79E58BE8888F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627659758.45702398</real>
+			<key>timeStoppedRecording</key>
+			<real>627659759.24020505</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>1B5C7463-8C73-4377-8B80-79E58BE8888F</string>
+		</dict>
 		<key>223DDAD1-9B0E-4E64-A672-5486963A6E1F</key>
 		<dict>
 			<key>className</key>
@@ -1433,6 +1467,40 @@
 			<string>Build SquidPrint</string>
 			<key>uniqueIdentifier</key>
 			<string>C844EAB8-10D4-4BDD-BC6C-101D8B425E5A</string>
+		</dict>
+		<key>C88A7501-8834-470F-933C-7A17A0F6B3FA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C88A7501-8834-470F-933C-7A17A0F6B3FA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SquidPrint project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SquidPrint</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SquidPrint</string>
+			<key>timeStartedRecording</key>
+			<real>627659716.87761497</real>
+			<key>timeStoppedRecording</key>
+			<real>627659720.72551</real>
+			<key>title</key>
+			<string>Build SquidPrint</string>
+			<key>uniqueIdentifier</key>
+			<string>C88A7501-8834-470F-933C-7A17A0F6B3FA</string>
 		</dict>
 		<key>CEDA2C10-C675-4731-AF7D-F063E37B1368</key>
 		<dict>
