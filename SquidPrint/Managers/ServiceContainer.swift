@@ -10,9 +10,18 @@ import SquidPrintLogic
 
 protocol ServiceContainer {
     var coreDataStorage: CoreDataStorage { get }
+    var serverManager: ServerManager { get }
 }
 
 class DefaultServiceContainer: ServiceContainer {
-    private let defaultCoreDataStorage = CoreDataStorage()
+    private let defaultCoreDataStorage: CoreDataStorage
+    private let defaultServerManager: ServerManager
+    
+    init() {
+        defaultCoreDataStorage = CoreDataStorage()
+        defaultServerManager = ServerManager(coreDataStorage: defaultCoreDataStorage)
+    }
+    
     var coreDataStorage: CoreDataStorage { defaultCoreDataStorage }
+    var serverManager: ServerManager { defaultServerManager }
 }

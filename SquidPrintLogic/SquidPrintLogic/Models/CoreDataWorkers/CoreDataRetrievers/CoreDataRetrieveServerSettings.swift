@@ -9,14 +9,14 @@ import Foundation
 import Combine
 import CoreData
 
-class CoreDataRetrieveServerSettings: CoreDataAutoSaveExecutor<ServerSettings> {
+class CoreDataRetrieveServerSettings: CoreDataAutoSaveExecutor<DB_ServerSettings?> {
     
-    override func doExecuteAndAutoSave(inContext context: NSManagedObjectContext) throws -> ServerSettings {
-        let request: NSFetchRequest<ServerSettings> = ServerSettings.fetchRequest()
+    override func doExecuteAndAutoSave(inContext context: NSManagedObjectContext) throws -> DB_ServerSettings? {
+        let request: NSFetchRequest<DB_ServerSettings> = DB_ServerSettings.fetchRequest()
         
         let result = try context.fetch(request)
         
-        return result.first ?? ServerSettings(context: context)
+        return result.first
     }
     
 }

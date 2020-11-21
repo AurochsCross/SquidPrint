@@ -10,14 +10,15 @@ import SquidPrintLogic
 import Combine
 
 class ServerSettingsViewModel: ObservableObject {
-    @Published var apiKey: String
-    @Published var serverSettings: ServerSettings?
+    @Published var name: String = ""
+    @Published var apiKey: String = ""
+    @Published var address: String = ""
+    @Published var port: String = ""
     private let serverManager: ServerManager
     
     private var cancellables = Set<AnyCancellable>()
     
     init(serverManager: ServerManager) {
-        apiKey = ""
         self.serverManager = serverManager
     }
     
@@ -26,32 +27,43 @@ class ServerSettingsViewModel: ObservableObject {
     }
     
     func onSave() {
-        guard let serverSettings = serverSettings else {
-            return
-        }
+        let serverSettings = ServerSettings(
+            name: name,
+            address: address,
+            port: port,
+            apiKey: apiKey)
         
-        serverSettings.apiKey = apiKey.isEmpty ? nil : apiKey
         serverManager.updateServerSettings(serverSettings)
             .sink(receiveCompletion: { completion in
                 switch completion {
-                case .finished: print("finished good")
-                case .failure(let error): print("Failed: \(error)")
+                case .finished: log.info("finished good")
+                case .failure(let error): log.error("Failed: \(error)")
                 }
             }, receiveValue: { _ in })
             .store(in: &cancellables)
     }
     
+    func onDeleteServer() {
+        serverManager.deleteServer()
+    }
+    
     private func reloadSettings() {
         serverManager.serverSettingsPublisher
             .catch { error -> Just<ServerSettings> in
-                print("Error: \(error)")
+                log.error("\(error)")
                 return Just(ServerSettings())
             }
             .receive(on: DispatchQueue.main)
             .sink { result in
-                self.serverSettings = result
-                self.apiKey = result.apiKey ?? ""
+                self.setFields(fromSettings: result)
             }
             .store(in: &cancellables)
+    }
+    
+    private func setFields(fromSettings settings: ServerSettings) {
+        self.name = settings.name ?? ""
+        self.address = settings.address
+        self.port = settings.port ?? ""
+        self.apiKey = settings.apiKey
     }
 }

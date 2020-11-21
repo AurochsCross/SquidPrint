@@ -33,6 +33,8 @@ let log: XCGLogger = {
     return log
 }()
 
+let serviceContainer: ServiceContainer = { DefaultServiceContainer() }()
+
 @main
 struct SquidPrintApp: App {
     let appEnvironment = AppEnvironment()

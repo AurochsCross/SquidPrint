@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F267256961C900D7A67C /* PublisherUtilities.swift */; };
 		B1B73F662568025B000AE39A /* SquidPrintLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B73F642568025B000AE39A /* SquidPrintLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F7125680291000AE39A /* CoreDataRetriever.swift */; };
 		B1B73F76256802B0000AE39A /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F75256802B0000AE39A /* GenericError.swift */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B131055D25698673006F2C54 /* SquidPrintDataModel_v0.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintDataModel_v0.1.xcdatamodel; sourceTree = "<group>"; };
+		B131056725698FB5006F2C54 /* SquidPrintDataModel_v0.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintDataModel_v0.2.xcdatamodel; sourceTree = "<group>"; };
+		B190F267256961C900D7A67C /* PublisherUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherUtilities.swift; sourceTree = "<group>"; };
 		B1B73F612568025B000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B73F642568025B000AE39A /* SquidPrintLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquidPrintLogic.h; sourceTree = "<group>"; };
 		B1B73F652568025B000AE39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,13 +79,13 @@
 		B1B73F632568025B000AE39A /* SquidPrintLogic */ = {
 			isa = PBXGroup;
 			children = (
-				B1B73FA225681E8E000AE39A /* Entities */,
-				B1B73F9625681B20000AE39A /* DataModels */,
-				B1B73F8C25680467000AE39A /* Utilities */,
-				B1B73F74256802A5000AE39A /* Errors */,
-				B1B73F6E25680279000AE39A /* Models */,
 				B1B73F642568025B000AE39A /* SquidPrintLogic.h */,
 				B1B73F652568025B000AE39A /* Info.plist */,
+				B1B73F9625681B20000AE39A /* DataModels */,
+				B1B73FA225681E8E000AE39A /* Entities */,
+				B1B73F74256802A5000AE39A /* Errors */,
+				B1B73F6E25680279000AE39A /* Models */,
+				B1B73F8C25680467000AE39A /* Utilities */,
 			);
 			path = SquidPrintLogic;
 			sourceTree = "<group>";
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B73F8D25680472000AE39A /* ApiConfigurationUtility.swift */,
+				B190F267256961C900D7A67C /* PublisherUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				B1B73FA825681ECA000AE39A /* SquidPrintDataModel.xcdatamodeld in Sources */,
 				B1B73F852568041D000AE39A /* CoreDataExecutor.swift in Sources */,
 				B1B73F76256802B0000AE39A /* GenericError.swift in Sources */,
+				B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */,
 				B1B73F8E25680472000AE39A /* ApiConfigurationUtility.swift in Sources */,
 				B1B73FA425681E9E000AE39A /* ServerSettings.swift in Sources */,
 				B1B73F9C25681B84000AE39A /* CoreDataStorage.swift in Sources */,
@@ -475,9 +481,11 @@
 		B1B73FA625681ECA000AE39A /* SquidPrintDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				B131056725698FB5006F2C54 /* SquidPrintDataModel_v0.2.xcdatamodel */,
+				B131055D25698673006F2C54 /* SquidPrintDataModel_v0.1.xcdatamodel */,
 				B1B73FA725681ECA000AE39A /* SquidPrintDataModel.xcdatamodel */,
 			);
-			currentVersion = B1B73FA725681ECA000AE39A /* SquidPrintDataModel.xcdatamodel */;
+			currentVersion = B131056725698FB5006F2C54 /* SquidPrintDataModel_v0.2.xcdatamodel */;
 			path = SquidPrintDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
