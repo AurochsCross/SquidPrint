@@ -9,4 +9,5 @@ import Foundation
 
 public enum CoreDataError: Error {
     case dataMissing
+    case saveFailed
 }

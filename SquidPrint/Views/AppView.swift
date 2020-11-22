@@ -12,11 +12,14 @@ struct AppView: View {
     @State var showSettings = false
     
     var body: some View {
-        Button(action: { self.showSettings.toggle()} ) {
-            Text("Show settings")
-        }
-        .sheet(isPresented: $showSettings) {
-            ServerSettingsView(viewModel: viewModel.serverSettingsViewModel)
+        if viewModel.appLoaded {
+            if viewModel.isServerSetup {
+                RootView(viewModel: viewModel.rootViewModel)
+            } else {
+                InitialServerSettingsView(viewModel: viewModel.serverSettingsViewModel)
+            }
+        } else {
+            EmptyView()
         }
     }
 }

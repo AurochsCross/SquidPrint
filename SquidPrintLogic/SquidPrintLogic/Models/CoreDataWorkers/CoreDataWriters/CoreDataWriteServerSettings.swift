@@ -9,15 +9,15 @@ import Foundation
 import Combine
 import CoreData
 
-class CoreDataWriteServerSettings: CoreDataAutoSaveExecutor<ServerSettings> {
-    private let serverSettings: ServerSettings
-    
-    init(_ settings: ServerSettings) {
-        self.serverSettings = settings
-    }
-    
-    override func doExecuteAndAutoSave(inContext context: NSManagedObjectContext) throws -> ServerSettings {
-//        context.insert(serverSettings)
-        return serverSettings
-    }
-}
+//class CoreDataWriteServerSettings: CoreDataAutoSaveExecutor<DB_ServerSettings> {
+//    private let serverSettings: Server
+//    
+//    init(_ settings: DB_ServerSettings) {
+//        self.serverSettings = settings
+//    }
+//    
+//    override func doExecuteAndAutoSave(inContext context: NSManagedObjectContext) throws -> DB_ServerSettings {
+////        context.insert(serverSettings)
+//        return serverSettings
+//    }
+//}
