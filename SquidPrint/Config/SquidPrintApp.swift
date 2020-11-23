@@ -38,12 +38,10 @@ let serviceContainer: ServiceContainer = { DefaultServiceContainer() }()
 @main
 struct SquidPrintApp: App {
     let appEnvironment = AppEnvironment()
-    let appViewModel = AppViewModel()
     
     var body: some Scene {
         WindowGroup {
-            AppView(viewModel: appViewModel)
-                .environmentObject(appEnvironment)
+            AppView(environment: appEnvironment)
                 .onAppear {
                     log.info("App started")
                 }

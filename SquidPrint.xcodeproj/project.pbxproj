@@ -9,27 +9,28 @@
 /* Begin PBXBuildFile section */
 		7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */; };
 		B10437C0256AF7D500104F64 /* ServerRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437BF256AF7D500104F64 /* ServerRootViewModel.swift */; };
-		B10437C2256AF7F000104F64 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C1256AF7F000104F64 /* AppViewModel.swift */; };
+		B10437C2256AF7F000104F64 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C1256AF7F000104F64 /* AppEnvironment.swift */; };
 		B10437C4256AF9D100104F64 /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C3256AF9D100104F64 /* ServersView.swift */; };
 		B10437C6256AF9DF00104F64 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C5256AF9DF00104F64 /* ServersViewModel.swift */; };
-		B10437C8256AFB3600104F64 /* CreateServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C7256AFB3600104F64 /* CreateServerViewModel.swift */; };
+		B10437C8256AFB3600104F64 /* ServerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */; };
 		B10437CA256AFBB500104F64 /* CreateServerInitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */; };
 		B10437CD256AFC5500104F64 /* InputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437CC256AFC5500104F64 /* InputRow.swift */; };
-		B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F81812567E13D0014290E /* AppEnvironment.swift */; };
 		B16F81962567E7160014290E /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F81952567E7160014290E /* Combine.framework */; };
 		B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = B18736012567F17300714DF3 /* SwiftKeychainWrapper */; };
-		B190F26D2569680700D7A67C /* CreateServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26C2569680700D7A67C /* CreateServerView.swift */; };
+		B190F26D2569680700D7A67C /* ServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26C2569680700D7A67C /* ServerSettingsView.swift */; };
 		B190F27025696E7A00D7A67C /* ServerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26F25696E7A00D7A67C /* ServerRootView.swift */; };
 		B190F27325696EA200D7A67C /* UnderConstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F27225696EA200D7A67C /* UnderConstructionView.swift */; };
 		B1B73F7E256802F1000AE39A /* SquidPrintLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; };
 		B1B73F7F256802F1000AE39A /* SquidPrintLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FB62568298D000AE39A /* ServiceContainer.swift */; };
-		B1B73FBC25682C3B000AE39A /* ServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */; };
+		B1B73FBC25682C3B000AE39A /* ServerSettingsView_Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FBB25682C3B000AE39A /* ServerSettingsView_Backup.swift */; };
+		B1BF6816256C278200C16BDB /* ServerSettingsViewModel_Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */; };
+		B1BF6818256C40E900C16BDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */; };
+		B1BF681D256C436000C16BDB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF681C256C436000C16BDB /* SettingsView.swift */; };
 		B1EA6A552567122B0097B262 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A542567122B0097B262 /* AppView.swift */; };
 		B1F2C72D256B0BC900E24C95 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2C72C256B0BC900E24C95 /* DashboardViewModel.swift */; };
 		B1F2C72F256B0CA500E24C95 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2C72E256B0CA500E24C95 /* DashboardView.swift */; };
 		B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */; };
-		B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600F12566FE1E0014BB4B /* ContentView.swift */; };
 		B1F600F42566FE1F0014BB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F600F32566FE1F0014BB4B /* Assets.xcassets */; };
 		B1F600F72566FE1F0014BB4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F600F62566FE1F0014BB4B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -53,26 +54,27 @@
 		901DD300CD7950C5ABE1AA29 /* Pods-SquidPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquidPrint.release.xcconfig"; path = "Target Support Files/Pods-SquidPrint/Pods-SquidPrint.release.xcconfig"; sourceTree = "<group>"; };
 		B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquidPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10437BF256AF7D500104F64 /* ServerRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRootViewModel.swift; sourceTree = "<group>"; };
-		B10437C1256AF7F000104F64 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		B10437C1256AF7F000104F64 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		B10437C3256AF9D100104F64 /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
 		B10437C5256AF9DF00104F64 /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
-		B10437C7256AFB3600104F64 /* CreateServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServerViewModel.swift; sourceTree = "<group>"; };
+		B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel.swift; sourceTree = "<group>"; };
 		B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServerInitialView.swift; sourceTree = "<group>"; };
 		B10437CC256AFC5500104F64 /* InputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputRow.swift; sourceTree = "<group>"; };
-		B16F81812567E13D0014290E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		B16F81952567E7160014290E /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
-		B190F26C2569680700D7A67C /* CreateServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServerView.swift; sourceTree = "<group>"; };
+		B190F26C2569680700D7A67C /* ServerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView.swift; sourceTree = "<group>"; };
 		B190F26F25696E7A00D7A67C /* ServerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRootView.swift; sourceTree = "<group>"; };
 		B190F27225696EA200D7A67C /* UnderConstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionView.swift; sourceTree = "<group>"; };
 		B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B73FB62568298D000AE39A /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
-		B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView.swift; sourceTree = "<group>"; };
+		B1B73FBB25682C3B000AE39A /* ServerSettingsView_Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView_Backup.swift; sourceTree = "<group>"; };
+		B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel_Backup.swift; sourceTree = "<group>"; };
+		B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		B1BF681C256C436000C16BDB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B1EA6A542567122B0097B262 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		B1F2C72C256B0BC900E24C95 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		B1F2C72E256B0CA500E24C95 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		B1F600EC2566FE1E0014BB4B /* SquidPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquidPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidPrintApp.swift; sourceTree = "<group>"; };
-		B1F600F12566FE1E0014BB4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1F600F32566FE1F0014BB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1F600F62566FE1F0014BB4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1F600F82566FE1F0014BB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				B10437BF256AF7D500104F64 /* ServerRootViewModel.swift */,
 				B1F2C72C256B0BC900E24C95 /* DashboardViewModel.swift */,
+				B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -123,7 +126,6 @@
 		B16F81802567E1140014290E /* EnvironmentObjects */ = {
 			isa = PBXGroup;
 			children = (
-				B16F81812567E13D0014290E /* AppEnvironment.swift */,
 			);
 			path = EnvironmentObjects;
 			sourceTree = "<group>";
@@ -136,22 +138,38 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		B1B73FB825682C22000AE39A /* ServerSettings */ = {
+		B1B73FB825682C22000AE39A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */,
-				B190F26C2569680700D7A67C /* CreateServerView.swift */,
-				B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */,
+				B1B73FBB25682C3B000AE39A /* ServerSettingsView_Backup.swift */,
+				B190F26C2569680700D7A67C /* ServerSettingsView.swift */,
+				B1BF681C256C436000C16BDB /* SettingsView.swift */,
 			);
-			path = ServerSettings;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B1BF6819256C431700C16BDB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */,
+				B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B1BF6823256C4C5D00C16BDB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B1EA6A4E2567120D0097B262 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B10437CB256AFC4400104F64 /* Rows */,
-				B1B73FB825682C22000AE39A /* ServerSettings */,
-				B1F600F12566FE1E0014BB4B /* ContentView.swift */,
+				B1B73FB825682C22000AE39A /* Settings */,
+				B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */,
 				B1EA6A542567122B0097B262 /* AppView.swift */,
 				B190F26F25696E7A00D7A67C /* ServerRootView.swift */,
 				B190F27225696EA200D7A67C /* UnderConstructionView.swift */,
@@ -164,10 +182,10 @@
 		B1EA6A572567125A0097B262 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B1BF6819256C431700C16BDB /* Settings */,
 				B10437BE256AF7CB00104F64 /* Server */,
-				B10437C1256AF7F000104F64 /* AppViewModel.swift */,
+				B10437C1256AF7F000104F64 /* AppEnvironment.swift */,
 				B10437C5256AF9DF00104F64 /* ServersViewModel.swift */,
-				B10437C7256AFB3600104F64 /* CreateServerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -214,6 +232,7 @@
 				B1EA6A5D256712BC0097B262 /* Content */,
 				B16F81802567E1140014290E /* EnvironmentObjects */,
 				B1B73FB525682982000AE39A /* Managers */,
+				B1BF6823256C4C5D00C16BDB /* Mocks */,
 				B1F600F52566FE1F0014BB4B /* Preview Content */,
 				B1EA6A572567125A0097B262 /* ViewModels */,
 				B1EA6A4E2567120D0097B262 /* Views */,
@@ -358,22 +377,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1BF681D256C436000C16BDB /* SettingsView.swift in Sources */,
 				B10437CA256AFBB500104F64 /* CreateServerInitialView.swift in Sources */,
 				B10437CD256AFC5500104F64 /* InputRow.swift in Sources */,
 				B10437C6256AF9DF00104F64 /* ServersViewModel.swift in Sources */,
-				B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */,
-				B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */,
+				B1BF6816256C278200C16BDB /* ServerSettingsViewModel_Backup.swift in Sources */,
 				B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */,
 				B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */,
 				B190F27025696E7A00D7A67C /* ServerRootView.swift in Sources */,
 				B1F2C72D256B0BC900E24C95 /* DashboardViewModel.swift in Sources */,
 				B10437C4256AF9D100104F64 /* ServersView.swift in Sources */,
 				B10437C0256AF7D500104F64 /* ServerRootViewModel.swift in Sources */,
-				B1B73FBC25682C3B000AE39A /* ServerSettingsView.swift in Sources */,
-				B10437C8256AFB3600104F64 /* CreateServerViewModel.swift in Sources */,
+				B1B73FBC25682C3B000AE39A /* ServerSettingsView_Backup.swift in Sources */,
+				B10437C8256AFB3600104F64 /* ServerSettingsViewModel.swift in Sources */,
 				B1F2C72F256B0CA500E24C95 /* DashboardView.swift in Sources */,
-				B190F26D2569680700D7A67C /* CreateServerView.swift in Sources */,
-				B10437C2256AF7F000104F64 /* AppViewModel.swift in Sources */,
+				B1BF6818256C40E900C16BDB /* SettingsViewModel.swift in Sources */,
+				B190F26D2569680700D7A67C /* ServerSettingsView.swift in Sources */,
+				B10437C2256AF7F000104F64 /* AppEnvironment.swift in Sources */,
 				B1EA6A552567122B0097B262 /* AppView.swift in Sources */,
 				B190F27325696EA200D7A67C /* UnderConstructionView.swift in Sources */,
 			);

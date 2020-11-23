@@ -12,9 +12,11 @@ import SquidPrintLogic
 class ServerRootViewModel: ObservableObject {
     let serverManager: ServerManager
     let dashboardViewModel: DashboardViewModel
+    let settingsViewModel: SettingsViewModel
     
     init(serverManager: ServerManager) {
         self.serverManager = serverManager
         self.dashboardViewModel = DashboardViewModel(serverManager: serverManager)
+        self.settingsViewModel = SettingsViewModel(serverManager: serverManager)
     }
 }

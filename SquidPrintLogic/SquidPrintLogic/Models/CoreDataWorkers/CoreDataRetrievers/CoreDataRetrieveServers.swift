@@ -10,14 +10,13 @@ import CoreData
 import Combine
 
 class CoreDataRetrieveServers: CoreDataAutoSaveExecutor<[ServerManager]> {
-    
     override func doExecuteAndAutoSave(inContext context: NSManagedObjectContext) throws -> [ServerManager] {
         let request: NSFetchRequest<DB_ServerSettings> = DB_ServerSettings.fetchRequest()
         
         let result = try context.fetch(request)
         
         return result.map { settings in
-            ServerManager(serverSettings: settings)
+            DefaultServerManager(serverSettings: settings)
         }
     }
     

@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct AppView: View {
-    @ObservedObject var viewModel: AppViewModel
+    @ObservedObject var environment: AppEnvironment
     
     var body: some View {
-        if viewModel.isAppLoaded {
-            if let serverViewModel = viewModel.serverViewModel {
-                ServerRootView(viewModel: serverViewModel)
+        ZStack {
+            if environment.isAppLoaded {
+                if let serverViewModel = environment.serverViewModel {
+                    ServerRootView(viewModel: serverViewModel)
+                        .environmentObject(environment)
+                } else {
+                    ServersView(viewModel: environment.serversViewModel)
+                        .environmentObject(environment)
+                }
             } else {
-                ServersView(viewModel: viewModel.serversViewModel)
+                Text("SquidPrint")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
             }
-        } else {
-            Text("SquidPrint")
-                .font(.largeTitle)
-                .fontWeight(.black)
         }
+        .animation(.default)
     }
 }
 
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = AppViewModel()
-        viewModel.isAppLoaded = true
-        return AppView(viewModel: viewModel)
+        let environment = AppEnvironment()
+        environment.isAppLoaded = true
+        return AppView(environment: environment)
     }
 }

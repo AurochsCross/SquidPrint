@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct CreateInitialServerView: View {
-    @ObservedObject var viewModel: CreateServerViewModel
+    @ObservedObject var viewModel: ServerSettingsViewModel
     
     var body: some View {
-        ServerSettingsView()
         GeometryReader { geometry in
             VStack {
                 Text("SquidPrint")
@@ -63,6 +62,6 @@ struct CreateInitialServerView: View {
 
 struct CreateInitialServerView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateServerView(viewModel: CreateServerViewModel(onSave: .init()))
+        ServerSettingsView(viewModel: ServerSettingsViewModel(onSave: .init()))
     }
 }

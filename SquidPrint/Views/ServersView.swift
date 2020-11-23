@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import SquidPrintLogic
 
 struct ServersView: View {
     @ObservedObject var viewModel: ServersViewModel
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.servers) { server in
+                ForEach(viewModel.servers, id: \.id) { server in
                     Button(action: { self.viewModel.select(server: server) }) {
                         Text("\(server.name)")
                     }
@@ -28,13 +29,20 @@ struct ServersView: View {
             })
             .listStyle(InsetGroupedListStyle())
         }
-        .sheet(isPresented: $viewModel.isCreatingServer, content: { CreateServerView(viewModel: self.viewModel.createServerViewModel) })
+        .onAppear { self.viewModel.reloadServers() }
+        .sheet(isPresented: $viewModel.isCreatingServer, content: {
+            NavigationView {
+                ServerSettingsView(viewModel: self.viewModel.createServerViewModel)
+            }
+            
+        })
     }
 }
 
 struct ServersView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = ServersViewModel(serverSelected: .init())
-        ServersView(viewModel: viewModel)
+        viewModel.servers.append(contentsOf: (0...4).map { _ in MockServerManager(status: .disconnected) })
+        return ServersView(viewModel: viewModel)
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import SquidPrintLogic
 
-class AppViewModel: ObservableObject {
+class AppEnvironment: ObservableObject {
     @Published var selectedServer: ServerManager? = nil
     @Published var isAppLoaded = false
     
@@ -27,8 +27,7 @@ class AppViewModel: ObservableObject {
         serverSelected
             .receive(on: DispatchQueue.main)
             .sink {
-                self.serverViewModel = ServerRootViewModel(serverManager: $0)
-                self.selectedServer = $0
+                self.selectServer($0)
             }
             .store(in: &cancellables)
         
@@ -39,5 +38,20 @@ class AppViewModel: ObservableObject {
             }
             .assign(to: \.isAppLoaded, on: self)
             .store(in: &cancellables)
+    }
+    
+    func selectServer(_ server: ServerManager?) {
+        guard let server = server else {
+            serverViewModel = nil
+            selectedServer = nil
+            return
+        }
+        
+        serverViewModel = ServerRootViewModel(serverManager: server)
+        selectedServer = server
+    }
+    
+    func reloadServers() {
+        serversViewModel.reloadServers()
     }
 }

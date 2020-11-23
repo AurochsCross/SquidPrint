@@ -1,18 +1,18 @@
+////
+////  ServerSettingsView.swift
+////  SquidPrint
+////
+////  Created by Petras Malinauskas on 2020-11-20.
+////
 //
-//  ServerSettingsView.swift
-//  SquidPrint
+//import SwiftUI
+//import SquidPrintLogic
 //
-//  Created by Petras Malinauskas on 2020-11-20.
-//
-
-import SwiftUI
-import SquidPrintLogic
-
-struct ServerSettingsView: View {
+//struct ServerSettingsView: View {
 //    @ObservedObject var viewModel: ServerSettingsViewModel
-    
-    var body: some View {
-        UnderConstructionView(viewName: "Settings")
+//    
+//    var body: some View {
+//        UnderConstructionView(viewName: "Settings")
 //        NavigationView {
 //            List {
 //                SettingsViewRow(title: "Server name", placeholder: "Name", input: $viewModel.name)
@@ -41,11 +41,11 @@ struct ServerSettingsView: View {
 //            })
 //            .onAppear { self.viewModel.onAppear() }
 //        }
-    }
-}
-
-struct ServerSettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        return ServerSettingsView()
-    }
-}
+//    }
+//}
+//
+//struct ServerSettingsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        return ServerSettingsView()
+//    }
+//}

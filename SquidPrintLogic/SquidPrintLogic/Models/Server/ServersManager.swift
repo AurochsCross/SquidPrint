@@ -19,7 +19,7 @@ public class ServersManager {
         loadServers()
     }
     
-    private func loadServers() {
+    public func loadServers() {
         storage.context.execute(worker: CoreDataRetrieveServers())
             .catch { error -> Just<[ServerManager]> in
                 log.error(error)
@@ -30,7 +30,7 @@ public class ServersManager {
     }
     
     public func addServer(serverSettings: ServerSettings) -> AnyPublisher<ServerManager, Error> {
-        ServerManager.create(serverSettings, inContext: storage.context)
+        DefaultServerManager.create(serverSettings, inContext: storage.context)
             .map { server in
                 self.servers.value = self.servers.value + [server]
                 return server

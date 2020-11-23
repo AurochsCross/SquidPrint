@@ -1,61 +1,24 @@
 import UIKit
+import Combine
 
-var str = "Hello, playground"
+var cancellables = Set<AnyCancellable>()
 
+protocol Foo {
+    var name: AnyPublisher<String, Error> { get }
+}
 
-extension Error {
-    var localizedDescription: String {
-        
-        if let error = self as? CustomError { return error.localizedDescription }
-        if let error = self as? OtherError { return error.localizedDescription }
-        
-        return localizedDescription
+class Bar: Foo {
+    var name: AnyPublisher<String, Error> { Just<String>("Bar").setFailureType(to: Error.self).eraseToAnyPublisher() }
+}
+
+Just<Void>(())
+    .flatMap { _ -> AnyPublisher<Foo, Error> in
+        return Just<Foo>(Bar()).setFailureType(to: Error.self).eraseToAnyPublisher()
     }
-}
-
-enum CustomError: Error {
-    case foo
-    case bar
-    
-    var localizedDescription: String {
-        switch self {
-        case .foo: return "Foo"
-        case .bar: return "Bar"
-        }
+    .flatMap { foo in
+        return foo.name
     }
-}
-
-enum OtherError: Error {
-    case foo
-    case bar
-    
-    var localizedDescription: String {
-        switch self {
-        case .foo: return "Other Foo"
-        case .bar: return "Other Bar"
-        }
-    }
-}
-
-enum UnknownError: Error {
-    case foo
-    case bar
-    
-    var localizedDescription: String {
-        switch self {
-        case .foo: return "unkwnown Foo"
-        case .bar: return "unknwon Bar"
-        }
-    }
-}
-
-
-
-func logError(_ error: Error) {
-    print(error.localizedDescription)
-}
-
-logError(CustomError.foo)
-logError(OtherError.foo)
-logError(UnknownError.foo)
-print("Finished")
+    .sink(receiveCompletion: { _ in } , receiveValue: { name in
+        print(name)
+    })
+    .store(in: &cancellables)

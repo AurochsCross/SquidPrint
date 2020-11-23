@@ -50,7 +50,7 @@ public struct ServerSettings: Identifiable {
 }
 
 extension ServerSettings {
-    var fullAddress: String {
+    public var fullAddress: String {
         "\(address)\(port != nil ? ":\(port!)" : "")"
     }
     

@@ -14,7 +14,7 @@ class ServersViewModel: ObservableObject {
     @Published var isCreatingServer = false
     
     private let serversManager: ServersManager
-    private(set) var createServerViewModel: CreateServerViewModel!
+    private(set) var createServerViewModel: ServerSettingsViewModel!
     
     private let serverSelectedSubject: PassthroughSubject<ServerManager, Never>
     
@@ -45,7 +45,11 @@ class ServersViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
-        createServerViewModel = CreateServerViewModel(onSave: onSave)
+        createServerViewModel = ServerSettingsViewModel(onSave: onSave)
         isCreatingServer = true
+    }
+    
+    func reloadServers() {
+        serversManager.loadServers()
     }
 }

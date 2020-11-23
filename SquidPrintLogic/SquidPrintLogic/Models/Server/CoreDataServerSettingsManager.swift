@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import CoreData
 
-public class ServerSettingsManager {
+internal class CoreDataServerSettingsManager: ServerSettingsManager {
     let serverSettingsManaged: CurrentValueSubject<DB_ServerSettings, Error>
     private let context: NSManagedObjectContext
     

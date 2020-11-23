@@ -14,11 +14,10 @@ struct ServerRootView: View {
             DashboardView()
                 .tabItem {
                     Image(systemName: "house")
-                    Text("Home")
+                    Text("Dashboard")
                 }
-            ServerSettingsView()
+            SettingsView(viewModel: viewModel.settingsViewModel)
                 .tabItem {
-                    
                         Image(systemName: "gear")
                         Text("Settings")
                 }
