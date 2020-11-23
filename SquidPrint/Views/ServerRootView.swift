@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct RootView: View {
-    @ObservedObject var viewModel: RootViewModel
+struct ServerRootView: View {
+    @ObservedObject var viewModel: ServerRootViewModel
     var body: some View {
         TabView {
-            UnderConstructionView(viewName: "App")
+            DashboardView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            ServerSettingsView(viewModel: self.viewModel.serverSettingsViewModel)
+            ServerSettingsView()
                 .tabItem {
                     
                         Image(systemName: "gear")
@@ -26,8 +26,8 @@ struct RootView: View {
     }
 }
 
-struct RootView_Previews: PreviewProvider {
+struct ServerRootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView(viewModel: RootViewModel())
+        UnderConstructionView(viewName: "Root")
     }
 }

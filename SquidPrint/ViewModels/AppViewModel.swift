@@ -2,63 +2,42 @@
 //  AppViewModel.swift
 //  SquidPrint
 //
-//  Created by Petras Malinauskas on 2020-11-19.
+//  Created by Petras Malinauskas on 2020-11-22.
 //
 
 import Foundation
-import SquidPrintLogic
 import Combine
+import SquidPrintLogic
 
 class AppViewModel: ObservableObject {
-    let coreDataStorage: CoreDataStorage
-    let serverManager: ServerManager
+    @Published var selectedServer: ServerManager? = nil
+    @Published var isAppLoaded = false
     
-    let rootViewModel: RootViewModel
-    let serverSettingsViewModel: ServerSettingsViewModel
+    private(set) var serverViewModel: ServerRootViewModel? = nil
     
-    @Published var appLoaded = false
-    @Published var isServerSetup = false
+    let serversViewModel: ServersViewModel
     
     private var cancellables = Set<AnyCancellable>()
     
     init() {
-        coreDataStorage = serviceContainer.coreDataStorage
-        serverManager = serviceContainer.serverManager
-        rootViewModel = RootViewModel()
-        serverSettingsViewModel = ServerSettingsViewModel(serverManager: serverManager)
+        let serverSelected = PassthroughSubject<ServerManager, Never>()
         
-//        coreDataStorage.isStorageLoaded
-//            .dropFirst()
-//            .flatMap { loaded -> AnyPublisher<Bool, Error> in
-//                if loaded {
-//                    return self.serverManager.isSetupSubject.eraseToAnyPublisher()
-//                } else {
-//                    return Fail<Bool, Error>(error: GenericError.unknown).eraseToAnyPublisher()
-//                }
-//            }
-//            .catch { error -> Just<Bool> in
-//                return Just(false)
-//            }
-//            .receive(on: DispatchQueue.main)
-//            .assign(to: \.isServerSetup, on: self)
-//            .store(in: &cancellables)
+        serversViewModel = ServersViewModel(serverSelected: serverSelected)
         
-        serverManager.isSetupSubject
-//            .dropFirst()
+        serverSelected
+            .receive(on: DispatchQueue.main)
+            .sink {
+                self.serverViewModel = ServerRootViewModel(serverManager: $0)
+                self.selectedServer = $0
+            }
+            .store(in: &cancellables)
+        
+        serviceContainer.coreDataStorage.isStorageLoaded
             .catch { error -> Just<Bool> in
+                log.error(error)
                 return Just(false)
             }
-            .receive(on: DispatchQueue.main)
-            .assign(to: \.isServerSetup, on: self)
+            .assign(to: \.isAppLoaded, on: self)
             .store(in: &cancellables)
-        
-        $isServerSetup
-            .receive(on: DispatchQueue.main)
-            .sink { _ in
-                self.appLoaded = true
-            }
-            .store(in: &cancellables)
-        
-        
     }
 }

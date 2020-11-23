@@ -21,27 +21,40 @@ public struct ServerSettings: Identifiable {
     public init() { }
     
     public init(name: String? = nil, address: String, port: String? = nil, apiKey: String) {
-        self.name = name
+        self.name = name?.isEmpty ?? true ? nil : name
         self.address = address
-        self.port = port
+        self.port = port?.isEmpty ?? true ? nil : port
         self.apiKey = apiKey
     }
     
     init(managed: DB_ServerSettings) {
-        name = "No name"
+        name = managed.name
         address = managed.address ?? ""
         port = managed.port
         apiKey = managed.apiKey ?? ""
     }
     
+    func updateManaged(_ managed: DB_ServerSettings) -> DB_ServerSettings {
+        managed.name = name
+        managed.apiKey = apiKey
+        managed.address = address
+        managed.port = port
+        
+        return managed
+    }
+    
     func updateManaged(_ managed: DB_ServerSettings?, context: NSManagedObjectContext) -> DB_ServerSettings {
         let existingManaged = managed ?? DB_ServerSettings(context: context)
-        
-        existingManaged.name = name
-        existingManaged.apiKey = apiKey
-        existingManaged.address = address
-        existingManaged.port = port
-        
-        return existingManaged
+        return updateManaged(existingManaged)
+    }
+}
+
+extension ServerSettings {
+    var fullAddress: String {
+        "\(address)\(port != nil ? ":\(port!)" : "")"
+    }
+    
+    public var displayName: String {
+        name ?? fullAddress
     }
 }

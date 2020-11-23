@@ -9,23 +9,26 @@ import SwiftUI
 
 struct AppView: View {
     @ObservedObject var viewModel: AppViewModel
-    @State var showSettings = false
     
     var body: some View {
-        if viewModel.appLoaded {
-            if viewModel.isServerSetup {
-                RootView(viewModel: viewModel.rootViewModel)
+        if viewModel.isAppLoaded {
+            if let serverViewModel = viewModel.serverViewModel {
+                ServerRootView(viewModel: serverViewModel)
             } else {
-                InitialServerSettingsView(viewModel: viewModel.serverSettingsViewModel)
+                ServersView(viewModel: viewModel.serversViewModel)
             }
         } else {
-            EmptyView()
+            Text("SquidPrint")
+                .font(.largeTitle)
+                .fontWeight(.black)
         }
     }
 }
 
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView(viewModel: AppViewModel(), showSettings: false)
+        let viewModel = AppViewModel()
+        viewModel.isAppLoaded = true
+        return AppView(viewModel: viewModel)
     }
 }

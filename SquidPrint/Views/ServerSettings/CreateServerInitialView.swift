@@ -1,16 +1,17 @@
 //
-//  InitialServerSettingsView.swift
+//  CreateServerInitialView.swift
 //  SquidPrint
 //
-//  Created by Petras Malinauskas on 2020-11-21.
+//  Created by Petras Malinauskas on 2020-11-22.
 //
 
 import SwiftUI
 
-struct InitialServerSettingsView: View {
-    @ObservedObject var viewModel: ServerSettingsViewModel
+struct CreateInitialServerView: View {
+    @ObservedObject var viewModel: CreateServerViewModel
     
     var body: some View {
+        ServerSettingsView()
         GeometryReader { geometry in
             VStack {
                 Text("SquidPrint")
@@ -19,11 +20,11 @@ struct InitialServerSettingsView: View {
                     .fontWeight(.black)
                     .frame(maxWidth: .infinity)
                     .frame(height: geometry.size.height / 3.0)
-                
+
                 VStack {
                     Text("Server Setup")
                         .font(.title)
-                    
+
                     VStack {
                         TextField("Name", text: $viewModel.name)
                         Divider()
@@ -40,7 +41,7 @@ struct InitialServerSettingsView: View {
                     .padding()
                     .background(Color(.sRGB, white: 0.5, opacity: 0.1))
                     .cornerRadius(6)
-                    
+
                     HStack {
                         Spacer()
                         Button(action: self.viewModel.onSave) {
@@ -50,18 +51,18 @@ struct InitialServerSettingsView: View {
                                 .background(Color("PrimaryColor"))
                         }
                         .cornerRadius(6)
-                        
+
                     }
                 }
                 .frame(maxWidth: 300)
             }
-            .onAppear { self.viewModel.onAppear() }
         }
+        
     }
 }
 
-struct InitialServerSettingsView_Previews: PreviewProvider {
+struct CreateInitialServerView_Previews: PreviewProvider {
     static var previews: some View {
-        InitialServerSettingsView(viewModel: ServerSettingsViewModel(serverManager: serviceContainer.serverManager))
+        CreateServerView(viewModel: CreateServerViewModel(onSave: .init()))
     }
 }

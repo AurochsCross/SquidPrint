@@ -30,21 +30,13 @@ public class CoreDataStorage {
             }
         }
     }
+    
     func execute<T>(worker: CoreDataExecutor<T>) -> AnyPublisher<T, Error> {
         worker.execute(inContext: persistentContainer.viewContext)
     }
     
     func execute(worker: CoreDataExecutor<Bool>) -> AnyPublisher<Bool, Error> {
         worker.execute(inContext: persistentContainer.viewContext)
-    }
-    
-    func save() -> AnyPublisher<Void, Error> {
-        do {
-            try self.persistentContainer.viewContext.save()
-            return Just<Void>(()).setFailureType(to: Error.self).eraseToAnyPublisher()
-        } catch {
-            return Fail<Void, Error>(error: error).eraseToAnyPublisher()
-        }
     }
     
     func discard() {
