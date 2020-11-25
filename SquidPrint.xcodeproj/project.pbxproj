@@ -8,24 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */; };
-		B131056625698BBF006F2C54 /* DebugViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131056525698BBF006F2C54 /* DebugViewModel.swift */; };
-		B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F81812567E13D0014290E /* AppEnvironment.swift */; };
+		B10437C0256AF7D500104F64 /* ServerRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437BF256AF7D500104F64 /* ServerRootViewModel.swift */; };
+		B10437C2256AF7F000104F64 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C1256AF7F000104F64 /* AppEnvironment.swift */; };
+		B10437C4256AF9D100104F64 /* ServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C3256AF9D100104F64 /* ServersView.swift */; };
+		B10437C6256AF9DF00104F64 /* ServersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C5256AF9DF00104F64 /* ServersViewModel.swift */; };
+		B10437C8256AFB3600104F64 /* ServerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */; };
+		B10437CA256AFBB500104F64 /* CreateServerInitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */; };
+		B10437CD256AFC5500104F64 /* InputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437CC256AFC5500104F64 /* InputRow.swift */; };
 		B16F81962567E7160014290E /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F81952567E7160014290E /* Combine.framework */; };
 		B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = B18736012567F17300714DF3 /* SwiftKeychainWrapper */; };
-		B190F26D2569680700D7A67C /* InitialServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26C2569680700D7A67C /* InitialServerSettingsView.swift */; };
-		B190F27025696E7A00D7A67C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26F25696E7A00D7A67C /* RootView.swift */; };
+		B190F26D2569680700D7A67C /* ServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26C2569680700D7A67C /* ServerSettingsView.swift */; };
+		B190F27025696E7A00D7A67C /* ServerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26F25696E7A00D7A67C /* ServerRootView.swift */; };
 		B190F27325696EA200D7A67C /* UnderConstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F27225696EA200D7A67C /* UnderConstructionView.swift */; };
-		B190F27625696F8E00D7A67C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F27525696F8E00D7A67C /* RootViewModel.swift */; };
 		B1B73F7E256802F1000AE39A /* SquidPrintLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; };
 		B1B73F7F256802F1000AE39A /* SquidPrintLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1B73FA125681E4F000AE39A /* ServerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FA025681E4F000AE39A /* ServerSettingsViewModel.swift */; };
 		B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FB62568298D000AE39A /* ServiceContainer.swift */; };
-		B1B73FBC25682C3B000AE39A /* ServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */; };
-		B1B73FBF2569531F000AE39A /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = B1B73FBE2569531F000AE39A /* XCGLogger */; };
+		B1B73FBC25682C3B000AE39A /* ServerSettingsView_Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FBB25682C3B000AE39A /* ServerSettingsView_Backup.swift */; };
+		B1BF6816256C278200C16BDB /* ServerSettingsViewModel_Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */; };
+		B1BF6818256C40E900C16BDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */; };
+		B1BF681D256C436000C16BDB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF681C256C436000C16BDB /* SettingsView.swift */; };
+		B1E1DFA3256D9FA60040689E /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFA2256D9FA60040689E /* Temp.swift */; };
+		B1E1DFA6256DA6FE0040689E /* TemperatureWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFA5256DA6FE0040689E /* TemperatureWidget.swift */; };
+		B1E1DFA8256DA7200040689E /* HotEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFA7256DA7200040689E /* HotEndAnimation.swift */; };
+		B1E1DFAB256E79BE0040689E /* ProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFAA256E79BE0040689E /* ProgressWidget.swift */; };
+		B1E1DFB0256E85990040689E /* TemperatureGraphWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFAF256E85990040689E /* TemperatureGraphWidget.swift */; };
+		B1E1DFB5256E89AC0040689E /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFB4256E89AC0040689E /* TemperatureView.swift */; };
+		B1E1DFB8256E8B860040689E /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = B1E1DFB7256E8B860040689E /* Charts */; };
+		B1E1DFBB256E90660040689E /* WidgetPreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFBA256E90650040689E /* WidgetPreviewer.swift */; };
+		B1E1DFBD256E92460040689E /* TemperatureControllWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFBC256E92460040689E /* TemperatureControllWidget.swift */; };
+		B1E1DFBF256E992A0040689E /* WidgetHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFBE256E992A0040689E /* WidgetHolder.swift */; };
+		B1E1DFC2256E99D90040689E /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFC1256E99D90040689E /* Color+Custom.swift */; };
 		B1EA6A552567122B0097B262 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A542567122B0097B262 /* AppView.swift */; };
-		B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6A58256712640097B262 /* AppViewModel.swift */; };
+		B1F2C72D256B0BC900E24C95 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2C72C256B0BC900E24C95 /* DashboardViewModel.swift */; };
+		B1F2C72F256B0CA500E24C95 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2C72E256B0CA500E24C95 /* DashboardView.swift */; };
 		B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */; };
-		B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F600F12566FE1E0014BB4B /* ContentView.swift */; };
 		B1F600F42566FE1F0014BB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F600F32566FE1F0014BB4B /* Assets.xcassets */; };
 		B1F600F72566FE1F0014BB4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F600F62566FE1F0014BB4B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -48,22 +64,38 @@
 		46F9F2A9B0C0904E789FF5FD /* Pods-SquidPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquidPrint.debug.xcconfig"; path = "Target Support Files/Pods-SquidPrint/Pods-SquidPrint.debug.xcconfig"; sourceTree = "<group>"; };
 		901DD300CD7950C5ABE1AA29 /* Pods-SquidPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquidPrint.release.xcconfig"; path = "Target Support Files/Pods-SquidPrint/Pods-SquidPrint.release.xcconfig"; sourceTree = "<group>"; };
 		B07BB84D3A9EF0BCEA9C80B0 /* Pods_SquidPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquidPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B131056525698BBF006F2C54 /* DebugViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewModel.swift; sourceTree = "<group>"; };
-		B16F81812567E13D0014290E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		B10437BF256AF7D500104F64 /* ServerRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRootViewModel.swift; sourceTree = "<group>"; };
+		B10437C1256AF7F000104F64 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		B10437C3256AF9D100104F64 /* ServersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersView.swift; sourceTree = "<group>"; };
+		B10437C5256AF9DF00104F64 /* ServersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewModel.swift; sourceTree = "<group>"; };
+		B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel.swift; sourceTree = "<group>"; };
+		B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServerInitialView.swift; sourceTree = "<group>"; };
+		B10437CC256AFC5500104F64 /* InputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputRow.swift; sourceTree = "<group>"; };
 		B16F81952567E7160014290E /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
-		B190F26C2569680700D7A67C /* InitialServerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialServerSettingsView.swift; sourceTree = "<group>"; };
-		B190F26F25696E7A00D7A67C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B190F26C2569680700D7A67C /* ServerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView.swift; sourceTree = "<group>"; };
+		B190F26F25696E7A00D7A67C /* ServerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRootView.swift; sourceTree = "<group>"; };
 		B190F27225696EA200D7A67C /* UnderConstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionView.swift; sourceTree = "<group>"; };
-		B190F27525696F8E00D7A67C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1B73FA025681E4F000AE39A /* ServerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel.swift; sourceTree = "<group>"; };
 		B1B73FB62568298D000AE39A /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
-		B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView.swift; sourceTree = "<group>"; };
+		B1B73FBB25682C3B000AE39A /* ServerSettingsView_Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView_Backup.swift; sourceTree = "<group>"; };
+		B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel_Backup.swift; sourceTree = "<group>"; };
+		B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		B1BF681C256C436000C16BDB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B1E1DFA2256D9FA60040689E /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		B1E1DFA5256DA6FE0040689E /* TemperatureWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureWidget.swift; sourceTree = "<group>"; };
+		B1E1DFA7256DA7200040689E /* HotEndAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotEndAnimation.swift; sourceTree = "<group>"; };
+		B1E1DFAA256E79BE0040689E /* ProgressWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressWidget.swift; sourceTree = "<group>"; };
+		B1E1DFAF256E85990040689E /* TemperatureGraphWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureGraphWidget.swift; sourceTree = "<group>"; };
+		B1E1DFB4256E89AC0040689E /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		B1E1DFBA256E90650040689E /* WidgetPreviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetPreviewer.swift; sourceTree = "<group>"; };
+		B1E1DFBC256E92460040689E /* TemperatureControllWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureControllWidget.swift; sourceTree = "<group>"; };
+		B1E1DFBE256E992A0040689E /* WidgetHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHolder.swift; sourceTree = "<group>"; };
+		B1E1DFC1256E99D90040689E /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		B1EA6A542567122B0097B262 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
-		B1EA6A58256712640097B262 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		B1F2C72C256B0BC900E24C95 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		B1F2C72E256B0CA500E24C95 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		B1F600EC2566FE1E0014BB4B /* SquidPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquidPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F600EF2566FE1E0014BB4B /* SquidPrintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidPrintApp.swift; sourceTree = "<group>"; };
-		B1F600F12566FE1E0014BB4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1F600F32566FE1F0014BB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1F600F62566FE1F0014BB4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1F600F82566FE1F0014BB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,10 +107,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B73F7E256802F1000AE39A /* SquidPrintLogic.framework in Frameworks */,
+				B1E1DFB8256E8B860040689E /* Charts in Frameworks */,
 				B16F81962567E7160014290E /* Combine.framework in Frameworks */,
 				B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */,
 				7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */,
-				B1B73FBF2569531F000AE39A /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,28 +127,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B131056425698BB0006F2C54 /* Debug */ = {
+		B10437BE256AF7CB00104F64 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				B131056525698BBF006F2C54 /* DebugViewModel.swift */,
+				B10437BF256AF7D500104F64 /* ServerRootViewModel.swift */,
+				B1F2C72C256B0BC900E24C95 /* DashboardViewModel.swift */,
+				B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */,
 			);
-			path = Debug;
+			path = Server;
+			sourceTree = "<group>";
+		};
+		B10437CB256AFC4400104F64 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				B10437CC256AFC5500104F64 /* InputRow.swift */,
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 		B16F81802567E1140014290E /* EnvironmentObjects */ = {
 			isa = PBXGroup;
 			children = (
-				B16F81812567E13D0014290E /* AppEnvironment.swift */,
 			);
 			path = EnvironmentObjects;
-			sourceTree = "<group>";
-		};
-		B18736042567F2EA00714DF3 /* ServerSettings */ = {
-			isa = PBXGroup;
-			children = (
-				B1B73FA025681E4F000AE39A /* ServerSettingsViewModel.swift */,
-			);
-			path = ServerSettings;
 			sourceTree = "<group>";
 		};
 		B1B73FB525682982000AE39A /* Managers */ = {
@@ -127,23 +160,92 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		B1B73FB825682C22000AE39A /* ServerSettings */ = {
+		B1B73FB825682C22000AE39A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				B1B73FBB25682C3B000AE39A /* ServerSettingsView.swift */,
-				B190F26C2569680700D7A67C /* InitialServerSettingsView.swift */,
+				B1B73FBB25682C3B000AE39A /* ServerSettingsView_Backup.swift */,
+				B190F26C2569680700D7A67C /* ServerSettingsView.swift */,
+				B1BF681C256C436000C16BDB /* SettingsView.swift */,
 			);
-			path = ServerSettings;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B1BF6819256C431700C16BDB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */,
+				B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B1BF6823256C4C5D00C16BDB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B1E1DFA4256DA6F10040689E /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				B1E1DFC4256EA95E0040689E /* MovementControlls */,
+				B1E1DFC3256EA9480040689E /* Temperature */,
+				B1E1DFB9256E90590040689E /* Helper */,
+				B1E1DFA7256DA7200040689E /* HotEndAnimation.swift */,
+				B1E1DFAA256E79BE0040689E /* ProgressWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		B1E1DFB9256E90590040689E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B1E1DFBA256E90650040689E /* WidgetPreviewer.swift */,
+				B1E1DFBE256E992A0040689E /* WidgetHolder.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B1E1DFC0256E99C90040689E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1E1DFC1256E99D90040689E /* Color+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B1E1DFC3256EA9480040689E /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				B1E1DFA5256DA6FE0040689E /* TemperatureWidget.swift */,
+				B1E1DFAF256E85990040689E /* TemperatureGraphWidget.swift */,
+				B1E1DFBC256E92460040689E /* TemperatureControllWidget.swift */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		B1E1DFC4256EA95E0040689E /* MovementControlls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovementControlls;
 			sourceTree = "<group>";
 		};
 		B1EA6A4E2567120D0097B262 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1B73FB825682C22000AE39A /* ServerSettings */,
-				B1F600F12566FE1E0014BB4B /* ContentView.swift */,
+				B1E1DFA4256DA6F10040689E /* Widgets */,
+				B10437CB256AFC4400104F64 /* Rows */,
+				B1B73FB825682C22000AE39A /* Settings */,
+				B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */,
 				B1EA6A542567122B0097B262 /* AppView.swift */,
-				B190F26F25696E7A00D7A67C /* RootView.swift */,
+				B190F26F25696E7A00D7A67C /* ServerRootView.swift */,
 				B190F27225696EA200D7A67C /* UnderConstructionView.swift */,
+				B10437C3256AF9D100104F64 /* ServersView.swift */,
+				B1F2C72E256B0CA500E24C95 /* DashboardView.swift */,
+				B1E1DFA2256D9FA60040689E /* Temp.swift */,
+				B1E1DFB4256E89AC0040689E /* TemperatureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,10 +253,10 @@
 		B1EA6A572567125A0097B262 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B131056425698BB0006F2C54 /* Debug */,
-				B18736042567F2EA00714DF3 /* ServerSettings */,
-				B1EA6A58256712640097B262 /* AppViewModel.swift */,
-				B190F27525696F8E00D7A67C /* RootViewModel.swift */,
+				B1BF6819256C431700C16BDB /* Settings */,
+				B10437BE256AF7CB00104F64 /* Server */,
+				B10437C1256AF7F000104F64 /* AppEnvironment.swift */,
+				B10437C5256AF9DF00104F64 /* ServersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,10 +299,12 @@
 		B1F600EE2566FE1E0014BB4B /* SquidPrint */ = {
 			isa = PBXGroup;
 			children = (
-				B1B73FB525682982000AE39A /* Managers */,
+				B1E1DFC0256E99C90040689E /* Extensions */,
 				B1EA6A5C256712AB0097B262 /* Config */,
 				B1EA6A5D256712BC0097B262 /* Content */,
 				B16F81802567E1140014290E /* EnvironmentObjects */,
+				B1B73FB525682982000AE39A /* Managers */,
+				B1BF6823256C4C5D00C16BDB /* Mocks */,
 				B1F600F52566FE1F0014BB4B /* Preview Content */,
 				B1EA6A572567125A0097B262 /* ViewModels */,
 				B1EA6A4E2567120D0097B262 /* Views */,
@@ -246,7 +350,7 @@
 			name = SquidPrint;
 			packageProductDependencies = (
 				B18736012567F17300714DF3 /* SwiftKeychainWrapper */,
-				B1B73FBE2569531F000AE39A /* XCGLogger */,
+				B1E1DFB7256E8B860040689E /* Charts */,
 			);
 			productName = SquidPrint;
 			productReference = B1F600EC2566FE1E0014BB4B /* SquidPrint.app */;
@@ -277,7 +381,7 @@
 			mainGroup = B1F600E32566FE1E0014BB4B;
 			packageReferences = (
 				B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
-				B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */,
+				B1E1DFB6256E8B860040689E /* XCRemoteSwiftPackageReference "swiftui-charts" */,
 			);
 			productRefGroup = B1F600ED2566FE1E0014BB4B /* Products */;
 			projectDirPath = "";
@@ -347,19 +451,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B16F81822567E13D0014290E /* AppEnvironment.swift in Sources */,
-				B1F600F22566FE1E0014BB4B /* ContentView.swift in Sources */,
+				B1E1DFC2256E99D90040689E /* Color+Custom.swift in Sources */,
+				B1E1DFBF256E992A0040689E /* WidgetHolder.swift in Sources */,
+				B1BF681D256C436000C16BDB /* SettingsView.swift in Sources */,
+				B10437CA256AFBB500104F64 /* CreateServerInitialView.swift in Sources */,
+				B1E1DFAB256E79BE0040689E /* ProgressWidget.swift in Sources */,
+				B10437CD256AFC5500104F64 /* InputRow.swift in Sources */,
+				B10437C6256AF9DF00104F64 /* ServersViewModel.swift in Sources */,
+				B1E1DFA8256DA7200040689E /* HotEndAnimation.swift in Sources */,
+				B1BF6816256C278200C16BDB /* ServerSettingsViewModel_Backup.swift in Sources */,
 				B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */,
+				B1E1DFBB256E90660040689E /* WidgetPreviewer.swift in Sources */,
 				B1F600F02566FE1E0014BB4B /* SquidPrintApp.swift in Sources */,
-				B131056625698BBF006F2C54 /* DebugViewModel.swift in Sources */,
-				B190F27025696E7A00D7A67C /* RootView.swift in Sources */,
-				B1EA6A59256712640097B262 /* AppViewModel.swift in Sources */,
-				B1B73FA125681E4F000AE39A /* ServerSettingsViewModel.swift in Sources */,
-				B1B73FBC25682C3B000AE39A /* ServerSettingsView.swift in Sources */,
-				B190F26D2569680700D7A67C /* InitialServerSettingsView.swift in Sources */,
+				B1E1DFA3256D9FA60040689E /* Temp.swift in Sources */,
+				B190F27025696E7A00D7A67C /* ServerRootView.swift in Sources */,
+				B1F2C72D256B0BC900E24C95 /* DashboardViewModel.swift in Sources */,
+				B1E1DFA6256DA6FE0040689E /* TemperatureWidget.swift in Sources */,
+				B10437C4256AF9D100104F64 /* ServersView.swift in Sources */,
+				B10437C0256AF7D500104F64 /* ServerRootViewModel.swift in Sources */,
+				B1B73FBC25682C3B000AE39A /* ServerSettingsView_Backup.swift in Sources */,
+				B10437C8256AFB3600104F64 /* ServerSettingsViewModel.swift in Sources */,
+				B1F2C72F256B0CA500E24C95 /* DashboardView.swift in Sources */,
+				B1E1DFB0256E85990040689E /* TemperatureGraphWidget.swift in Sources */,
+				B1BF6818256C40E900C16BDB /* SettingsViewModel.swift in Sources */,
+				B190F26D2569680700D7A67C /* ServerSettingsView.swift in Sources */,
+				B10437C2256AF7F000104F64 /* AppEnvironment.swift in Sources */,
+				B1E1DFB5256E89AC0040689E /* TemperatureView.swift in Sources */,
 				B1EA6A552567122B0097B262 /* AppView.swift in Sources */,
-				B190F27625696F8E00D7A67C /* RootViewModel.swift in Sources */,
 				B190F27325696EA200D7A67C /* UnderConstructionView.swift in Sources */,
+				B1E1DFBD256E92460040689E /* TemperatureControllWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +606,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46F9F2A9B0C0904E789FF5FD /* Pods-SquidPrint.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -511,7 +631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 901DD300CD7950C5ABE1AA29 /* Pods-SquidPrint.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -564,12 +684,12 @@
 				minimumVersion = 4.0.1;
 			};
 		};
-		B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+		B1E1DFB6256E8B860040689E /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger.git";
+			repositoryURL = "https://github.com/spacenation/swiftui-charts";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.1;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -580,10 +700,10 @@
 			package = B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
 		};
-		B1B73FBE2569531F000AE39A /* XCGLogger */ = {
+		B1E1DFB7256E8B860040689E /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B1B73FBD2569531F000AE39A /* XCRemoteSwiftPackageReference "XCGLogger" */;
-			productName = XCGLogger;
+			package = B1E1DFB6256E8B860040689E /* XCRemoteSwiftPackageReference "swiftui-charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

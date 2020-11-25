@@ -16,15 +16,15 @@ open class AuthenticationAPI {
      
      - parameter loginRequest: (body)  
      - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - returns: AnyPublisher<Void, Error>
+     - returns: AnyPublisher<UserRecord, Error>
      */
     @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    open class func loginPost(loginRequest: LoginRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<Void, Error> {
-        return Future<Void, Error>.init { promisse in
+    open class func loginPost(loginRequest: LoginRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<UserRecord, Error> {
+        return Future<UserRecord, Error>.init { promisse in
             loginPostWithRequestBuilder(loginRequest: loginRequest).execute(apiResponseQueue) { result -> Void in
                 switch result {
-                case .success:
-                    promisse(.success(()))
+                case let .success(response):
+                    promisse(.success(response.body!))
                 case let .failure(error):
                     promisse(.failure(error))
                 }
@@ -39,16 +39,16 @@ open class AuthenticationAPI {
        - type: apiKey X-Api-Key 
        - name: ApiKeyAuth
      - parameter loginRequest: (body)  
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<UserRecord> 
      */
-    open class func loginPostWithRequestBuilder(loginRequest: LoginRequest) -> RequestBuilder<Void> {
+    open class func loginPostWithRequestBuilder(loginRequest: LoginRequest) -> RequestBuilder<UserRecord> {
         let path = "/login"
         let URLString = OpenAPIClientAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: loginRequest)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = OpenAPIClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+        let requestBuilder: RequestBuilder<UserRecord>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

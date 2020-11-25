@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct AppView: View {
-    @ObservedObject var viewModel: AppViewModel
-    @State var showSettings = false
+    @ObservedObject var environment: AppEnvironment
     
     var body: some View {
-        if viewModel.appLoaded {
-            if viewModel.isServerSetup {
-                RootView(viewModel: viewModel.rootViewModel)
+        ZStack {
+            if environment.isAppLoaded {
+                if let serverViewModel = environment.serverViewModel {
+                    ServerRootView(viewModel: serverViewModel)
+                        .environmentObject(environment)
+                } else {
+                    ServersView(viewModel: environment.serversViewModel)
+                        .environmentObject(environment)
+                }
             } else {
-                InitialServerSettingsView(viewModel: viewModel.serverSettingsViewModel)
+                Text("SquidPrint")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
             }
-        } else {
-            EmptyView()
         }
+        .animation(.default)
     }
 }
 
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView(viewModel: AppViewModel(), showSettings: false)
+        let environment = AppEnvironment()
+        environment.isAppLoaded = true
+        return AppView(environment: environment)
     }
 }

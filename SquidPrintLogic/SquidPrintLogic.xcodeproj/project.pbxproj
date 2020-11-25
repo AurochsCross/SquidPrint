@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10437A4256AE4DA00104F64 /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = B10437A3256AE4DA00104F64 /* XCGLogger */; };
+		B10437A7256AE52300104F64 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437A6256AE52300104F64 /* Logger.swift */; };
+		B10437AB256AE5EF00104F64 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437AA256AE5EF00104F64 /* ErrorHandler.swift */; };
+		B10437AF256AE99D00104F64 /* Log+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437AE256AE99D00104F64 /* Log+Completion.swift */; };
+		B10437B3256AED0000104F64 /* ServersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437B2256AED0000104F64 /* ServersManager.swift */; };
+		B10437B7256AEE1000104F64 /* CoreDataRetrieveServers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437B6256AEE1000104F64 /* CoreDataRetrieveServers.swift */; };
+		B10437BB256AEEE000104F64 /* Context+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437BA256AEEE000104F64 /* Context+Utilities.swift */; };
+		B11F3AE1256AE19600618DFD /* CoreDataServerSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11F3AE0256AE19600618DFD /* CoreDataServerSettingsManager.swift */; };
+		B11F3AE5256AE2DA00618DFD /* ServerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11F3AE4256AE2DA00618DFD /* ServerStatus.swift */; };
+		B1327F65256CE25900286CA4 /* Api+ServerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */; };
+		B1327F68256CE3D100286CA4 /* ServerCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */; };
 		B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F267256961C900D7A67C /* PublisherUtilities.swift */; };
 		B1B73F662568025B000AE39A /* SquidPrintLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B73F642568025B000AE39A /* SquidPrintLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F7125680291000AE39A /* CoreDataRetriever.swift */; };
@@ -15,7 +26,7 @@
 		B1B73F852568041D000AE39A /* CoreDataExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F842568041D000AE39A /* CoreDataExecutor.swift */; };
 		B1B73F8925680447000AE39A /* CoreDataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F8825680447000AE39A /* CoreDataWriter.swift */; };
 		B1B73F8E25680472000AE39A /* ApiConfigurationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F8D25680472000AE39A /* ApiConfigurationUtility.swift */; };
-		B1B73F9125680A67000AE39A /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F9025680A67000AE39A /* ServerManager.swift */; };
+		B1B73F9125680A67000AE39A /* DefaultServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F9025680A67000AE39A /* DefaultServerManager.swift */; };
 		B1B73F9425681B0D000AE39A /* CoreDataWriteServerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F9325681B0D000AE39A /* CoreDataWriteServerSettings.swift */; };
 		B1B73F9C25681B84000AE39A /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F9B25681B84000AE39A /* CoreDataStorage.swift */; };
 		B1B73FA425681E9E000AE39A /* ServerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FA325681E9E000AE39A /* ServerSettings.swift */; };
@@ -23,11 +34,24 @@
 		B1B73FAC256820C6000AE39A /* CoreDataAutoSaveExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FAB256820C6000AE39A /* CoreDataAutoSaveExecutor.swift */; };
 		B1B73FB025682224000AE39A /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FAF25682224000AE39A /* CoreDataError.swift */; };
 		B1B73FB325682373000AE39A /* CoreDataRetrieveServerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FB225682373000AE39A /* CoreDataRetrieveServerSettings.swift */; };
+		B1BF6820256C45DB00C16BDB /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF681F256C45DB00C16BDB /* ServerManager.swift */; };
+		B1BF6825256C4C8000C16BDB /* ServerSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6824256C4C8000C16BDB /* ServerSettingsManager.swift */; };
+		B1BF682B256C4E1200C16BDB /* MockServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF682A256C4E1200C16BDB /* MockServerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B10437A6256AE52300104F64 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B10437AA256AE5EF00104F64 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		B10437AE256AE99D00104F64 /* Log+Completion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+Completion.swift"; sourceTree = "<group>"; };
+		B10437B2256AED0000104F64 /* ServersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersManager.swift; sourceTree = "<group>"; };
+		B10437B6256AEE1000104F64 /* CoreDataRetrieveServers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRetrieveServers.swift; sourceTree = "<group>"; };
+		B10437BA256AEEE000104F64 /* Context+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Context+Utilities.swift"; sourceTree = "<group>"; };
+		B11F3AE0256AE19600618DFD /* CoreDataServerSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServerSettingsManager.swift; sourceTree = "<group>"; };
+		B11F3AE4256AE2DA00618DFD /* ServerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStatus.swift; sourceTree = "<group>"; };
 		B131055D25698673006F2C54 /* SquidPrintDataModel_v0.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintDataModel_v0.1.xcdatamodel; sourceTree = "<group>"; };
 		B131056725698FB5006F2C54 /* SquidPrintDataModel_v0.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintDataModel_v0.2.xcdatamodel; sourceTree = "<group>"; };
+		B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+ServerSelection.swift"; sourceTree = "<group>"; };
+		B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunicationManager.swift; sourceTree = "<group>"; };
 		B190F267256961C900D7A67C /* PublisherUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherUtilities.swift; sourceTree = "<group>"; };
 		B1B73F612568025B000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B73F642568025B000AE39A /* SquidPrintLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquidPrintLogic.h; sourceTree = "<group>"; };
@@ -37,7 +61,7 @@
 		B1B73F842568041D000AE39A /* CoreDataExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExecutor.swift; sourceTree = "<group>"; };
 		B1B73F8825680447000AE39A /* CoreDataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWriter.swift; sourceTree = "<group>"; };
 		B1B73F8D25680472000AE39A /* ApiConfigurationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfigurationUtility.swift; sourceTree = "<group>"; };
-		B1B73F9025680A67000AE39A /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		B1B73F9025680A67000AE39A /* DefaultServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultServerManager.swift; sourceTree = "<group>"; };
 		B1B73F9325681B0D000AE39A /* CoreDataWriteServerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWriteServerSettings.swift; sourceTree = "<group>"; };
 		B1B73F9B25681B84000AE39A /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		B1B73FA325681E9E000AE39A /* ServerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettings.swift; sourceTree = "<group>"; };
@@ -45,6 +69,9 @@
 		B1B73FAB256820C6000AE39A /* CoreDataAutoSaveExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAutoSaveExecutor.swift; sourceTree = "<group>"; };
 		B1B73FAF25682224000AE39A /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
 		B1B73FB225682373000AE39A /* CoreDataRetrieveServerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRetrieveServerSettings.swift; sourceTree = "<group>"; };
+		B1BF681F256C45DB00C16BDB /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		B1BF6824256C4C8000C16BDB /* ServerSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsManager.swift; sourceTree = "<group>"; };
+		B1BF682A256C4E1200C16BDB /* MockServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +80,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B73F7B256802DC000AE39A /* OpenAPIClient in Frameworks */,
+				B10437A4256AE4DA00104F64 /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B10437AD256AE99400104F64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B10437AE256AE99D00104F64 /* Log+Completion.swift */,
+				B10437BA256AEEE000104F64 /* Context+Utilities.swift */,
+				B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B11F3ADE256AE18700618DFD /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				B1B73F9025680A67000AE39A /* DefaultServerManager.swift */,
+				B11F3AE0256AE19600618DFD /* CoreDataServerSettingsManager.swift */,
+				B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		B11F3AE3256AE2C300618DFD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B11F3AE4256AE2DA00618DFD /* ServerStatus.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B1B73F572568025B000AE39A = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +135,17 @@
 		B1B73F632568025B000AE39A /* SquidPrintLogic */ = {
 			isa = PBXGroup;
 			children = (
+				B10437A6256AE52300104F64 /* Logger.swift */,
 				B1B73F642568025B000AE39A /* SquidPrintLogic.h */,
 				B1B73F652568025B000AE39A /* Info.plist */,
 				B1B73F9625681B20000AE39A /* DataModels */,
 				B1B73FA225681E8E000AE39A /* Entities */,
+				B11F3AE3256AE2C300618DFD /* Enums */,
 				B1B73F74256802A5000AE39A /* Errors */,
+				B10437AD256AE99400104F64 /* Extensions */,
+				B1BF6829256C4E0100C16BDB /* Mocks */,
 				B1B73F6E25680279000AE39A /* Models */,
+				B1BF681E256C45BF00C16BDB /* Protocols */,
 				B1B73F8C25680467000AE39A /* Utilities */,
 			);
 			path = SquidPrintLogic;
@@ -93,8 +154,9 @@
 		B1B73F6E25680279000AE39A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B10437B2256AED0000104F64 /* ServersManager.swift */,
+				B11F3ADE256AE18700618DFD /* Server */,
 				B1B73F6F2568027E000AE39A /* CoreDataWorkers */,
-				B1B73F9025680A67000AE39A /* ServerManager.swift */,
 				B1B73F9B25681B84000AE39A /* CoreDataStorage.swift */,
 			);
 			path = Models;
@@ -116,6 +178,7 @@
 			children = (
 				B1B73F7125680291000AE39A /* CoreDataRetriever.swift */,
 				B1B73FB225682373000AE39A /* CoreDataRetrieveServerSettings.swift */,
+				B10437B6256AEE1000104F64 /* CoreDataRetrieveServers.swift */,
 			);
 			path = CoreDataRetrievers;
 			sourceTree = "<group>";
@@ -150,6 +213,7 @@
 			children = (
 				B1B73F8D25680472000AE39A /* ApiConfigurationUtility.swift */,
 				B190F267256961C900D7A67C /* PublisherUtilities.swift */,
+				B10437AA256AE5EF00104F64 /* ErrorHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -168,6 +232,23 @@
 				B1B73FA325681E9E000AE39A /* ServerSettings.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		B1BF681E256C45BF00C16BDB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B1BF681F256C45DB00C16BDB /* ServerManager.swift */,
+				B1BF6824256C4C8000C16BDB /* ServerSettingsManager.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B1BF6829256C4E0100C16BDB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B1BF682A256C4E1200C16BDB /* MockServerManager.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +281,7 @@
 			name = SquidPrintLogic;
 			packageProductDependencies = (
 				B1B73F7A256802DC000AE39A /* OpenAPIClient */,
+				B10437A3256AE4DA00104F64 /* XCGLogger */,
 			);
 			productName = SquidPrintLogic;
 			productReference = B1B73F612568025B000AE39A /* SquidPrintLogic.framework */;
@@ -228,6 +310,9 @@
 				Base,
 			);
 			mainGroup = B1B73F572568025B000AE39A;
+			packageReferences = (
+				B10437A2256AE4DA00104F64 /* XCRemoteSwiftPackageReference "XCGLogger" */,
+			);
 			productRefGroup = B1B73F622568025B000AE39A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,15 +342,28 @@
 				B1B73FA825681ECA000AE39A /* SquidPrintDataModel.xcdatamodeld in Sources */,
 				B1B73F852568041D000AE39A /* CoreDataExecutor.swift in Sources */,
 				B1B73F76256802B0000AE39A /* GenericError.swift in Sources */,
+				B11F3AE1256AE19600618DFD /* CoreDataServerSettingsManager.swift in Sources */,
+				B10437BB256AEEE000104F64 /* Context+Utilities.swift in Sources */,
+				B1BF6820256C45DB00C16BDB /* ServerManager.swift in Sources */,
+				B10437B7256AEE1000104F64 /* CoreDataRetrieveServers.swift in Sources */,
 				B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */,
+				B1327F65256CE25900286CA4 /* Api+ServerSelection.swift in Sources */,
 				B1B73F8E25680472000AE39A /* ApiConfigurationUtility.swift in Sources */,
+				B10437A7256AE52300104F64 /* Logger.swift in Sources */,
+				B11F3AE5256AE2DA00618DFD /* ServerStatus.swift in Sources */,
 				B1B73FA425681E9E000AE39A /* ServerSettings.swift in Sources */,
 				B1B73F9C25681B84000AE39A /* CoreDataStorage.swift in Sources */,
+				B1BF6825256C4C8000C16BDB /* ServerSettingsManager.swift in Sources */,
 				B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */,
 				B1B73F9425681B0D000AE39A /* CoreDataWriteServerSettings.swift in Sources */,
-				B1B73F9125680A67000AE39A /* ServerManager.swift in Sources */,
+				B1327F68256CE3D100286CA4 /* ServerCommunicationManager.swift in Sources */,
+				B1B73F9125680A67000AE39A /* DefaultServerManager.swift in Sources */,
+				B10437AB256AE5EF00104F64 /* ErrorHandler.swift in Sources */,
+				B10437B3256AED0000104F64 /* ServersManager.swift in Sources */,
 				B1B73F8925680447000AE39A /* CoreDataWriter.swift in Sources */,
+				B10437AF256AE99D00104F64 /* Log+Completion.swift in Sources */,
 				B1B73FB025682224000AE39A /* CoreDataError.swift in Sources */,
+				B1BF682B256C4E1200C16BDB /* MockServerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +568,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		B10437A2256AE4DA00104F64 /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		B10437A3256AE4DA00104F64 /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B10437A2256AE4DA00104F64 /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
 		B1B73F7A256802DC000AE39A /* OpenAPIClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = OpenAPIClient;

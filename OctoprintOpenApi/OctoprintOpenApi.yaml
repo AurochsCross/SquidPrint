@@ -18,6 +18,10 @@ paths:
       responses:
         200:
           description: Successful login
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserRecord'
 components:
   schemas:
     LoginRequest:
