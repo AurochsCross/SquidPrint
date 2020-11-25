@@ -27,6 +27,8 @@
 		B1BF6816256C278200C16BDB /* ServerSettingsViewModel_Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */; };
 		B1BF6818256C40E900C16BDB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */; };
 		B1BF681D256C436000C16BDB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF681C256C436000C16BDB /* SettingsView.swift */; };
+		B1C2A140256EAB1B0092A482 /* MovementControlWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A13F256EAB1B0092A482 /* MovementControlWidget.swift */; };
+		B1C2A144256EB2B20092A482 /* MovementControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A143256EB2B20092A482 /* MovementControlView.swift */; };
 		B1E1DFA3256D9FA60040689E /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFA2256D9FA60040689E /* Temp.swift */; };
 		B1E1DFA6256DA6FE0040689E /* TemperatureWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFA5256DA6FE0040689E /* TemperatureWidget.swift */; };
 		B1E1DFA8256DA7200040689E /* HotEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1DFA7256DA7200040689E /* HotEndAnimation.swift */; };
@@ -81,6 +83,8 @@
 		B1BF6815256C278200C16BDB /* ServerSettingsViewModel_Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel_Backup.swift; sourceTree = "<group>"; };
 		B1BF6817256C40E900C16BDB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B1BF681C256C436000C16BDB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B1C2A13F256EAB1B0092A482 /* MovementControlWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementControlWidget.swift; sourceTree = "<group>"; };
+		B1C2A143256EB2B20092A482 /* MovementControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementControlView.swift; sourceTree = "<group>"; };
 		B1E1DFA2256D9FA60040689E /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
 		B1E1DFA5256DA6FE0040689E /* TemperatureWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureWidget.swift; sourceTree = "<group>"; };
 		B1E1DFA7256DA7200040689E /* HotEndAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotEndAnimation.swift; sourceTree = "<group>"; };
@@ -145,13 +149,6 @@
 			path = Rows;
 			sourceTree = "<group>";
 		};
-		B16F81802567E1140014290E /* EnvironmentObjects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EnvironmentObjects;
-			sourceTree = "<group>";
-		};
 		B1B73FB525682982000AE39A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,17 +176,18 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		B1BF6823256C4C5D00C16BDB /* Mocks */ = {
+		B1C2A13E256EAAE80092A482 /* Movement */ = {
 			isa = PBXGroup;
 			children = (
+				B1C2A13F256EAB1B0092A482 /* MovementControlWidget.swift */,
 			);
-			path = Mocks;
+			path = Movement;
 			sourceTree = "<group>";
 		};
 		B1E1DFA4256DA6F10040689E /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				B1E1DFC4256EA95E0040689E /* MovementControlls */,
+				B1C2A13E256EAAE80092A482 /* Movement */,
 				B1E1DFC3256EA9480040689E /* Temperature */,
 				B1E1DFB9256E90590040689E /* Helper */,
 				B1E1DFA7256DA7200040689E /* HotEndAnimation.swift */,
@@ -225,13 +223,6 @@
 			path = Temperature;
 			sourceTree = "<group>";
 		};
-		B1E1DFC4256EA95E0040689E /* MovementControlls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MovementControlls;
-			sourceTree = "<group>";
-		};
 		B1EA6A4E2567120D0097B262 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +237,7 @@
 				B1F2C72E256B0CA500E24C95 /* DashboardView.swift */,
 				B1E1DFA2256D9FA60040689E /* Temp.swift */,
 				B1E1DFB4256E89AC0040689E /* TemperatureView.swift */,
+				B1C2A143256EB2B20092A482 /* MovementControlView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,9 +294,7 @@
 				B1E1DFC0256E99C90040689E /* Extensions */,
 				B1EA6A5C256712AB0097B262 /* Config */,
 				B1EA6A5D256712BC0097B262 /* Content */,
-				B16F81802567E1140014290E /* EnvironmentObjects */,
 				B1B73FB525682982000AE39A /* Managers */,
-				B1BF6823256C4C5D00C16BDB /* Mocks */,
 				B1F600F52566FE1F0014BB4B /* Preview Content */,
 				B1EA6A572567125A0097B262 /* ViewModels */,
 				B1EA6A4E2567120D0097B262 /* Views */,
@@ -455,6 +445,7 @@
 				B1E1DFBF256E992A0040689E /* WidgetHolder.swift in Sources */,
 				B1BF681D256C436000C16BDB /* SettingsView.swift in Sources */,
 				B10437CA256AFBB500104F64 /* CreateServerInitialView.swift in Sources */,
+				B1C2A140256EAB1B0092A482 /* MovementControlWidget.swift in Sources */,
 				B1E1DFAB256E79BE0040689E /* ProgressWidget.swift in Sources */,
 				B10437CD256AFC5500104F64 /* InputRow.swift in Sources */,
 				B10437C6256AF9DF00104F64 /* ServersViewModel.swift in Sources */,
@@ -468,6 +459,7 @@
 				B1F2C72D256B0BC900E24C95 /* DashboardViewModel.swift in Sources */,
 				B1E1DFA6256DA6FE0040689E /* TemperatureWidget.swift in Sources */,
 				B10437C4256AF9D100104F64 /* ServersView.swift in Sources */,
+				B1C2A144256EB2B20092A482 /* MovementControlView.swift in Sources */,
 				B10437C0256AF7D500104F64 /* ServerRootViewModel.swift in Sources */,
 				B1B73FBC25682C3B000AE39A /* ServerSettingsView_Backup.swift in Sources */,
 				B10437C8256AFB3600104F64 /* ServerSettingsViewModel.swift in Sources */,

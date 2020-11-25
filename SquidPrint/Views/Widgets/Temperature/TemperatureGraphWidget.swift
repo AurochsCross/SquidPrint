@@ -28,17 +28,21 @@ struct TemperatureGraphWidget: View {
             
             HStack {
                 ZStack {
+                    // Orange
+                    
+                
+                    Chart(data: [0, 80, 130, 198, 213, 205, 205, 206, 202].map { Float($0) / 250 })
+                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .orange, lineWidth: 6))
+                    Chart(data: [0, 205, 205, 205, 205, 205, 205, 205, 205].map { Float($0) / 250 })
+                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .orange, lineWidth: 6))
+                        .opacity(0.3)
+                    
+                    // Blue
                     Chart(data: [0, 0, 0, 0, 0, 0, 10, 25, 49, 63, 60].map { Float($0) / 250 })
                         .chartStyle(LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 6))
                     
                     Chart(data: [0, 0, 0, 0, 0, 0, 60, 60, 60, 60, 60].map { Float($0) / 250 })
                         .chartStyle(LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 6))
-                        .opacity(0.3)
-                    
-                    Chart(data: [0, 80, 130, 198, 213, 205, 205, 206, 202].map { Float($0) / 250 })
-                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .orange, lineWidth: 6))
-                    Chart(data: [0, 205, 205, 205, 205, 205, 205, 205, 205].map { Float($0) / 250 })
-                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .orange, lineWidth: 6))
                         .opacity(0.3)
                 }
                 Divider()
@@ -78,13 +82,8 @@ struct TemperatureGraphWidget: View {
 
 struct TemperatureGraphWidget_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureGraphWidget()
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-            .frame(minWidth: 100, minHeight: 100)
-            .padding()
-            .background(Color.blue)
-            .previewLayout(.sizeThatFits)
+        WidgetPreviewer {
+            TemperatureGraphWidget()
+        }
     }
 }
