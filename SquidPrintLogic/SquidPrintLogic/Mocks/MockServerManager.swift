@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import OpenAPIClient
 
 public class MockServerManager: ServerManager {
     public var id: Int { Int.random(in: 0...9999) }
@@ -19,7 +20,11 @@ public class MockServerManager: ServerManager {
             apiKey: String(UUID().uuidString.replacingOccurrences(of: "-", with: "")))
     }
     
-    public let status: CurrentValueSubject<ServerStatus, Error>
+    public let status: CurrentValueSubject<ServerStatus, Never>
+
+    public func connect() -> AnyPublisher<UserRecord, Error> {
+        fatalError()
+    }
     
     public func updateServerSettings(_ serverSettings: ServerSettings) -> AnyPublisher<ServerSettings, Error> {
         return PublisherUtilities.anyWithValue(serverSettings)

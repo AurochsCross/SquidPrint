@@ -6,16 +6,24 @@
 //
 
 import SwiftUI
+import SquidPrintLogic
 
 struct ServerRootView: View {
     @ObservedObject var viewModel: ServerRootViewModel
     var body: some View {
         TabView {
-            DashboardView()
+            DashboardView(viewModel: viewModel.dashboardViewModel)
                 .tabItem {
                     Image(systemName: "house")
                     Text("Dashboard")
                 }
+            
+            TemperatureView()
+                .tabItem {
+                    Image(systemName: "thermometer")
+                    Text("Temperature")
+                }
+            
             SettingsView(viewModel: viewModel.settingsViewModel)
                 .tabItem {
                         Image(systemName: "gear")
@@ -27,6 +35,6 @@ struct ServerRootView: View {
 
 struct ServerRootView_Previews: PreviewProvider {
     static var previews: some View {
-        UnderConstructionView(viewName: "Root")
+        ServerRootView(viewModel: ServerRootViewModel(serverManager: MockServerManager()))
     }
 }

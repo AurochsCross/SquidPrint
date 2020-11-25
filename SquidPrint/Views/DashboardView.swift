@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
+import SquidPrintLogic
 
 struct DashboardView: View {
+    @ObservedObject var viewModel: DashboardViewModel
+    
     var body: some View {
         NavigationView {
             List {
-                Section {
-                Circle()
-                    .stroke(Color.green, lineWidth: 10)
-                    .frame(height: 300)
-                    .padding()
+                Section(header: Text("Progress")) {
+                    ProgressWidget()
+                }
+                
+                Section(header: Text("Readings")) {
+                    TemperatureWidget()
+                        .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
                 }
                 
                 Section(header: Text("Temperature")) {
@@ -32,15 +37,29 @@ struct DashboardView: View {
                             .foregroundColor(.red)
                     }
                 }
+                
+                Section(header: Text("Temperature graph")) {
+                    TemperatureGraphWidget()
+                        .frame(height: 250)
+                }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Dashboard")
+            .navigationBarItems(trailing: HStack {
+                EmptyView()
+                if !self.viewModel.isConnected {
+                    Button(action: self.viewModel.connect) {
+                        Image(systemName: "externaldrive.badge.xmark")
+                            .foregroundColor(.red)
+                    }
+                }
+            })
         }
     }
 }
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView()
+        DashboardView(viewModel: DashboardViewModel(serverManager: MockServerManager()))
     }
 }

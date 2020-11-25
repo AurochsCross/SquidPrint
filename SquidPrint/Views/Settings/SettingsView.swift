@@ -47,7 +47,7 @@ struct SettingsView: View {
         let serverSettings: ServerSettings
         
         private var hiddenApiKey: String {
-            let revealedSymbols = 3
+            let revealedSymbols = serverSettings.apiKey.count < 3 ? serverSettings.apiKey.count : 3
             return String(serverSettings.apiKey.prefix(revealedSymbols))
                 .appending(String(repeating: "*", count: serverSettings.apiKey.count - revealedSymbols))
         }

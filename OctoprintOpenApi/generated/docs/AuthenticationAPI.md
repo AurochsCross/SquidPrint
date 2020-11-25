@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **loginPost**
 ```swift
-    open class func loginPost(loginRequest: LoginRequest, completion: @escaping (_ data: Void?, _ error: Error?) -> Void)
+    open class func loginPost(loginRequest: LoginRequest, completion: @escaping (_ data: UserRecord?, _ error: Error?) -> Void)
 ```
 
 User login
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-Void (empty response body)
+[**UserRecord**](UserRecord.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -10,12 +10,33 @@ import Combine
 import SquidPrintLogic
 
 class DashboardViewModel: ObservableObject {
-    @Published var name: String
+    @Published var isConnected = false
     
     let serverManager: ServerManager
     
+    private var cancellables = Set<AnyCancellable>()
+    
     init(serverManager: ServerManager) {
         self.serverManager = serverManager
-        self.name = serverManager.name
+        
+        serverManager.status
+            .map { status in
+                status == .connected
+            }
+            .assign(to: \.isConnected, on: self)
+            .store(in: &cancellables)
+    }
+    
+    func connect() {
+        if isConnected { return }
+        
+        serverManager.connect()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished: log.info("Connected successfuly")
+                case .failure(let error): log.error(error)
+                }
+            }, receiveValue: { _ in })
+            .store(in: &cancellables)
     }
 }

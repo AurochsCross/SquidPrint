@@ -16,6 +16,8 @@
 		B10437BB256AEEE000104F64 /* Context+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437BA256AEEE000104F64 /* Context+Utilities.swift */; };
 		B11F3AE1256AE19600618DFD /* CoreDataServerSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11F3AE0256AE19600618DFD /* CoreDataServerSettingsManager.swift */; };
 		B11F3AE5256AE2DA00618DFD /* ServerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11F3AE4256AE2DA00618DFD /* ServerStatus.swift */; };
+		B1327F65256CE25900286CA4 /* Api+ServerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */; };
+		B1327F68256CE3D100286CA4 /* ServerCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */; };
 		B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F267256961C900D7A67C /* PublisherUtilities.swift */; };
 		B1B73F662568025B000AE39A /* SquidPrintLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B73F642568025B000AE39A /* SquidPrintLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F7125680291000AE39A /* CoreDataRetriever.swift */; };
@@ -48,6 +50,8 @@
 		B11F3AE4256AE2DA00618DFD /* ServerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStatus.swift; sourceTree = "<group>"; };
 		B131055D25698673006F2C54 /* SquidPrintDataModel_v0.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintDataModel_v0.1.xcdatamodel; sourceTree = "<group>"; };
 		B131056725698FB5006F2C54 /* SquidPrintDataModel_v0.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintDataModel_v0.2.xcdatamodel; sourceTree = "<group>"; };
+		B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+ServerSelection.swift"; sourceTree = "<group>"; };
+		B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunicationManager.swift; sourceTree = "<group>"; };
 		B190F267256961C900D7A67C /* PublisherUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherUtilities.swift; sourceTree = "<group>"; };
 		B1B73F612568025B000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B73F642568025B000AE39A /* SquidPrintLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquidPrintLogic.h; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 			children = (
 				B10437AE256AE99D00104F64 /* Log+Completion.swift */,
 				B10437BA256AEEE000104F64 /* Context+Utilities.swift */,
+				B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -97,7 +102,7 @@
 			children = (
 				B1B73F9025680A67000AE39A /* DefaultServerManager.swift */,
 				B11F3AE0256AE19600618DFD /* CoreDataServerSettingsManager.swift */,
-				B10437B2256AED0000104F64 /* ServersManager.swift */,
+				B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		B1B73F6E25680279000AE39A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B10437B2256AED0000104F64 /* ServersManager.swift */,
 				B11F3ADE256AE18700618DFD /* Server */,
 				B1B73F6F2568027E000AE39A /* CoreDataWorkers */,
 				B1B73F9B25681B84000AE39A /* CoreDataStorage.swift */,
@@ -341,6 +347,7 @@
 				B1BF6820256C45DB00C16BDB /* ServerManager.swift in Sources */,
 				B10437B7256AEE1000104F64 /* CoreDataRetrieveServers.swift in Sources */,
 				B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */,
+				B1327F65256CE25900286CA4 /* Api+ServerSelection.swift in Sources */,
 				B1B73F8E25680472000AE39A /* ApiConfigurationUtility.swift in Sources */,
 				B10437A7256AE52300104F64 /* Logger.swift in Sources */,
 				B11F3AE5256AE2DA00618DFD /* ServerStatus.swift in Sources */,
@@ -349,6 +356,7 @@
 				B1BF6825256C4C8000C16BDB /* ServerSettingsManager.swift in Sources */,
 				B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */,
 				B1B73F9425681B0D000AE39A /* CoreDataWriteServerSettings.swift in Sources */,
+				B1327F68256CE3D100286CA4 /* ServerCommunicationManager.swift in Sources */,
 				B1B73F9125680A67000AE39A /* DefaultServerManager.swift in Sources */,
 				B10437AB256AE5EF00104F64 /* ErrorHandler.swift in Sources */,
 				B10437B3256AED0000104F64 /* ServersManager.swift in Sources */,
