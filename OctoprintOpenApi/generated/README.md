@@ -26,11 +26,14 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthenticationAPI* | [**loginPost**](docs/AuthenticationAPI.md#loginpost) | **POST** /login | User login
+*DefaultAPI* | [**printerPrintheadPost**](docs/DefaultAPI.md#printerprintheadpost) | **POST** /printer/printhead | Issue command to printhead
 
 
 ## Documentation For Models
 
  - [LoginRequest](docs/LoginRequest.md)
+ - [PrintHeadCommand](docs/PrintHeadCommand.md)
+ - [PrintHeadInstructions](docs/PrintHeadInstructions.md)
  - [UserRecord](docs/UserRecord.md)
 
 

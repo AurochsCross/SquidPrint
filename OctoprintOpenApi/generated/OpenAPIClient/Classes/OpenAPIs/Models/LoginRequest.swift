@@ -13,7 +13,7 @@ public struct LoginRequest: Codable {
 
     public var passive: Bool?
 
-    public init(passive: Bool?) {
+    public init(passive: Bool? = nil) {
         self.passive = passive
     }
 

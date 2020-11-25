@@ -9,32 +9,28 @@
 {{#allVars}}
 {{#isEnum}}
     {{#description}}/** {{description}} */
-    {{/description}}{{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} {{#readonlyProperties}}private(set) {{/readonlyProperties}}var {{name}}: {{{datatypeWithEnum}}}{{#required}}{{#isNullable}}?{{/isNullable}}{{/required}}{{^required}}?{{/required}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}
+    {{/description}}{{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} var {{name}}: {{{datatypeWithEnum}}}{{#unwrapRequired}}?{{/unwrapRequired}}{{^unwrapRequired}}{{^required}}?{{/required}}{{/unwrapRequired}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}
 {{/isEnum}}
 {{^isEnum}}
     {{#description}}/** {{description}} */
-    {{/description}}{{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} {{#readonlyProperties}}private(set) {{/readonlyProperties}}var {{name}}: {{{datatype}}}{{#required}}{{#isNullable}}?{{/isNullable}}{{/required}}{{^required}}?{{/required}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}
-    {{#objcCompatible}}
-    {{#vendorExtensions.x-swift-optional-scalar}}
+    {{/description}}{{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} var {{name}}: {{{datatype}}}{{#unwrapRequired}}?{{/unwrapRequired}}{{^unwrapRequired}}{{^required}}?{{/required}}{{/unwrapRequired}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}}{{#objcCompatible}}{{#vendorExtensions.x-swift-optional-scalar}}
     {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} var {{name}}Num: NSNumber? {
         get {
             return {{name}} as NSNumber?
         }
-    }
-    {{/vendorExtensions.x-swift-optional-scalar}}
-    {{/objcCompatible}}
+    }{{/vendorExtensions.x-swift-optional-scalar}}{{/objcCompatible}}
 {{/isEnum}}
 {{/allVars}}
 
 {{#hasVars}}
-    {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} init({{#allVars}}{{name}}: {{{datatypeWithEnum}}}{{#required}}{{#isNullable}}?{{/isNullable}}{{/required}}{{^required}}? = nil{{/required}}{{#hasMore}}, {{/hasMore}}{{/allVars}}) {
+    {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} init({{#allVars}}{{name}}: {{{datatypeWithEnum}}}{{#unwrapRequired}}?{{/unwrapRequired}}{{^unwrapRequired}}{{^required}}?{{/required}}{{/unwrapRequired}}{{#hasMore}}, {{/hasMore}}{{/allVars}}) {
         {{#allVars}}
         self.{{name}} = {{name}}
         {{/allVars}}
     }
 {{/hasVars}}
 {{#additionalPropertiesType}}
-    {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} {{#readonlyProperties}}private(set) {{/readonlyProperties}}var additionalProperties: [String:{{{additionalPropertiesType}}}] = [:]
+    {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} var additionalProperties: [String:{{{additionalPropertiesType}}}] = [:]
 
     {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} subscript(key: String) -> {{{additionalPropertiesType}}}? {
         get {
@@ -56,7 +52,7 @@
         var container = encoder.container(keyedBy: String.self)
 
         {{#allVars}}
-        try container.encode{{#required}}{{#isNullable}}IfPresent{{/isNullable}}{{/required}}{{^required}}IfPresent{{/required}}({{{name}}}, forKey: "{{{baseName}}}")
+        try container.encode{{#unwrapRequired}}IfPresent{{/unwrapRequired}}{{^unwrapRequired}}{{^required}}IfPresent{{/required}}{{/unwrapRequired}}({{{name}}}, forKey: "{{{baseName}}}")
         {{/allVars}}
         try container.encodeMap(additionalProperties)
     }
@@ -67,7 +63,7 @@
         let container = try decoder.container(keyedBy: String.self)
 
         {{#allVars}}
-        {{name}} = try container.decode{{#required}}{{#isNullable}}IfPresent{{/isNullable}}{{/required}}{{^required}}IfPresent{{/required}}({{{datatypeWithEnum}}}.self, forKey: "{{{baseName}}}")
+        {{name}} = try container.decode{{#unwrapRequired}}IfPresent{{/unwrapRequired}}{{^unwrapRequired}}{{^required}}IfPresent{{/required}}{{/unwrapRequired}}({{{datatypeWithEnum}}}.self, forKey: "{{{baseName}}}")
         {{/allVars}}
         var nonAdditionalPropertyKeys = Set<String>()
         {{#allVars}}
@@ -78,7 +74,7 @@
 
 {{/additionalPropertiesType}}
 {{^additionalPropertiesType}}{{#vendorExtensions.x-codegen-has-escaped-property-names}}
-    {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} enum CodingKeys: String, CodingKey, CaseIterable { {{#allVars}}
+    {{#nonPublicApi}}internal{{/nonPublicApi}}{{^nonPublicApi}}public{{/nonPublicApi}} enum CodingKeys: String, CodingKey { {{#allVars}}
         case {{name}}{{#vendorExtensions.x-codegen-escaped-property-name}} = "{{{baseName}}}"{{/vendorExtensions.x-codegen-escaped-property-name}}{{/allVars}}
     }
 {{/vendorExtensions.x-codegen-has-escaped-property-names}}{{/additionalPropertiesType}}

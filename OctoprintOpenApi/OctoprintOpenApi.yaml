@@ -22,6 +22,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserRecord'
+  /printer/printhead:
+    post:
+      summary: 'Issue command to printhead'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PrintHeadInstructions'
+      responses:
+        204:
+          description: "Success"
+
 components:
   schemas:
     LoginRequest:
@@ -38,6 +51,32 @@ components:
           type: boolean
         apikey:
           type: string
+    PrintHeadInstructions:
+      type: object
+      properties:
+        command:
+          required: true
+          $ref: '#/components/schemas/PrintHeadCommand'
+        x:
+          type: number
+        y:
+          type: number
+        z: 
+          type: number
+        axes:
+          type: array
+          items:
+            type: string
+            enum:
+              - x
+              - y
+              - z
+
+    PrintHeadCommand:
+      type: string
+      enum: 
+        - jog
+        - home
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
