@@ -19,4 +19,6 @@ public protocol ServerManager {
     
     func updateServerSettings(_ serverSettings: ServerSettings) -> AnyPublisher<ServerSettings, Error>
     func deleteServer() -> AnyPublisher<Void, Error>
+    
+    func move(withInstructions instructions: PrintheadInstructionSet) -> AnyPublisher<Void, Error>
 }

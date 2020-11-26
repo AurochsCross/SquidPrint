@@ -37,4 +37,8 @@ public class MockServerManager: ServerManager {
     public init(status: ServerStatus = .connected) {
         self.status = .init(status)
     }
+    
+    public func move(withInstructions instructions: PrintheadInstructionSet) -> AnyPublisher<Void, Error> {
+        fatalError()
+    }
 }

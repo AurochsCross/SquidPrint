@@ -51,7 +51,9 @@ struct HotEndAnimation: View {
                 .offset(x: -width / 2 + height / 2, y: 37)
         }
         .onAppear{
-            self.animateFillament.toggle()
+            if !self.animateFillament {
+                self.animateFillament.toggle()
+            }
         }
     }
 }

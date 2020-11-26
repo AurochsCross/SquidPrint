@@ -18,6 +18,12 @@ struct ServerRootView: View {
                     Text("Dashboard")
                 }
             
+            MovementControlView(viewModel: viewModel.movementViewModel)
+                .tabItem {
+                    Image(systemName: "move.3d")
+                    Text("Control")
+                }
+            
             TemperatureView()
                 .tabItem {
                     Image(systemName: "thermometer")

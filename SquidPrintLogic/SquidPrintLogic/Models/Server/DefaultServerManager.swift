@@ -17,6 +17,7 @@ public class DefaultServerManager: ServerManager {
     
     private let settingsManager: CoreDataServerSettingsManager
     private var communicationManager: ServerCommunicationManager
+    private var movementManager: ServerMovementManager
     public let status = CurrentValueSubject<ServerStatus, Never>(.disconnected)
     
     private var cancellables = Set<AnyCancellable>()
@@ -24,6 +25,7 @@ public class DefaultServerManager: ServerManager {
     init(serverSettings: DB_ServerSettings) {
         settingsManager = CoreDataServerSettingsManager(serverSettings: serverSettings)
         communicationManager = ServerCommunicationManager(serverSettings: ServerSettings(managed: serverSettings))
+        movementManager = ServerMovementManager(callExecutor: communicationManager)
         updateCommunicationManager(withSettings: ServerSettings(managed: serverSettings))
     }
     
@@ -46,6 +48,7 @@ public class DefaultServerManager: ServerManager {
     
     func updateCommunicationManager(withSettings settings: ServerSettings) {
         communicationManager = ServerCommunicationManager(serverSettings: settings)
+        movementManager = ServerMovementManager(callExecutor: communicationManager)
         
         communicationManager.isConnected
             .map { isConnected -> ServerStatus in
@@ -54,6 +57,10 @@ public class DefaultServerManager: ServerManager {
             .receive(on: DispatchQueue.main)
             .assign(to: \.status.value, on: self)
             .store(in: &cancellables)
+    }
+    
+    public func move(withInstructions instructions: PrintheadInstructionSet) -> AnyPublisher<Void, Error> {
+        movementManager.issuePrintheadMovementCommand(instructions)
     }
     
     static func create(_ settings: ServerSettings, inContext context: NSManagedObjectContext) -> AnyPublisher<DefaultServerManager, Error> {

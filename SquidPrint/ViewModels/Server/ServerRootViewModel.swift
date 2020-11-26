@@ -14,6 +14,7 @@ class ServerRootViewModel: ObservableObject {
     let serverManager: ServerManager
     let dashboardViewModel: DashboardViewModel
     let settingsViewModel: SettingsViewModel
+    let movementViewModel: MovementControlViewModel
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -21,6 +22,7 @@ class ServerRootViewModel: ObservableObject {
         self.serverManager = serverManager
         self.dashboardViewModel = DashboardViewModel(serverManager: serverManager)
         self.settingsViewModel = SettingsViewModel(serverManager: serverManager)
+        self.movementViewModel = MovementControlViewModel(serverManager: serverManager)
         serverManager.connect()
             .sink(receiveCompletion: { completion in
                 switch completion {

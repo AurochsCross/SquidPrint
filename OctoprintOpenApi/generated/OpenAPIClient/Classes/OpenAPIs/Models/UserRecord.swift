@@ -15,7 +15,7 @@ public struct UserRecord: Codable {
     public var active: Bool?
     public var apikey: String?
 
-    public init(name: String?, active: Bool?, apikey: String?) {
+    public init(name: String? = nil, active: Bool? = nil, apikey: String? = nil) {
         self.name = name
         self.active = active
         self.apikey = apikey

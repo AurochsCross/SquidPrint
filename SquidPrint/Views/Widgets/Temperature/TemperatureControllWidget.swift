@@ -55,9 +55,12 @@ struct TemperatureControllWidget: View {
                     .onChanged(self.onDragChanged)
                     .onEnded(self.onDragEnded)
             )
-            
             .frame(height: 40)
             .cornerRadius(16)
+            .animation(nil)
+            .scaleEffect(isPressed ? 1.05 : 1.0)
+            .shadow(radius: isPressed ? 10 : 0)
+            .animation(Animation.linear(duration: 0.1))
         }
     }
     
