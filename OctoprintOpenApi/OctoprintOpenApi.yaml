@@ -22,6 +22,16 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserRecord'
+  /printer:
+    get:
+      summary: 'Current printer state'
+      responses:
+        200:
+          description: 'Current printer state'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FullState'
   /printer/printhead:
     post:
       summary: 'Issue command to printhead'
@@ -51,6 +61,63 @@ components:
           type: boolean
         apikey:
           type: string
+    FullState:
+      type: object
+      properties:
+        temperature:
+          $ref: '#/components/schemas/TemperatureState'
+        sd:
+          $ref: '#/components/schemas/SdState'
+        state:
+          $ref: '#/components/schemas/PrinterState'
+    PrinterState:
+      type: object
+      properties: 
+        text:
+          type: string
+        flags:
+          type: object
+          $ref: '#/components/schemas/PrinterStateFlags'
+    PrinterStateFlags:
+      type: object
+      properties:
+        operational:
+          type: boolean
+        paused:
+          type: boolean
+        printing:
+          type: boolean
+        cancelling:
+          type: boolean
+        pausing:
+          type: boolean
+        sdReady:
+          type: boolean
+        error:
+          type: boolean
+        ready:
+          type: boolean
+        closedOrError:
+          type: boolean
+    SdState:
+      type: object
+      properties:
+        ready: 
+          type: boolean
+    TemperatureState:
+      type: object
+      properties:
+        tool0:
+          $ref: '#/components/schemas/Temperature'
+    Temperature:
+      type: object
+      properties:
+        actual:
+          type: number
+        target:
+          type: number
+        offset:
+          type: number
     PrintHeadInstructions:
       type: object
       properties:
@@ -71,7 +138,6 @@ components:
               - x
               - y
               - z
-
     PrintHeadCommand:
       type: string
       enum: 

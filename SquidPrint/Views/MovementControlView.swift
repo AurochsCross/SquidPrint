@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import SquidPrintLogic
 
 struct MovementControlView: View {
+    @ObservedObject var viewModel: MovementControlViewModel
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     WidgetHolder(title: "Controlls") {
-                        MovementControlWidget()
+                        MovementControlWidget(onMove: viewModel.move)
                     }
                 }
                 .padding(.horizontal)
@@ -25,6 +28,6 @@ struct MovementControlView: View {
 
 struct MovementControlView_Previews: PreviewProvider {
     static var previews: some View {
-        MovementControlView()
+        MovementControlView(viewModel: MovementControlViewModel(serverManager: MockServerManager()))
     }
 }

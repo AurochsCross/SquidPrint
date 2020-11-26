@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum PrinterCommunicationStatus {
+    case disconnected
+    case connected
+}

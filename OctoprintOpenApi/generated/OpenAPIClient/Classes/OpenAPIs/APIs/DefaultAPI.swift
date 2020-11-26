@@ -12,6 +12,46 @@ import Combine
 
 open class DefaultAPI {
     /**
+     Current printer state
+     
+     - parameter apiResponseQueue: The queue on which api response is dispatched.
+     - returns: AnyPublisher<FullState, Error>
+     */
+    @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    open class func printerGet(apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<FullState, Error> {
+        return Future<FullState, Error>.init { promisse in
+            printerGetWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
+                switch result {
+                case let .success(response):
+                    promisse(.success(response.body!))
+                case let .failure(error):
+                    promisse(.failure(error))
+                }
+            }
+        }.eraseToAnyPublisher()
+    }
+
+    /**
+     Current printer state
+     - GET /printer
+     - API Key:
+       - type: apiKey X-Api-Key 
+       - name: ApiKeyAuth
+     - returns: RequestBuilder<FullState> 
+     */
+    open class func printerGetWithRequestBuilder() -> RequestBuilder<FullState> {
+        let path = "/printer"
+        let URLString = OpenAPIClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FullState>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      Issue command to printhead
      
      - parameter printHeadInstructions: (body)  

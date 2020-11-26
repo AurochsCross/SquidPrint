@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Combine
+
+protocol ApiCallExecutor {
+    func execute<T>(_ call: AnyPublisher<T, Error>) -> AnyPublisher<T, Error>
+}

@@ -18,7 +18,7 @@ struct ServerRootView: View {
                     Text("Dashboard")
                 }
             
-            MovementControlView()
+            MovementControlView(viewModel: viewModel.movementViewModel)
                 .tabItem {
                     Image(systemName: "move.3d")
                     Text("Control")

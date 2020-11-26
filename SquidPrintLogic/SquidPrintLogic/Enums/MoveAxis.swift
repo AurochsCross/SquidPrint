@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public enum MoveAxis {
+    case x
+    case y
+    case z
+}

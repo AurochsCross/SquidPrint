@@ -15,8 +15,9 @@
 		B10437C8256AFB3600104F64 /* ServerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */; };
 		B10437CA256AFBB500104F64 /* CreateServerInitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */; };
 		B10437CD256AFC5500104F64 /* InputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10437CC256AFC5500104F64 /* InputRow.swift */; };
+		B1470B28256ECF5D0015CCB7 /* MovementControlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B27256ECF5D0015CCB7 /* MovementControlViewModel.swift */; };
+		B1470B2B256ED00E0015CCB7 /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B2A256ED00E0015CCB7 /* AlertUtility.swift */; };
 		B16F81962567E7160014290E /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F81952567E7160014290E /* Combine.framework */; };
-		B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = B18736012567F17300714DF3 /* SwiftKeychainWrapper */; };
 		B190F26D2569680700D7A67C /* ServerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26C2569680700D7A67C /* ServerSettingsView.swift */; };
 		B190F27025696E7A00D7A67C /* ServerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F26F25696E7A00D7A67C /* ServerRootView.swift */; };
 		B190F27325696EA200D7A67C /* UnderConstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F27225696EA200D7A67C /* UnderConstructionView.swift */; };
@@ -73,6 +74,8 @@
 		B10437C7256AFB3600104F64 /* ServerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsViewModel.swift; sourceTree = "<group>"; };
 		B10437C9256AFBB500104F64 /* CreateServerInitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServerInitialView.swift; sourceTree = "<group>"; };
 		B10437CC256AFC5500104F64 /* InputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputRow.swift; sourceTree = "<group>"; };
+		B1470B27256ECF5D0015CCB7 /* MovementControlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementControlViewModel.swift; sourceTree = "<group>"; };
+		B1470B2A256ED00E0015CCB7 /* AlertUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtility.swift; sourceTree = "<group>"; };
 		B16F81952567E7160014290E /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		B190F26C2569680700D7A67C /* ServerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView.swift; sourceTree = "<group>"; };
 		B190F26F25696E7A00D7A67C /* ServerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRootView.swift; sourceTree = "<group>"; };
@@ -113,7 +116,6 @@
 				B1B73F7E256802F1000AE39A /* SquidPrintLogic.framework in Frameworks */,
 				B1E1DFB8256E8B860040689E /* Charts in Frameworks */,
 				B16F81962567E7160014290E /* Combine.framework in Frameworks */,
-				B18736022567F17300714DF3 /* SwiftKeychainWrapper in Frameworks */,
 				7F807ABE3AEB0E2D31DAB374 /* Pods_SquidPrint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +149,14 @@
 				B10437CC256AFC5500104F64 /* InputRow.swift */,
 			);
 			path = Rows;
+			sourceTree = "<group>";
+		};
+		B1470B29256ECFF80015CCB7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B1470B2A256ED00E0015CCB7 /* AlertUtility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B1B73FB525682982000AE39A /* Managers */ = {
@@ -249,6 +259,7 @@
 				B10437BE256AF7CB00104F64 /* Server */,
 				B10437C1256AF7F000104F64 /* AppEnvironment.swift */,
 				B10437C5256AF9DF00104F64 /* ServersViewModel.swift */,
+				B1470B27256ECF5D0015CCB7 /* MovementControlViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				B1F600F52566FE1F0014BB4B /* Preview Content */,
 				B1EA6A572567125A0097B262 /* ViewModels */,
 				B1EA6A4E2567120D0097B262 /* Views */,
+				B1470B29256ECFF80015CCB7 /* Utilities */,
 			);
 			path = SquidPrint;
 			sourceTree = "<group>";
@@ -339,7 +351,6 @@
 			);
 			name = SquidPrint;
 			packageProductDependencies = (
-				B18736012567F17300714DF3 /* SwiftKeychainWrapper */,
 				B1E1DFB7256E8B860040689E /* Charts */,
 			);
 			productName = SquidPrint;
@@ -458,7 +469,9 @@
 				B190F27025696E7A00D7A67C /* ServerRootView.swift in Sources */,
 				B1F2C72D256B0BC900E24C95 /* DashboardViewModel.swift in Sources */,
 				B1E1DFA6256DA6FE0040689E /* TemperatureWidget.swift in Sources */,
+				B1470B28256ECF5D0015CCB7 /* MovementControlViewModel.swift in Sources */,
 				B10437C4256AF9D100104F64 /* ServersView.swift in Sources */,
+				B1470B2B256ED00E0015CCB7 /* AlertUtility.swift in Sources */,
 				B1C2A144256EB2B20092A482 /* MovementControlView.swift in Sources */,
 				B10437C0256AF7D500104F64 /* ServerRootViewModel.swift in Sources */,
 				B1B73FBC25682C3B000AE39A /* ServerSettingsView_Backup.swift in Sources */,
@@ -687,11 +700,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B18736012567F17300714DF3 /* SwiftKeychainWrapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B18736002567F17300714DF3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
-			productName = SwiftKeychainWrapper;
-		};
 		B1E1DFB7256E8B860040689E /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1E1DFB6256E8B860040689E /* XCRemoteSwiftPackageReference "swiftui-charts" */;

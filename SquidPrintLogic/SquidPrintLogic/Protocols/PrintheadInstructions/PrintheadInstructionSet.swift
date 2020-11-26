@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import OpenAPIClient
+
+public protocol PrintheadInstructionSet {
+    func toApiInstructions() -> PrintHeadInstructions
+}

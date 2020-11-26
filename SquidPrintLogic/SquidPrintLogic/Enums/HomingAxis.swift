@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+public enum HomingAxis {
+    case xy
+    case z
+}
