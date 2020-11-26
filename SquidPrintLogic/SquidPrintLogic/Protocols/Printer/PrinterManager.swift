@@ -11,4 +11,7 @@ import Combine
 public protocol PrinterManager {
     var status: CurrentValueSubject<PrinterStatus, Never> { get }
     var informationProvider: PrinterInformationProvider { get }
+    var temperatureManager: PrinterTemperatureManager { get }
+    
+    func connect() -> AnyPublisher<Bool, Error>
 }

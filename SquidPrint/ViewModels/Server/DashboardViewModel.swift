@@ -13,11 +13,13 @@ class DashboardViewModel: ObservableObject {
     @Published var isConnected = false
     
     let serverManager: ServerManager
+    let temperatureWidgetModel: StandaloneTemperatureGraphWidgetModel
     
     private var cancellables = Set<AnyCancellable>()
     
     init(serverManager: ServerManager) {
         self.serverManager = serverManager
+        self.temperatureWidgetModel = StandaloneTemperatureGraphWidgetModel(infoProvider: serverManager.printerManager.informationProvider, bufferSize: 40)
         
         serverManager.status
             .map { status in

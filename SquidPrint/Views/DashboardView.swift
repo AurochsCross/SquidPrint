@@ -39,7 +39,7 @@ struct DashboardView: View {
                 }
                 
                 Section(header: Text("Temperature graph")) {
-                    TemperatureGraphWidget()
+                    StandaloneTemperatureGraphWidget(widgetModel: viewModel.temperatureWidgetModel)
                         .frame(height: 250)
                 }
             }

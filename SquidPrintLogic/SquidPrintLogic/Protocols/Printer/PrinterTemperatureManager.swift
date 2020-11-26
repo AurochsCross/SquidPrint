@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-public protocol PrinterTemperatureController {
+public protocol PrinterTemperatureManager {
     func setTemperature(_ instructions: SetTemperatureInstructions) -> AnyPublisher<Void, Error>
 }

@@ -9,22 +9,32 @@ import Foundation
 import Combine
 import OpenAPIClient
 
-class DefaultPrinterInformationProvider: PrinterInformationProvider {
+class DefaultPrinterInformationProvider: PrinterApiCaller, PrinterInformationProvider {
     let printerState = CurrentValueSubject<FullState?, Never>(nil)
     
-    private var stateUpdateCancellables = Set<AnyCancellable>()
     private var timer: Timer? = nil
     private let refreshInterval: Double
+    private var printerStatusCancellables = Set<AnyCancellable>()
     
-    private let apiExecutor: ApiCallExecutor
-    
-    init(apiCallExecutor: ApiCallExecutor, refreshInterval: Double = 1) {
-        self.apiExecutor = apiCallExecutor
-        self.refreshInterval = 1.0
+    init(apiCallExecutor: ApiCallExecutor, printerStatus: AnyPublisher<PrinterStatus, Never>? = nil, refreshInterval: Double = 2) {
+        self.refreshInterval = refreshInterval
+        super.init(apiCallExecutor: apiCallExecutor)
+        
+        printerStatus?
+            .sink { status in
+                switch status {
+                case .connected:
+                    self.startRetrievingPrinterState()
+                case .disconnected:
+                    self.stopRetrievingPrinterState()
+                }
+            }
+            .store(in: &cancellables)
     }
     
+    
     private func startRetrievingPrinterState() {
-        stateUpdateCancellables = Set<AnyCancellable>()
+        printerStatusCancellables = Set<AnyCancellable>()
         
         timer = Timer.scheduledTimer(withTimeInterval: refreshInterval, repeats: true) { (timer) in
             self.apiExecutor.execute(DefaultAPI.printerGet())
@@ -40,12 +50,12 @@ class DefaultPrinterInformationProvider: PrinterInformationProvider {
                 }, receiveValue: { state in
                     self.printerState.value = state
                 })
-                .store(in: &self.stateUpdateCancellables)
+                .store(in: &self.printerStatusCancellables)
         }
     }
     
     private func stopRetrievingPrinterState() {
         timer = nil
-        stateUpdateCancellables = Set<AnyCancellable>()
+        printerStatusCancellables = Set<AnyCancellable>()
     }
 }

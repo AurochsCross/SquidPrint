@@ -12,9 +12,11 @@ struct TemperatureControllWidget: View {
     @State private var offset: Int = Int.zero
     
     let title: String
-    @Binding var currentTemperature: Int
+    @State var currentTemperature: Int?
     let maxTemperature: Int
     let color: Color
+    
+    var onTemperatureChanged: ((Int) -> ())? = nil
     
     var body: some View {
         VStack {
@@ -23,31 +25,38 @@ struct TemperatureControllWidget: View {
                     .font(.title)
                     .bold()
                 Spacer()
-                Text("\(currentTemperature)")
-                    .foregroundColor(color)
-                    .font(.title)
-                    .bold() +
-                Text("°C")
-                    .font(.headline)
-                    .foregroundColor(.secondary)
+                if let currentTemperature = currentTemperature {
+                    Text("\(currentTemperature)")
+                        .foregroundColor(color)
+                        .font(.title)
+                        .bold() +
+                    Text("°C")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                } else {
+                    Text("Unavailable")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                }
             }
             
             ZStack(alignment: .leading) {
                 Rectangle()
                     .fill(Color(.sRGB, white: 0.5, opacity: 0.2))
-                
-                GeometryReader { geometry in
-                    Rectangle()
-                        .foregroundColor(color)
-                        .frame(width: geometry.size.width / CGFloat(maxTemperature) * CGFloat(currentTemperature + offset))
-                        .animation(nil)
-                }
-                
-                if isPressed {
-                    Text("\(currentTemperature + offset)°C")
-                        .foregroundColor(.white)
-                        .shadow(radius: 2)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                if let currentTemperature = currentTemperature {
+                    GeometryReader { geometry in
+                        Rectangle()
+                            .foregroundColor(color)
+                            .frame(width: geometry.size.width / CGFloat(maxTemperature) * CGFloat(currentTemperature + offset))
+                            .animation(nil)
+                    }
+                    
+                    if isPressed {
+                        Text("\(currentTemperature + offset)°C")
+                            .foregroundColor(.white)
+                            .shadow(radius: 2)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
                 }
             }
             .gesture(
@@ -65,6 +74,9 @@ struct TemperatureControllWidget: View {
     }
     
     private func onDragChanged(_ gesture: DragGesture.Value) {
+        guard let currentTemperature = currentTemperature else {
+            return
+        }
         self.isPressed = true
         var drag = Int(gesture.translation.width)
         
@@ -75,14 +87,18 @@ struct TemperatureControllWidget: View {
     }
     
     private func onDragEnded(_ gesture: DragGesture.Value) {
-            self.isPressed = false
-            self.currentTemperature += self.offset
-            self.offset = 0
+        guard let currentTemperature = currentTemperature else {
+            return
+        }
+        self.isPressed = false
+        self.currentTemperature = currentTemperature + self.offset
+        self.offset = 0
+        self.onTemperatureChanged?(self.currentTemperature!)
     }
 }
 
 struct TemperatureControllWidget_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetPreviewer{ TemperatureControllWidget(title: "Hotend", currentTemperature: .constant(201), maxTemperature: 250, color: .green) }
+        WidgetPreviewer{ TemperatureControllWidget(title: "Hotend", currentTemperature: 201, maxTemperature: 250, color: .green) }
     }
 }

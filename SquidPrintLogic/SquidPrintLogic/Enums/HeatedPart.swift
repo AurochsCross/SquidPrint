@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+public enum HeatedPart {
+    case bed
+    case hotend
+}

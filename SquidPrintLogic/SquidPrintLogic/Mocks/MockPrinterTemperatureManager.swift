@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import Combine
+
+class MockPrinterTemperatureManager: PrinterTemperatureManager {
+    func setTemperature(_ instructions: SetTemperatureInstructions) -> AnyPublisher<Void, Error> {
+        fatalError()
+    }
+}

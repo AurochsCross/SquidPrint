@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import Combine
+
+public class MockPrinterManager: PrinterManager {
+    public let status = CurrentValueSubject<PrinterStatus, Never>(.connected)
+    
+    public let informationProvider: PrinterInformationProvider = MockPrinterInformationProvider()
+    public let temperatureManager: PrinterTemperatureManager = MockPrinterTemperatureManager()
+    
+    public init() {
+        
+    }
+    
+    public func connect() -> AnyPublisher<Bool, Error> {
+        fatalError()
+    }
+}

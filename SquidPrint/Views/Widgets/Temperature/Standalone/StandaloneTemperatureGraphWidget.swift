@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import SquidPrintLogic
 
 struct StandaloneTemperatureGraphWidget: View {
+    @ObservedObject var widgetModel: StandaloneTemperatureGraphWidgetModel
+    
     var body: some View {
-        TemperatureGraphWidget(temperatures: [])
+        TemperatureGraphWidget(temperatures: widgetModel.temperatures)
     }
 }
 
 struct StandaloneTemperatureGraphWidget_Previews: PreviewProvider {
     static var previews: some View {
-        StandaloneTemperatureGraphWidget()
+        StandaloneTemperatureGraphWidget(widgetModel: StandaloneTemperatureGraphWidgetModel(infoProvider: MockPrinterManager().informationProvider, bufferSize: 40))
     }
 }

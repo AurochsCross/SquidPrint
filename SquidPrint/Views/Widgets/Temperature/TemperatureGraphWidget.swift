@@ -7,19 +7,39 @@
 
 import SwiftUI
 import Charts
+import OpenAPIClient
 
 struct TemperatureGraphWidget: View {
+    let temperatures: [TemperatureFrame]
+    
+    private var maxTemperature: Double {
+        if temperatures.count == 0 { return 100 }
+        
+        return temperatures.map { frame -> Double in
+            [frame.bed.actual!, frame.bed.target!, frame.hotend.actual!, frame.hotend.target!].max()!
+        }
+        .max()!
+    }
+    
+    private var bedTemperature: Double {
+        temperatures.last?.bed.actual ?? 0
+    }
+    
+    private var hotendTemperature: Double {
+        temperatures.last?.hotend.actual ?? 0
+    }
+    
     var body: some View {
         VStack {
             HStack {
                 HStack {
-                    TemperatureIndicator(name: "Hotend", temperature: 205)
+                    TemperatureIndicator(name: "Hotend", temperature: Int(hotendTemperature))
                         .foregroundColor(.orange)
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 HStack {
-                    TemperatureIndicator(name: "Bed", temperature: 64)
+                    TemperatureIndicator(name: "Bed", temperature: Int(bedTemperature))
                         .foregroundColor(.blue)
                     Spacer()
                 }
@@ -28,26 +48,15 @@ struct TemperatureGraphWidget: View {
             
             HStack {
                 ZStack {
-                    // Orange
-                    
-                
-                    Chart(data: [0, 80, 130, 198, 213, 205, 205, 206, 202].map { Float($0) / 250 })
-                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .orange, lineWidth: 6))
-                    Chart(data: [0, 205, 205, 205, 205, 205, 205, 205, 205].map { Float($0) / 250 })
-                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .orange, lineWidth: 6))
-                        .opacity(0.3)
-                    
-                    // Blue
-                    Chart(data: [0, 0, 0, 0, 0, 0, 10, 25, 49, 63, 60].map { Float($0) / 250 })
-                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 6))
-                    
-                    Chart(data: [0, 0, 0, 0, 0, 0, 60, 60, 60, 60, 60].map { Float($0) / 250 })
-                        .chartStyle(LineChartStyle(.quadCurve, lineColor: .blue, lineWidth: 6))
-                        .opacity(0.3)
+                    TemperatureLine(temperatures: temperatures.map { $0.hotend }, maxTemperature: maxTemperature, color: .orange)
+                        .animation(.default)
+                    TemperatureLine(temperatures: temperatures.map { $0.bed }, maxTemperature: maxTemperature, color: .blue)
                 }
+                .padding(.vertical, 3)
+                .clipped()
                 Divider()
                 VStack(alignment: .leading) {
-                    Text("250°C")
+                    Text("\(Int(maxTemperature))°C")
                         .font(.caption)
                         .foregroundColor(.secondary)
                     Spacer()
@@ -78,12 +87,36 @@ struct TemperatureGraphWidget: View {
             }
         }
     }
+    
+    private struct TemperatureLine: View {
+        let temperatures: [Temperature]
+        let maxTemperature: Double
+        let color: Color
+        
+        var body: some View {
+            Chart(data: temperatures.map { Double($0.actual!) / maxTemperature })
+                .chartStyle(LineChartStyle(.line, lineColor: color, lineWidth: 6))
+            Chart(data: temperatures.map { Double($0.target!) / maxTemperature })
+                .chartStyle(LineChartStyle(.line, lineColor: color, lineWidth: 6))
+                .opacity(0.3)
+        }
+    }
 }
 
 struct TemperatureGraphWidget_Previews: PreviewProvider {
+    
     static var previews: some View {
-        WidgetPreviewer {
-            TemperatureGraphWidget()
+        let temperatures = [
+            TemperatureFrame(bed: Temperature(actual: 0, target: 0), hotend: Temperature(actual: 0, target: 0)),
+            TemperatureFrame(bed: Temperature(actual: 50, target: 200), hotend: Temperature(actual: 0, target: 0)),
+            TemperatureFrame(bed: Temperature(actual: 100, target: 200), hotend: Temperature(actual: 0, target: 100)),
+            TemperatureFrame(bed: Temperature(actual: 150, target: 200), hotend: Temperature(actual: 33, target: 100)),
+            TemperatureFrame(bed: Temperature(actual: 200, target: 200), hotend: Temperature(actual: 66, target: 100)),
+            TemperatureFrame(bed: Temperature(actual: 200, target: 200), hotend: Temperature(actual: 100, target: 100))
+        ]
+        
+        return WidgetPreviewer {
+            TemperatureGraphWidget(temperatures: temperatures)
         }
     }
 }

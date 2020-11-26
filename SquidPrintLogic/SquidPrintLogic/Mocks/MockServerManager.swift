@@ -10,6 +10,10 @@ import Combine
 import OpenAPIClient
 
 public class MockServerManager: ServerManager {
+    public var printerManager: PrinterManager = MockPrinterManager()
+    
+    public var informationProvider: PrinterInformationProvider { MockPrinterInformationProvider() }
+    
     public var id: Int { Int.random(in: 0...9999) }
     public var name: String { UUID().uuidString }
     public var settings: ServerSettings {

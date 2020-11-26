@@ -24,7 +24,7 @@ struct ServerRootView: View {
                     Text("Control")
                 }
             
-            TemperatureView()
+            TemperatureView(viewModel: viewModel.temperatureViewModel)
                 .tabItem {
                     Image(systemName: "thermometer")
                     Text("Temperature")

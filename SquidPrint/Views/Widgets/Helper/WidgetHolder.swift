@@ -35,6 +35,6 @@ struct WidgetHolder<Content: View>: View {
 
 struct WidgetHolder_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetHolder(title: "Widget") { TemperatureControllWidget(title: "Hotend", currentTemperature: .constant(105), maxTemperature: 220, color: .green) }
+        WidgetHolder(title: "Widget") { TemperatureControllWidget(title: "Hotend", currentTemperature: nil, maxTemperature: 220, color: .green) }
     }
 }
