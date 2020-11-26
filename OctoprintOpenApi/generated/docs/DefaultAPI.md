@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**printerGet**](DefaultAPI.md#printerget) | **GET** /printer | Current printer state
 [**printerPrintheadPost**](DefaultAPI.md#printerprintheadpost) | **POST** /printer/printhead | Issue command to printhead
+[**printerToolPost**](DefaultAPI.md#printertoolpost) | **POST** /printer/tool | Issue command to printhead
 
 
 # **printerGet**
@@ -84,6 +85,54 @@ DefaultAPI.printerPrintheadPost(printHeadInstructions: printHeadInstructions) { 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **printHeadInstructions** | [**PrintHeadInstructions**](PrintHeadInstructions.md) |  | 
+
+### Return type
+
+Void (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **printerToolPost**
+```swift
+    open class func printerToolPost(printToolInstructions: PrintToolInstructions, completion: @escaping (_ data: Void?, _ error: Error?) -> Void)
+```
+
+Issue command to printhead
+
+### Example 
+```swift
+// The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
+import OpenAPIClient
+
+let printToolInstructions = PrintToolInstructions(command: PrintToolCommand(), targets: PrintToolValues(tool0: 123, tool1: 123), offsets: PrintToolValues(tool0: 123, tool1: 123)) // PrintToolInstructions | 
+
+// Issue command to printhead
+DefaultAPI.printerToolPost(printToolInstructions: printToolInstructions) { (response, error) in
+    guard error == nil else {
+        print(error)
+        return
+    }
+
+    if (response) {
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **printToolInstructions** | [**PrintToolInstructions**](PrintToolInstructions.md) |  | 
 
 ### Return type
 

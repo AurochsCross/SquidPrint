@@ -44,6 +44,19 @@ paths:
       responses:
         204:
           description: "Success"
+  /printer/tool:
+    post:
+      summary: 'Issue command to tool'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrintToolInstructions"
+      responses:
+        204:
+          description: "Success"
+
 
 components:
   schemas:
@@ -109,6 +122,8 @@ components:
       properties:
         tool0:
           $ref: '#/components/schemas/Temperature'
+        bed:
+          $ref: '#/components/schemas/Temperature'
     Temperature:
       type: object
       properties:
@@ -122,7 +137,6 @@ components:
       type: object
       properties:
         command:
-          required: true
           $ref: '#/components/schemas/PrintHeadCommand'
         x:
           type: number
@@ -138,11 +152,35 @@ components:
               - x
               - y
               - z
+      required:
+        - command
     PrintHeadCommand:
       type: string
       enum: 
         - jog
         - home
+    PrintToolInstructions:
+      type: object
+      properties: 
+        command:
+          $ref: "#/components/schemas/PrintToolCommand"
+        targets:
+          $ref: "#/components/schemas/PrintToolValues"
+        offsets:
+          $ref: "#/components/schemas/PrintToolValues"
+      required:
+        - command
+    PrintToolValues:
+      type: object
+      properties:
+        tool0:
+          type: number
+        tool1:
+          type: number
+    PrintToolCommand:
+      type: string
+      enum:
+        - target
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

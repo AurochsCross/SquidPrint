@@ -15,6 +15,8 @@ public protocol ServerManager {
     var settings: ServerSettings { get }
     var status: CurrentValueSubject<ServerStatus, Never> { get }
     
+    var printerManager: PrinterManager { get }
+    
     func connect() -> AnyPublisher<UserRecord, Error>
     
     func updateServerSettings(_ serverSettings: ServerSettings) -> AnyPublisher<ServerSettings, Error>

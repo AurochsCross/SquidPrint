@@ -28,6 +28,7 @@ Class | Method | HTTP request | Description
 *AuthenticationAPI* | [**loginPost**](docs/AuthenticationAPI.md#loginpost) | **POST** /login | User login
 *DefaultAPI* | [**printerGet**](docs/DefaultAPI.md#printerget) | **GET** /printer | Current printer state
 *DefaultAPI* | [**printerPrintheadPost**](docs/DefaultAPI.md#printerprintheadpost) | **POST** /printer/printhead | Issue command to printhead
+*DefaultAPI* | [**printerToolPost**](docs/DefaultAPI.md#printertoolpost) | **POST** /printer/tool | Issue command to printhead
 
 
 ## Documentation For Models
@@ -36,6 +37,9 @@ Class | Method | HTTP request | Description
  - [LoginRequest](docs/LoginRequest.md)
  - [PrintHeadCommand](docs/PrintHeadCommand.md)
  - [PrintHeadInstructions](docs/PrintHeadInstructions.md)
+ - [PrintToolCommand](docs/PrintToolCommand.md)
+ - [PrintToolInstructions](docs/PrintToolInstructions.md)
+ - [PrintToolValues](docs/PrintToolValues.md)
  - [PrinterState](docs/PrinterState.md)
  - [PrinterStateFlags](docs/PrinterStateFlags.md)
  - [SdState](docs/SdState.md)

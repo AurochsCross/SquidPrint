@@ -93,4 +93,46 @@ open class DefaultAPI {
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
+    /**
+     Issue command to printhead
+     
+     - parameter printToolInstructions: (body)  
+     - parameter apiResponseQueue: The queue on which api response is dispatched.
+     - returns: AnyPublisher<Void, Error>
+     */
+    @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    open class func printerToolPost(printToolInstructions: PrintToolInstructions, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<Void, Error> {
+        return Future<Void, Error>.init { promisse in
+            printerToolPostWithRequestBuilder(printToolInstructions: printToolInstructions).execute(apiResponseQueue) { result -> Void in
+                switch result {
+                case .success:
+                    promisse(.success(()))
+                case let .failure(error):
+                    promisse(.failure(error))
+                }
+            }
+        }.eraseToAnyPublisher()
+    }
+
+    /**
+     Issue command to printhead
+     - POST /printer/tool
+     - API Key:
+       - type: apiKey X-Api-Key 
+       - name: ApiKeyAuth
+     - parameter printToolInstructions: (body)  
+     - returns: RequestBuilder<Void> 
+     */
+    open class func printerToolPostWithRequestBuilder(printToolInstructions: PrintToolInstructions) -> RequestBuilder<Void> {
+        let path = "/printer/tool"
+        let URLString = OpenAPIClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: printToolInstructions)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = OpenAPIClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
 }

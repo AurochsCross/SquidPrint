@@ -9,7 +9,7 @@ import Foundation
 import OpenAPIClient
 import Combine
 
-class ServerMovementManager {
+class PrinterMovementManager {
     let callExecutor: ApiCallExecutor
     
     private var isBusy = false
