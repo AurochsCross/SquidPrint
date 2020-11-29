@@ -16,8 +16,11 @@ class DefaultPrinterInformationProvider: PrinterApiCaller, PrinterInformationPro
     private let refreshInterval: Double
     private var printerStatusCancellables = Set<AnyCancellable>()
     
+    let temperatureProvider: PrinterTemperatureProvider
+    
     init(apiCallExecutor: ApiCallExecutor, printerStatus: AnyPublisher<PrinterStatus, Never>? = nil, refreshInterval: Double = 2) {
         self.refreshInterval = refreshInterval
+        self.temperatureProvider = DefaultPrinterTemperatureProvider(printerState: printerState, apiExecutor: apiCallExecutor, historySize: 20)
         super.init(apiCallExecutor: apiCallExecutor)
         
         printerStatus?

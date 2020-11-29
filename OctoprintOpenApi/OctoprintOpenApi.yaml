@@ -25,6 +25,17 @@ paths:
   /printer:
     get:
       summary: 'Current printer state'
+      parameters:
+        - name: history
+          in: query
+          schema:
+            type: boolean
+          required: false
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          required: false
       responses:
         200:
           description: 'Current printer state'
@@ -56,6 +67,18 @@ paths:
       responses:
         204:
           description: "Success"
+  /printer/bed:
+    post:
+      summary: 'Issue command to bed'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BedInstructions"
+      responses:
+        204:
+          description: "Success"
 
 
 components:
@@ -83,6 +106,10 @@ components:
           $ref: '#/components/schemas/SdState'
         state:
           $ref: '#/components/schemas/PrinterState'
+        history:
+          type: array
+          items:
+            $ref: "#/components/schemas/HistoryFrame"
     PrinterState:
       type: object
       properties: 
@@ -133,6 +160,15 @@ components:
           type: number
         offset:
           type: number
+    HistoryFrame:
+      type: object
+      properties:
+        time:
+          type: number
+        tool0:
+          $ref: '#/components/schemas/Temperature'
+        bed:
+          $ref: '#/components/schemas/Temperature'
     PrintHeadInstructions:
       type: object
       properties:
@@ -181,6 +217,23 @@ components:
       type: string
       enum:
         - target
+        - offset
+    BedInstructions:
+      type: object
+      properties:
+        command: 
+          $ref: "#/components/schemas/BedCommand"
+        target:
+          type: number
+        offset:
+          type: number
+      required:
+        - command
+    BedCommand:
+      type: string
+      enum:
+        - target
+        - offset
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

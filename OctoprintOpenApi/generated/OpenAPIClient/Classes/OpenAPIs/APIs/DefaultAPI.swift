@@ -12,15 +12,59 @@ import Combine
 
 open class DefaultAPI {
     /**
+     Issue command to bed
+     
+     - parameter bedInstructions: (body)  
+     - parameter apiResponseQueue: The queue on which api response is dispatched.
+     - returns: AnyPublisher<Void, Error>
+     */
+    @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    open class func printerBedPost(bedInstructions: BedInstructions, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<Void, Error> {
+        return Future<Void, Error>.init { promisse in
+            printerBedPostWithRequestBuilder(bedInstructions: bedInstructions).execute(apiResponseQueue) { result -> Void in
+                switch result {
+                case .success:
+                    promisse(.success(()))
+                case let .failure(error):
+                    promisse(.failure(error))
+                }
+            }
+        }.eraseToAnyPublisher()
+    }
+
+    /**
+     Issue command to bed
+     - POST /printer/bed
+     - API Key:
+       - type: apiKey X-Api-Key 
+       - name: ApiKeyAuth
+     - parameter bedInstructions: (body)  
+     - returns: RequestBuilder<Void> 
+     */
+    open class func printerBedPostWithRequestBuilder(bedInstructions: BedInstructions) -> RequestBuilder<Void> {
+        let path = "/printer/bed"
+        let URLString = OpenAPIClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: bedInstructions)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = OpenAPIClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
      Current printer state
      
+     - parameter history: (query)  (optional)
+     - parameter limit: (query)  (optional)
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - returns: AnyPublisher<FullState, Error>
      */
     @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    open class func printerGet(apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<FullState, Error> {
+    open class func printerGet(history: Bool? = nil, limit: Int? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<FullState, Error> {
         return Future<FullState, Error>.init { promisse in
-            printerGetWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
+            printerGetWithRequestBuilder(history: history, limit: limit).execute(apiResponseQueue) { result -> Void in
                 switch result {
                 case let .success(response):
                     promisse(.success(response.body!))
@@ -37,14 +81,20 @@ open class DefaultAPI {
      - API Key:
        - type: apiKey X-Api-Key 
        - name: ApiKeyAuth
+     - parameter history: (query)  (optional)
+     - parameter limit: (query)  (optional)
      - returns: RequestBuilder<FullState> 
      */
-    open class func printerGetWithRequestBuilder() -> RequestBuilder<FullState> {
+    open class func printerGetWithRequestBuilder(history: Bool? = nil, limit: Int? = nil) -> RequestBuilder<FullState> {
         let path = "/printer"
         let URLString = OpenAPIClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "history": history?.encodeToJSON(), 
+            "limit": limit?.encodeToJSON()
+        ])
 
         let requestBuilder: RequestBuilder<FullState>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
 
@@ -94,7 +144,7 @@ open class DefaultAPI {
     }
 
     /**
-     Issue command to printhead
+     Issue command to tool
      
      - parameter printToolInstructions: (body)  
      - parameter apiResponseQueue: The queue on which api response is dispatched.
@@ -115,7 +165,7 @@ open class DefaultAPI {
     }
 
     /**
-     Issue command to printhead
+     Issue command to tool
      - POST /printer/tool
      - API Key:
        - type: apiKey X-Api-Key 

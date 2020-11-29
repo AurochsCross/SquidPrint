@@ -14,11 +14,13 @@ public struct FullState: Codable {
     public var temperature: TemperatureState?
     public var sd: SdState?
     public var state: PrinterState?
+    public var history: [HistoryFrame]?
 
-    public init(temperature: TemperatureState? = nil, sd: SdState? = nil, state: PrinterState? = nil) {
+    public init(temperature: TemperatureState? = nil, sd: SdState? = nil, state: PrinterState? = nil, history: [HistoryFrame]? = nil) {
         self.temperature = temperature
         self.sd = sd
         self.state = state
+        self.history = history
     }
 
 }

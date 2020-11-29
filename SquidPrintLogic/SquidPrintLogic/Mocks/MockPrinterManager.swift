@@ -13,6 +13,7 @@ public class MockPrinterManager: PrinterManager {
     
     public let informationProvider: PrinterInformationProvider = MockPrinterInformationProvider()
     public let temperatureManager: PrinterTemperatureManager = MockPrinterTemperatureManager()
+    public let temperatureProvider: PrinterTemperatureProvider = MockPrinterTemperatureProvider()
     
     public init() {
         

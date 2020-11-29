@@ -13,7 +13,7 @@ class StandaloneTemperatureGraphWidgetModel: ObservableObject {
     @Published var hotendTargetTemperature: Int? = nil
     @Published var bedTargetTemperature: Int? = nil
     
-    private let infoProvider: PrinterInformationProvider
+    private let temperatureProvider: PrinterTemperatureProvider
     @Published private(set) var temperatures: [TemperatureFrame]
     private let temperatureBufferSize: Int
 
@@ -21,29 +21,12 @@ class StandaloneTemperatureGraphWidgetModel: ObservableObject {
     
     init(infoProvider: PrinterInformationProvider, bufferSize: Int) {
         self.temperatureBufferSize = bufferSize
-        self.infoProvider = infoProvider
+        self.temperatureProvider = infoProvider.temperatureProvider
         self.temperatures = (0..<temperatureBufferSize).map { _ in TemperatureFrame() }
         
-        infoProvider.printerState
+        temperatureProvider.frames
             .receive(on: DispatchQueue.main)
-            .sink { state in
-                guard let temperature = state?.temperature else {
-                    self.addTemperatureFrame(nil)
-                    return
-                }
-                self.bedTargetTemperature = state?.temperature?.bed?.target.map { Int($0) }
-                self.hotendTargetTemperature = state?.temperature?.tool0?.target.map { Int($0) }
-                self.addTemperatureFrame(TemperatureFrame(temperatureState: temperature))
-            }
+            .assign(to: \.temperatures, on: self)
             .store(in: &cancellables)
-    }
-    
-    private func addTemperatureFrame(_ frame: TemperatureFrame?) {
-        guard let frame = frame else {
-            temperatures = Array(temperatures.dropFirst()) + [temperatures.last!]
-            return
-        }
-        
-        temperatures = Array(temperatures.dropFirst()) + [frame]
     }
 }

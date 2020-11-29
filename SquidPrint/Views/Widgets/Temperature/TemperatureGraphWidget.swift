@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 import OpenAPIClient
+import SquidPrintLogic
 
 struct TemperatureGraphWidget: View {
     let temperatures: [TemperatureFrame]

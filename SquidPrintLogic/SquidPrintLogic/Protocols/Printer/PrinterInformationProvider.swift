@@ -11,4 +11,5 @@ import OpenAPIClient
 
 public protocol PrinterInformationProvider {
     var printerState: CurrentValueSubject<FullState?, Never> { get }
+    var temperatureProvider: PrinterTemperatureProvider { get }
 }

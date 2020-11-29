@@ -10,6 +10,8 @@ import Combine
 import OpenAPIClient
 
 class MockPrinterInformationProvider: PrinterInformationProvider {
+    var temperatureProvider: PrinterTemperatureProvider = MockPrinterTemperatureProvider()
+    
     var printerState = CurrentValueSubject<FullState?, Never>(
         FullState(
             temperature: TemperatureState(
@@ -32,4 +34,6 @@ class MockPrinterInformationProvider: PrinterInformationProvider {
                     ready: false,
                     closedOrError: false)))
     )
+    
+    
 }

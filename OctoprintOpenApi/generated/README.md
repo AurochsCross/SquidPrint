@@ -26,14 +26,18 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthenticationAPI* | [**loginPost**](docs/AuthenticationAPI.md#loginpost) | **POST** /login | User login
+*DefaultAPI* | [**printerBedPost**](docs/DefaultAPI.md#printerbedpost) | **POST** /printer/bed | Issue command to bed
 *DefaultAPI* | [**printerGet**](docs/DefaultAPI.md#printerget) | **GET** /printer | Current printer state
 *DefaultAPI* | [**printerPrintheadPost**](docs/DefaultAPI.md#printerprintheadpost) | **POST** /printer/printhead | Issue command to printhead
-*DefaultAPI* | [**printerToolPost**](docs/DefaultAPI.md#printertoolpost) | **POST** /printer/tool | Issue command to printhead
+*DefaultAPI* | [**printerToolPost**](docs/DefaultAPI.md#printertoolpost) | **POST** /printer/tool | Issue command to tool
 
 
 ## Documentation For Models
 
+ - [BedCommand](docs/BedCommand.md)
+ - [BedInstructions](docs/BedInstructions.md)
  - [FullState](docs/FullState.md)
+ - [HistoryFrame](docs/HistoryFrame.md)
  - [LoginRequest](docs/LoginRequest.md)
  - [PrintHeadCommand](docs/PrintHeadCommand.md)
  - [PrintHeadInstructions](docs/PrintHeadInstructions.md)

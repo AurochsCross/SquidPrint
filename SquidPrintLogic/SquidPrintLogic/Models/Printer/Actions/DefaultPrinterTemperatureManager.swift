@@ -19,7 +19,7 @@ class DefaultPrinterTemperatureManager: PrinterApiCaller, PrinterTemperatureMana
     }
     
     private func bedTemperatureRequest(forTemperature temperature: Int) -> AnyPublisher<Void, Error> {
-        PublisherUtilities.anyWithValue(())
+        DefaultAPI.printerBedPost(bedInstructions: BedInstructions(command: .target, target: Double(temperature)))
     }
     
     private func toolTemperatureRequest(forTemperature temperature: Int) -> AnyPublisher<Void, Error> {
