@@ -21,7 +21,7 @@ Run `pod install`
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://78.58.133.153:93/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

@@ -40,7 +40,7 @@
 		B19906DE2570317C00F40211 /* SetTemperatureInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906DD2570317C00F40211 /* SetTemperatureInstructions.swift */; };
 		B1B562BF25728A6000BB5939 /* PrinterTemperatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B562BE25728A6000BB5939 /* PrinterTemperatureProvider.swift */; };
 		B1B562C425728B1500BB5939 /* MockPrinterTemperatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B562C325728B1500BB5939 /* MockPrinterTemperatureProvider.swift */; };
-		B1B562C925728D9300BB5939 /* ProcessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B562C825728D9300BB5939 /* ProcessState.swift */; };
+		B1B562C925728D9300BB5939 /* ProcessStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B562C825728D9300BB5939 /* ProcessStatus.swift */; };
 		B1B73F662568025B000AE39A /* SquidPrintLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B73F642568025B000AE39A /* SquidPrintLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F7125680291000AE39A /* CoreDataRetriever.swift */; };
 		B1B73F76256802B0000AE39A /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F75256802B0000AE39A /* GenericError.swift */; };
@@ -62,6 +62,7 @@
 		B1C2A14A256EC3FC0092A482 /* MoveAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A149256EC3FC0092A482 /* MoveAxis.swift */; };
 		B1C2A150256EC7640092A482 /* PrintheadInstructionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A14F256EC7640092A482 /* PrintheadInstructionSet.swift */; };
 		B1DAEDCF2570365D00CB0560 /* MockPrinterTemperatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAEDCE2570365D00CB0560 /* MockPrinterTemperatureManager.swift */; };
+		B1DEBAB52573DF45003D64A6 /* PrinterContinuousInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEBAB42573DF45003D64A6 /* PrinterContinuousInformationProvider.swift */; };
 		B1E5B84F256EDDFB008A975F /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = B1E5B84E256EDDFB008A975F /* OpenAPIClient */; };
 		B1E5B855256EE766008A975F /* ServerCommunicationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E5B854256EE766008A975F /* ServerCommunicationStatus.swift */; };
 /* End PBXBuildFile section */
@@ -101,7 +102,7 @@
 		B19906DD2570317C00F40211 /* SetTemperatureInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTemperatureInstructions.swift; sourceTree = "<group>"; };
 		B1B562BE25728A6000BB5939 /* PrinterTemperatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterTemperatureProvider.swift; sourceTree = "<group>"; };
 		B1B562C325728B1500BB5939 /* MockPrinterTemperatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrinterTemperatureProvider.swift; sourceTree = "<group>"; };
-		B1B562C825728D9300BB5939 /* ProcessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessState.swift; sourceTree = "<group>"; };
+		B1B562C825728D9300BB5939 /* ProcessStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessStatus.swift; sourceTree = "<group>"; };
 		B1B73F612568025B000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B73F642568025B000AE39A /* SquidPrintLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquidPrintLogic.h; sourceTree = "<group>"; };
 		B1B73F652568025B000AE39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		B1C2A149256EC3FC0092A482 /* MoveAxis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAxis.swift; sourceTree = "<group>"; };
 		B1C2A14F256EC7640092A482 /* PrintheadInstructionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintheadInstructionSet.swift; sourceTree = "<group>"; };
 		B1DAEDCE2570365D00CB0560 /* MockPrinterTemperatureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrinterTemperatureManager.swift; sourceTree = "<group>"; };
+		B1DEBAB42573DF45003D64A6 /* PrinterContinuousInformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterContinuousInformationProvider.swift; sourceTree = "<group>"; };
 		B1E5B854256EE766008A975F /* ServerCommunicationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunicationStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +172,7 @@
 				B1470B18256EC8990015CCB7 /* HomingAxis.swift */,
 				B1E5B854256EE766008A975F /* ServerCommunicationStatus.swift */,
 				B19906DA2570315500F40211 /* HeatedPart.swift */,
-				B1B562C825728D9300BB5939 /* ProcessState.swift */,
+				B1B562C825728D9300BB5939 /* ProcessStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -200,6 +202,7 @@
 			children = (
 				B19906B8257025F500F40211 /* DefaultPrinterInformationProvider.swift */,
 				B13315962572847400952072 /* DefaultPrinterTemperatureProvider.swift */,
+				B1DEBAB42573DF45003D64A6 /* PrinterContinuousInformationProvider.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -487,7 +490,7 @@
 				B19906C72570292D00F40211 /* PrinterCommuncationManager.swift in Sources */,
 				B1C2A150256EC7640092A482 /* PrintheadInstructionSet.swift in Sources */,
 				B133159E257284EB00952072 /* TemperatureFrame.swift in Sources */,
-				B1B562C925728D9300BB5939 /* ProcessState.swift in Sources */,
+				B1B562C925728D9300BB5939 /* ProcessStatus.swift in Sources */,
 				B1B562C425728B1500BB5939 /* MockPrinterTemperatureProvider.swift in Sources */,
 				B1470B22256ECC4D0015CCB7 /* ApiCallExecutor.swift in Sources */,
 				B1B73FB325682373000AE39A /* CoreDataRetrieveServerSettings.swift in Sources */,
@@ -535,6 +538,7 @@
 				B1B73F8925680447000AE39A /* CoreDataWriter.swift in Sources */,
 				B10437AF256AE99D00104F64 /* Log+Completion.swift in Sources */,
 				B1B73FB025682224000AE39A /* CoreDataError.swift in Sources */,
+				B1DEBAB52573DF45003D64A6 /* PrinterContinuousInformationProvider.swift in Sources */,
 				B1BF682B256C4E1200C16BDB /* MockServerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

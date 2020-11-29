@@ -18,47 +18,9 @@ class DefaultPrinterInformationProvider: PrinterApiCaller, PrinterInformationPro
     
     let temperatureProvider: PrinterTemperatureProvider
     
-    init(apiCallExecutor: ApiCallExecutor, printerStatus: AnyPublisher<PrinterStatus, Never>? = nil, refreshInterval: Double = 2) {
+    init(apiCallExecutor: ApiCallExecutor, printerStatus: AnyPublisher<PrinterStatus, Never>, refreshInterval: Double = 2) {
         self.refreshInterval = refreshInterval
-        self.temperatureProvider = DefaultPrinterTemperatureProvider(printerState: printerState, apiExecutor: apiCallExecutor, historySize: 20)
+        self.temperatureProvider = DefaultPrinterTemperatureProvider(apiExecutor: apiCallExecutor, printerStatus: printerStatus, refreshInterval: refreshInterval, historyBufferSize: 20)
         super.init(apiCallExecutor: apiCallExecutor)
-        
-        printerStatus?
-            .sink { status in
-                switch status {
-                case .connected:
-                    self.startRetrievingPrinterState()
-                case .disconnected:
-                    self.stopRetrievingPrinterState()
-                }
-            }
-            .store(in: &cancellables)
-    }
-    
-    
-    private func startRetrievingPrinterState() {
-        printerStatusCancellables = Set<AnyCancellable>()
-        
-        timer = Timer.scheduledTimer(withTimeInterval: refreshInterval, repeats: true) { (timer) in
-            self.apiExecutor.execute(DefaultAPI.printerGet())
-                .receive(on: DispatchQueue.main)
-                .sink(receiveCompletion: { completion in
-                    switch completion {
-                    case .finished:
-                        return
-                    case .failure(let error):
-                        log.error(error)
-                        self.printerState.value = nil
-                    }
-                }, receiveValue: { state in
-                    self.printerState.value = state
-                })
-                .store(in: &self.printerStatusCancellables)
-        }
-    }
-    
-    private func stopRetrievingPrinterState() {
-        timer = nil
-        printerStatusCancellables = Set<AnyCancellable>()
     }
 }

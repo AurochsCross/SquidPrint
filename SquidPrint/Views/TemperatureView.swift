@@ -19,10 +19,10 @@ struct TemperatureView: View {
                         .frame(height: 200)
                         .padding(.horizontal)
                     VStack {
-                        WidgetHolder(title: "Temperature Controlls") {
+                        WidgetHolder(title: "Target temperature") {
                             TemperatureControllWidget(
                                 title: "Hotend",
-                                currentTemperature: viewModel.hotendTargetTemperature,
+                                currentTemperature: $viewModel.hotendTargetTemperature,
                                 maxTemperature: 250,
                                 color: .orange,
                                 onTemperatureChanged: { self.viewModel.setTemperature(for: .hotend, to: $0) })
@@ -30,7 +30,7 @@ struct TemperatureView: View {
                         WidgetHolder {
                             TemperatureControllWidget(
                                 title: "Bed",
-                                currentTemperature: viewModel.bedTargetTemperature,
+                                currentTemperature: $viewModel.bedTargetTemperature,
                                 maxTemperature: 100,
                                 color: .blue,
                                 onTemperatureChanged: { self.viewModel.setTemperature(for: .bed, to: $0) })

@@ -22,7 +22,7 @@ class StandaloneTemperatureGraphWidgetModel: ObservableObject {
     init(infoProvider: PrinterInformationProvider, bufferSize: Int) {
         self.temperatureBufferSize = bufferSize
         self.temperatureProvider = infoProvider.temperatureProvider
-        self.temperatures = (0..<temperatureBufferSize).map { _ in TemperatureFrame() }
+        self.temperatures = temperatureProvider.frames.value
         
         temperatureProvider.frames
             .receive(on: DispatchQueue.main)

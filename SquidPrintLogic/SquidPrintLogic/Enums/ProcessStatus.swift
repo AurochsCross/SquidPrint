@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ProcessState {
+public enum ProcessStatus {
     case notStarted
     case inProgress
     case finished

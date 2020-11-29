@@ -3,6 +3,9 @@ info:
   title: OctoprintAPI
   description: Octoprint OpenApi documentation
   version: 0.0.1
+servers:
+  - url: http://78.58.133.153:93/api
+    description: Test server  
 paths:
   /login:
     post:
@@ -106,10 +109,6 @@ components:
           $ref: '#/components/schemas/SdState'
         state:
           $ref: '#/components/schemas/PrinterState'
-        history:
-          type: array
-          items:
-            $ref: "#/components/schemas/HistoryFrame"
     PrinterState:
       type: object
       properties: 
@@ -151,6 +150,10 @@ components:
           $ref: '#/components/schemas/Temperature'
         bed:
           $ref: '#/components/schemas/Temperature'
+        history:
+          type: array
+          items:
+            $ref: "#/components/schemas/HistoryFrame"
     Temperature:
       type: object
       properties:

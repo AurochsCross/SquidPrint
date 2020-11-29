@@ -24,11 +24,19 @@ class TemperatureViewModel: ObservableObject {
         self.temperatureManager = printerManager.temperatureManager
         self.temperatureGraphWidget = StandaloneTemperatureGraphWidgetModel(infoProvider: printerManager.informationProvider, bufferSize: 40)
         
-        infoProvider.printerState
+        infoProvider.temperatureProvider.frames
             .receive(on: DispatchQueue.main)
-            .sink { state in
-                self.bedTargetTemperature = state?.temperature?.bed?.target.map { Int($0) }
-                self.hotendTargetTemperature = state?.temperature?.tool0?.target.map { Int($0) }
+            .sink { frames in
+                guard frames.last?.bed.target.map({ Int($0) }) ?? self.bedTargetTemperature != self.bedTargetTemperature
+                        || frames.last?.hotend.target.map({ Int($0) }) ?? self.hotendTargetTemperature != self.hotendTargetTemperature else {
+                    return
+                }
+                
+                self.bedTargetTemperature = frames.last?.bed.target.map { Int($0) }
+                self.hotendTargetTemperature = frames.last?.hotend.target.map { Int($0) }
+                    
+                
+                self.objectWillChange.send()
             }
             .store(in: &cancellables)
     }

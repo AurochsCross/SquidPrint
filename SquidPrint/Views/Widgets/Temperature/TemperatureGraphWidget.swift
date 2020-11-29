@@ -16,10 +16,12 @@ struct TemperatureGraphWidget: View {
     private var maxTemperature: Double {
         if temperatures.count == 0 { return 100 }
         
-        return temperatures.map { frame -> Double in
+        let maxTemperature = temperatures.map { frame -> Double in
             [frame.bed.actual!, frame.bed.target!, frame.hotend.actual!, frame.hotend.target!].max()!
         }
         .max()!
+        
+        return maxTemperature > 0 ? maxTemperature : 100
     }
     
     private var bedTemperature: Double {
@@ -95,7 +97,9 @@ struct TemperatureGraphWidget: View {
         let color: Color
         
         var body: some View {
-            Chart(data: temperatures.map { Double($0.actual!) / maxTemperature })
+            Chart(data: temperatures.map { temp in
+                    Double(temp.actual!) / maxTemperature
+            })
                 .chartStyle(LineChartStyle(.line, lineColor: color, lineWidth: 6))
             Chart(data: temperatures.map { Double($0.target!) / maxTemperature })
                 .chartStyle(LineChartStyle(.line, lineColor: color, lineWidth: 6))

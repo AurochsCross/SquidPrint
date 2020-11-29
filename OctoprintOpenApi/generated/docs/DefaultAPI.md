@@ -1,6 +1,6 @@
 # DefaultAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://78.58.133.153:93/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

@@ -12,7 +12,7 @@ struct TemperatureControllWidget: View {
     @State private var offset: Int = Int.zero
     
     let title: String
-    @State var currentTemperature: Int?
+    @Binding var currentTemperature: Int?
     let maxTemperature: Int
     let color: Color
     
@@ -99,6 +99,6 @@ struct TemperatureControllWidget: View {
 
 struct TemperatureControllWidget_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetPreviewer{ TemperatureControllWidget(title: "Hotend", currentTemperature: 201, maxTemperature: 250, color: .green) }
+        WidgetPreviewer{ TemperatureControllWidget(title: "Hotend", currentTemperature: .constant(201), maxTemperature: 250, color: .green) }
     }
 }

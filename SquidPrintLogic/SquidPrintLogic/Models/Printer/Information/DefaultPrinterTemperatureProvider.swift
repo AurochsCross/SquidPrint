@@ -9,50 +9,61 @@ import Foundation
 import Combine
 import OpenAPIClient
 
-class DefaultPrinterTemperatureProvider: PrinterTemperatureProvider {
+class DefaultPrinterTemperatureProvider: PrinterContinuousInformationProvider<[TemperatureFrame]>, PrinterTemperatureProvider {
+    var frames: CurrentValueSubject<[TemperatureFrame], Never>
     
-    let frames: CurrentValueSubject<[TemperatureFrame], Never>
-    
-    private let historySize: Int
-    private let apiExecutor: ApiCallExecutor
-    private var cancellables = Set<AnyCancellable>()
-    
-    private var initialHistoryState = ProcessState.notStarted
-    
-    init(printerState: CurrentValueSubject<FullState?, Never>, apiExecutor: ApiCallExecutor, historySize: Int) {
-        self.apiExecutor = apiExecutor
-        self.historySize = historySize
-        frames = .init((0..<historySize).map { _ in TemperatureFrame() })
-        printerState
-            .map { state in
-                TemperatureFrame(bed: state?.temperature?.bed, hotend: state?.temperature?.tool0, lastFrame: self.frames.value.last ?? TemperatureFrame())
-            }
-            .receive(on: DispatchQueue.main)
-            .sink {
-                if self.initialHistoryState == .finished {
-                    self.frames.value = Array(self.frames.value.dropFirst()) + [$0]
-                } else if self.initialHistoryState == .notStarted  {
-                    self.retrieveHistory()
-                    self.initialHistoryState = .inProgress
+    override var informationReceivePublisher: AnyPublisher<[TemperatureFrame], Error> {
+        if initialHistoryProcessStatus == .notStarted {
+            initialHistoryProcessStatus = .inProgress
+            
+            return DefaultAPI.printerGet(history: true, limit: historyBufferSize)
+                .map { state -> [TemperatureFrame] in
+                    self.initialHistoryProcessStatus = .finished
+                    return (state.temperature?.history ?? []).compactMap { TemperatureFrame(bed: $0.bed, hotend: $0.tool0) }
                 }
+                .eraseToAnyPublisher()
+        } else if initialHistoryProcessStatus == .inProgress {
+            return Empty<[TemperatureFrame], Error>().eraseToAnyPublisher()
+        } else {
+            return DefaultAPI.printerGet(history: true, limit: historyBufferSize)
+                .map { state -> [TemperatureFrame] in
+                    [ TemperatureFrame(bed: state.temperature?.bed, hotend: state.temperature?.tool0) ]
+                }
+                .eraseToAnyPublisher()
+        }
+    }
+    
+    private let historyBufferSize: Int
+    private var initialHistoryProcessStatus = ProcessStatus.notStarted
+    
+    init(
+        apiExecutor: ApiCallExecutor,
+        printerStatus: AnyPublisher<PrinterStatus, Never>,
+        refreshInterval: Double,
+        historyBufferSize: Int) {
+        self.historyBufferSize = historyBufferSize
+        self.frames = .init((0..<historyBufferSize).map { _ in TemperatureFrame() })
+        super.init(
+            apiExecutor: apiExecutor,
+            printerStatus: printerStatus,
+            refreshInterval: refreshInterval)
+        
+        informationSubject
+            .map { frames in
+                Array(self.frames.value.dropFirst(frames.count)) + frames
             }
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error): log.error(error)
+                case .finished: return
+                }
+            }, receiveValue: {
+                self.frames.value = $0
+            })
             .store(in: &cancellables)
     }
     
-    public func retrieveHistory() {
-        apiExecutor.execute(DefaultAPI.printerGet(history: true, limit: historySize))
-            .sink(receiveCompletion: {
-                switch $0 {
-                case .finished: return
-                case .failure(let error): log.error(error)
-                }
-            }) { result in
-                let frames = result.history?.compactMap{ TemperatureFrame(bed: $0.bed, hotend: $0.tool0) } ?? []
-                let missingFrames = self.historySize - frames.count
-                
-                self.frames.value = (0..<missingFrames).map { _ in frames.first ?? TemperatureFrame() } + frames
-                self.initialHistoryState = .finished
-            }
-            .store(in: &cancellables)
+    func retrieveHistory() {
+        initialHistoryProcessStatus = .notStarted
     }
 }
