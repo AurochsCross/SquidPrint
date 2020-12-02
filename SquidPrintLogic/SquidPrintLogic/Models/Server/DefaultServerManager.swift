@@ -10,25 +10,32 @@ import Combine
 import CoreData
 import OpenAPIClient
 
-public class DefaultServerManager: ServerManager {
-    public var id: Int { settings.id }
-    public var name: String { settings.displayName }
-    public var settings: ServerSettings { ServerSettings(managed: settingsManager.serverSettingsManaged.value) }
-    
+public class DefaultServerManager {
     private let settingsManager: CoreDataServerSettingsManager
     private var communicationManager: ServerCommunicationManager
-    private var movementManager: ServerMovementManager
-    public let status = CurrentValueSubject<ServerStatus, Never>(.disconnected)
+    public private(set) var printerManager: PrinterManager
+    public var status: CurrentValueSubject<ServerStatus, Never> { communicationManager.status }
     
     private var cancellables = Set<AnyCancellable>()
     
     init(serverSettings: DB_ServerSettings) {
         settingsManager = CoreDataServerSettingsManager(serverSettings: serverSettings)
         communicationManager = ServerCommunicationManager(serverSettings: ServerSettings(managed: serverSettings))
-        movementManager = ServerMovementManager(callExecutor: communicationManager)
-        updateCommunicationManager(withSettings: ServerSettings(managed: serverSettings))
+        printerManager = DefaultPrinterManager(serverApiExecutor: communicationManager, serverStatus: communicationManager.status)
     }
-    
+    static func create(_ settings: ServerSettings, inContext context: NSManagedObjectContext) -> AnyPublisher<DefaultServerManager, Error> {
+        let serverSettings = DB_ServerSettings(context: context)
+        _ = settings.updateManaged(serverSettings)
+        
+        return context.savePublisher()
+            .map { _ -> DefaultServerManager in
+                DefaultServerManager(serverSettings: serverSettings)
+            }
+            .eraseToAnyPublisher()
+    }
+}
+
+extension DefaultServerManager {
     public func connect() -> AnyPublisher<UserRecord, Error> {
         communicationManager.connect()
     }
@@ -48,29 +55,16 @@ public class DefaultServerManager: ServerManager {
     
     func updateCommunicationManager(withSettings settings: ServerSettings) {
         communicationManager = ServerCommunicationManager(serverSettings: settings)
-        movementManager = ServerMovementManager(callExecutor: communicationManager)
-        
-        communicationManager.isConnected
-            .map { isConnected -> ServerStatus in
-                isConnected ? .connected : .disconnected
-            }
-            .receive(on: DispatchQueue.main)
-            .assign(to: \.status.value, on: self)
-            .store(in: &cancellables)
+        printerManager = DefaultPrinterManager(serverApiExecutor: communicationManager, serverStatus: communicationManager.status)
     }
     
     public func move(withInstructions instructions: PrintheadInstructionSet) -> AnyPublisher<Void, Error> {
-        movementManager.issuePrintheadMovementCommand(instructions)
+        fatalError()
     }
-    
-    static func create(_ settings: ServerSettings, inContext context: NSManagedObjectContext) -> AnyPublisher<DefaultServerManager, Error> {
-        let serverSettings = DB_ServerSettings(context: context)
-        _ = settings.updateManaged(serverSettings)
-        
-        return context.savePublisher()
-            .map { _ -> DefaultServerManager in
-                DefaultServerManager(serverSettings: serverSettings)
-            }
-            .eraseToAnyPublisher()
-    }
+}
+
+extension DefaultServerManager: ServerManager {
+    public var id: Int { settings.id }
+    public var name: String { settings.displayName }
+    public var settings: ServerSettings { ServerSettings(managed: settingsManager.serverSettingsManaged.value) }
 }

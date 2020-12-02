@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PrinterCommunicationStatus {
+public enum PrinterStatus {
     case disconnected
     case connected
 }

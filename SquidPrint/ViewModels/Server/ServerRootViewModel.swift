@@ -15,6 +15,7 @@ class ServerRootViewModel: ObservableObject {
     let dashboardViewModel: DashboardViewModel
     let settingsViewModel: SettingsViewModel
     let movementViewModel: MovementControlViewModel
+    let temperatureViewModel: TemperatureViewModel
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -23,7 +24,14 @@ class ServerRootViewModel: ObservableObject {
         self.dashboardViewModel = DashboardViewModel(serverManager: serverManager)
         self.settingsViewModel = SettingsViewModel(serverManager: serverManager)
         self.movementViewModel = MovementControlViewModel(serverManager: serverManager)
+        self.temperatureViewModel = TemperatureViewModel(printerManager: serverManager.printerManager)
+        
         serverManager.connect()
+            .flatMap { record -> AnyPublisher<Bool, Error> in
+                log.info("Connection to \(record.name ?? "-") established")
+                
+                return serverManager.printerManager.connect()
+            }
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished: return
@@ -31,7 +39,7 @@ class ServerRootViewModel: ObservableObject {
                 }
                 
             }) { record in
-                log.info("Connection to \(record.name ?? "-") established")
+                log.info("Connection to printer established")
             }
             .store(in: &cancellables)
     }

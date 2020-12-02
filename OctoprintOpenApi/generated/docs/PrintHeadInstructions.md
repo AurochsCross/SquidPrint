@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**command** | [**PrintHeadCommand**](PrintHeadCommand.md) |  | [optional] 
+**command** | [**PrintHeadCommand**](PrintHeadCommand.md) |  | 
 **x** | **Double** |  | [optional] 
 **y** | **Double** |  | [optional] 
 **z** | **Double** |  | [optional] 

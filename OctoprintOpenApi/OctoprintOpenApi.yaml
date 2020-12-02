@@ -3,6 +3,9 @@ info:
   title: OctoprintAPI
   description: Octoprint OpenApi documentation
   version: 0.0.1
+servers:
+  - url: http://78.58.133.153:93/api
+    description: Test server  
 paths:
   /login:
     post:
@@ -25,6 +28,17 @@ paths:
   /printer:
     get:
       summary: 'Current printer state'
+      parameters:
+        - name: history
+          in: query
+          schema:
+            type: boolean
+          required: false
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          required: false
       responses:
         200:
           description: 'Current printer state'
@@ -44,6 +58,31 @@ paths:
       responses:
         204:
           description: "Success"
+  /printer/tool:
+    post:
+      summary: 'Issue command to tool'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrintToolInstructions"
+      responses:
+        204:
+          description: "Success"
+  /printer/bed:
+    post:
+      summary: 'Issue command to bed'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BedInstructions"
+      responses:
+        204:
+          description: "Success"
+
 
 components:
   schemas:
@@ -109,6 +148,12 @@ components:
       properties:
         tool0:
           $ref: '#/components/schemas/Temperature'
+        bed:
+          $ref: '#/components/schemas/Temperature'
+        history:
+          type: array
+          items:
+            $ref: "#/components/schemas/HistoryFrame"
     Temperature:
       type: object
       properties:
@@ -118,11 +163,19 @@ components:
           type: number
         offset:
           type: number
+    HistoryFrame:
+      type: object
+      properties:
+        time:
+          type: number
+        tool0:
+          $ref: '#/components/schemas/Temperature'
+        bed:
+          $ref: '#/components/schemas/Temperature'
     PrintHeadInstructions:
       type: object
       properties:
         command:
-          required: true
           $ref: '#/components/schemas/PrintHeadCommand'
         x:
           type: number
@@ -138,11 +191,52 @@ components:
               - x
               - y
               - z
+      required:
+        - command
     PrintHeadCommand:
       type: string
       enum: 
         - jog
         - home
+    PrintToolInstructions:
+      type: object
+      properties: 
+        command:
+          $ref: "#/components/schemas/PrintToolCommand"
+        targets:
+          $ref: "#/components/schemas/PrintToolValues"
+        offsets:
+          $ref: "#/components/schemas/PrintToolValues"
+      required:
+        - command
+    PrintToolValues:
+      type: object
+      properties:
+        tool0:
+          type: number
+        tool1:
+          type: number
+    PrintToolCommand:
+      type: string
+      enum:
+        - target
+        - offset
+    BedInstructions:
+      type: object
+      properties:
+        command: 
+          $ref: "#/components/schemas/BedCommand"
+        target:
+          type: number
+        offset:
+          type: number
+      required:
+        - command
+    BedCommand:
+      type: string
+      enum:
+        - target
+        - offset
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

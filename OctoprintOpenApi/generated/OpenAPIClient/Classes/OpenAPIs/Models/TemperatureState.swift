@@ -12,9 +12,13 @@ public struct TemperatureState: Codable {
 
 
     public var tool0: Temperature?
+    public var bed: Temperature?
+    public var history: [HistoryFrame]?
 
-    public init(tool0: Temperature? = nil) {
+    public init(tool0: Temperature? = nil, bed: Temperature? = nil, history: [HistoryFrame]? = nil) {
         self.tool0 = tool0
+        self.bed = bed
+        self.history = history
     }
 
 }

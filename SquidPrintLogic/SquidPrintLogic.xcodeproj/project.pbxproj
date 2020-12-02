@@ -18,12 +18,29 @@
 		B11F3AE5256AE2DA00618DFD /* ServerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11F3AE4256AE2DA00618DFD /* ServerStatus.swift */; };
 		B1327F65256CE25900286CA4 /* Api+ServerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */; };
 		B1327F68256CE3D100286CA4 /* ServerCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */; };
+		B13315972572847400952072 /* DefaultPrinterTemperatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13315962572847400952072 /* DefaultPrinterTemperatureProvider.swift */; };
+		B133159E257284EB00952072 /* TemperatureFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133159D257284EB00952072 /* TemperatureFrame.swift */; };
 		B1470B19256EC8990015CCB7 /* HomingAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B18256EC8990015CCB7 /* HomingAxis.swift */; };
 		B1470B1C256EC8DC0015CCB7 /* PrintheadHomingInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B1B256EC8DC0015CCB7 /* PrintheadHomingInstructions.swift */; };
-		B1470B1F256ECB6E0015CCB7 /* ServerMovementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B1E256ECB6E0015CCB7 /* ServerMovementManager.swift */; };
+		B1470B1F256ECB6E0015CCB7 /* PrinterMovementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B1E256ECB6E0015CCB7 /* PrinterMovementManager.swift */; };
 		B1470B22256ECC4D0015CCB7 /* ApiCallExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B21256ECC4D0015CCB7 /* ApiCallExecutor.swift */; };
 		B1470B25256ECEA60015CCB7 /* PrinterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1470B24256ECEA60015CCB7 /* PrinterError.swift */; };
 		B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F267256961C900D7A67C /* PublisherUtilities.swift */; };
+		B19906A5256FFFD200F40211 /* PrinterInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906A4256FFFD200F40211 /* PrinterInformationProvider.swift */; };
+		B19906A82570014900F40211 /* MockPrinterInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906A72570014900F40211 /* MockPrinterInformationProvider.swift */; };
+		B19906B6257025CA00F40211 /* DefaultPrinterTemperatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906B5257025CA00F40211 /* DefaultPrinterTemperatureManager.swift */; };
+		B19906B9257025F500F40211 /* DefaultPrinterInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906B8257025F500F40211 /* DefaultPrinterInformationProvider.swift */; };
+		B19906BD257027D600F40211 /* PrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906BC257027D600F40211 /* PrinterManager.swift */; };
+		B19906C0257027FB00F40211 /* DefaultPrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906BF257027FB00F40211 /* DefaultPrinterManager.swift */; };
+		B19906C72570292D00F40211 /* PrinterCommuncationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906C62570292D00F40211 /* PrinterCommuncationManager.swift */; };
+		B19906CC25702C9900F40211 /* PrinterApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906CB25702C9900F40211 /* PrinterApiCaller.swift */; };
+		B19906D225702F4600F40211 /* MockPrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906D125702F4600F40211 /* MockPrinterManager.swift */; };
+		B19906D72570310900F40211 /* PrinterTemperatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906D62570310900F40211 /* PrinterTemperatureManager.swift */; };
+		B19906DB2570315500F40211 /* HeatedPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906DA2570315500F40211 /* HeatedPart.swift */; };
+		B19906DE2570317C00F40211 /* SetTemperatureInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906DD2570317C00F40211 /* SetTemperatureInstructions.swift */; };
+		B1B562BF25728A6000BB5939 /* PrinterTemperatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B562BE25728A6000BB5939 /* PrinterTemperatureProvider.swift */; };
+		B1B562C425728B1500BB5939 /* MockPrinterTemperatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B562C325728B1500BB5939 /* MockPrinterTemperatureProvider.swift */; };
+		B1B562C925728D9300BB5939 /* ProcessStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B562C825728D9300BB5939 /* ProcessStatus.swift */; };
 		B1B73F662568025B000AE39A /* SquidPrintLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B73F642568025B000AE39A /* SquidPrintLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F7125680291000AE39A /* CoreDataRetriever.swift */; };
 		B1B73F76256802B0000AE39A /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73F75256802B0000AE39A /* GenericError.swift */; };
@@ -44,6 +61,8 @@
 		B1C2A146256EC3B00092A482 /* PrintheadMoveInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A145256EC3B00092A482 /* PrintheadMoveInstructions.swift */; };
 		B1C2A14A256EC3FC0092A482 /* MoveAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A149256EC3FC0092A482 /* MoveAxis.swift */; };
 		B1C2A150256EC7640092A482 /* PrintheadInstructionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2A14F256EC7640092A482 /* PrintheadInstructionSet.swift */; };
+		B1DAEDCF2570365D00CB0560 /* MockPrinterTemperatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAEDCE2570365D00CB0560 /* MockPrinterTemperatureManager.swift */; };
+		B1DEBAB52573DF45003D64A6 /* PrinterContinuousInformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEBAB42573DF45003D64A6 /* PrinterContinuousInformationProvider.swift */; };
 		B1E5B84F256EDDFB008A975F /* OpenAPIClient in Frameworks */ = {isa = PBXBuildFile; productRef = B1E5B84E256EDDFB008A975F /* OpenAPIClient */; };
 		B1E5B855256EE766008A975F /* ServerCommunicationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E5B854256EE766008A975F /* ServerCommunicationStatus.swift */; };
 /* End PBXBuildFile section */
@@ -61,12 +80,29 @@
 		B131056725698FB5006F2C54 /* SquidPrintDataModel_v0.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquidPrintDataModel_v0.2.xcdatamodel; sourceTree = "<group>"; };
 		B1327F64256CE25900286CA4 /* Api+ServerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+ServerSelection.swift"; sourceTree = "<group>"; };
 		B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunicationManager.swift; sourceTree = "<group>"; };
+		B13315962572847400952072 /* DefaultPrinterTemperatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPrinterTemperatureProvider.swift; sourceTree = "<group>"; };
+		B133159D257284EB00952072 /* TemperatureFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureFrame.swift; sourceTree = "<group>"; };
 		B1470B18256EC8990015CCB7 /* HomingAxis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomingAxis.swift; sourceTree = "<group>"; };
 		B1470B1B256EC8DC0015CCB7 /* PrintheadHomingInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintheadHomingInstructions.swift; sourceTree = "<group>"; };
-		B1470B1E256ECB6E0015CCB7 /* ServerMovementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMovementManager.swift; sourceTree = "<group>"; };
+		B1470B1E256ECB6E0015CCB7 /* PrinterMovementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterMovementManager.swift; sourceTree = "<group>"; };
 		B1470B21256ECC4D0015CCB7 /* ApiCallExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallExecutor.swift; sourceTree = "<group>"; };
 		B1470B24256ECEA60015CCB7 /* PrinterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterError.swift; sourceTree = "<group>"; };
 		B190F267256961C900D7A67C /* PublisherUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherUtilities.swift; sourceTree = "<group>"; };
+		B19906A4256FFFD200F40211 /* PrinterInformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterInformationProvider.swift; sourceTree = "<group>"; };
+		B19906A72570014900F40211 /* MockPrinterInformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrinterInformationProvider.swift; sourceTree = "<group>"; };
+		B19906B5257025CA00F40211 /* DefaultPrinterTemperatureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPrinterTemperatureManager.swift; sourceTree = "<group>"; };
+		B19906B8257025F500F40211 /* DefaultPrinterInformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPrinterInformationProvider.swift; sourceTree = "<group>"; };
+		B19906BC257027D600F40211 /* PrinterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterManager.swift; sourceTree = "<group>"; };
+		B19906BF257027FB00F40211 /* DefaultPrinterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPrinterManager.swift; sourceTree = "<group>"; };
+		B19906C62570292D00F40211 /* PrinterCommuncationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterCommuncationManager.swift; sourceTree = "<group>"; };
+		B19906CB25702C9900F40211 /* PrinterApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterApiCaller.swift; sourceTree = "<group>"; };
+		B19906D125702F4600F40211 /* MockPrinterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrinterManager.swift; sourceTree = "<group>"; };
+		B19906D62570310900F40211 /* PrinterTemperatureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterTemperatureManager.swift; sourceTree = "<group>"; };
+		B19906DA2570315500F40211 /* HeatedPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatedPart.swift; sourceTree = "<group>"; };
+		B19906DD2570317C00F40211 /* SetTemperatureInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTemperatureInstructions.swift; sourceTree = "<group>"; };
+		B1B562BE25728A6000BB5939 /* PrinterTemperatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterTemperatureProvider.swift; sourceTree = "<group>"; };
+		B1B562C325728B1500BB5939 /* MockPrinterTemperatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrinterTemperatureProvider.swift; sourceTree = "<group>"; };
+		B1B562C825728D9300BB5939 /* ProcessStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessStatus.swift; sourceTree = "<group>"; };
 		B1B73F612568025B000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B73F642568025B000AE39A /* SquidPrintLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquidPrintLogic.h; sourceTree = "<group>"; };
 		B1B73F652568025B000AE39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +125,8 @@
 		B1C2A145256EC3B00092A482 /* PrintheadMoveInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintheadMoveInstructions.swift; sourceTree = "<group>"; };
 		B1C2A149256EC3FC0092A482 /* MoveAxis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAxis.swift; sourceTree = "<group>"; };
 		B1C2A14F256EC7640092A482 /* PrintheadInstructionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintheadInstructionSet.swift; sourceTree = "<group>"; };
+		B1DAEDCE2570365D00CB0560 /* MockPrinterTemperatureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrinterTemperatureManager.swift; sourceTree = "<group>"; };
+		B1DEBAB42573DF45003D64A6 /* PrinterContinuousInformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterContinuousInformationProvider.swift; sourceTree = "<group>"; };
 		B1E5B854256EE766008A975F /* ServerCommunicationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunicationStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,10 +156,10 @@
 		B11F3ADE256AE18700618DFD /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				B10437B2256AED0000104F64 /* ServersManager.swift */,
 				B1B73F9025680A67000AE39A /* DefaultServerManager.swift */,
-				B11F3AE0256AE19600618DFD /* CoreDataServerSettingsManager.swift */,
 				B1327F67256CE3D100286CA4 /* ServerCommunicationManager.swift */,
-				B1470B1E256ECB6E0015CCB7 /* ServerMovementManager.swift */,
+				B11F3AE0256AE19600618DFD /* CoreDataServerSettingsManager.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -133,8 +171,70 @@
 				B1C2A149256EC3FC0092A482 /* MoveAxis.swift */,
 				B1470B18256EC8990015CCB7 /* HomingAxis.swift */,
 				B1E5B854256EE766008A975F /* ServerCommunicationStatus.swift */,
+				B19906DA2570315500F40211 /* HeatedPart.swift */,
+				B1B562C825728D9300BB5939 /* ProcessStatus.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		B19906BB257027A500F40211 /* Printer */ = {
+			isa = PBXGroup;
+			children = (
+				B19906CF25702CEA00F40211 /* Communication */,
+				B19906C52570290200F40211 /* Information */,
+				B19906C2257028CC00F40211 /* Actions */,
+				B19906BF257027FB00F40211 /* DefaultPrinterManager.swift */,
+			);
+			path = Printer;
+			sourceTree = "<group>";
+		};
+		B19906C2257028CC00F40211 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B1470B1E256ECB6E0015CCB7 /* PrinterMovementManager.swift */,
+				B19906B5257025CA00F40211 /* DefaultPrinterTemperatureManager.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		B19906C52570290200F40211 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				B19906B8257025F500F40211 /* DefaultPrinterInformationProvider.swift */,
+				B13315962572847400952072 /* DefaultPrinterTemperatureProvider.swift */,
+				B1DEBAB42573DF45003D64A6 /* PrinterContinuousInformationProvider.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		B19906CF25702CEA00F40211 /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				B19906C62570292D00F40211 /* PrinterCommuncationManager.swift */,
+				B19906CB25702C9900F40211 /* PrinterApiCaller.swift */,
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
+		B19906D4257030B000F40211 /* Printer */ = {
+			isa = PBXGroup;
+			children = (
+				B1C2A152256EC76A0092A482 /* PrintheadInstructions */,
+				B19906A4256FFFD200F40211 /* PrinterInformationProvider.swift */,
+				B19906BC257027D600F40211 /* PrinterManager.swift */,
+				B19906D62570310900F40211 /* PrinterTemperatureManager.swift */,
+				B1B562BE25728A6000BB5939 /* PrinterTemperatureProvider.swift */,
+			);
+			path = Printer;
+			sourceTree = "<group>";
+		};
+		B19906D5257030BC00F40211 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				B1BF681F256C45DB00C16BDB /* ServerManager.swift */,
+				B1BF6824256C4C8000C16BDB /* ServerSettingsManager.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 		B1B73F572568025B000AE39A = {
@@ -176,8 +276,8 @@
 		B1B73F6E25680279000AE39A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B10437B2256AED0000104F64 /* ServersManager.swift */,
 				B11F3ADE256AE18700618DFD /* Server */,
+				B19906BB257027A500F40211 /* Printer */,
 				B1B73F6F2568027E000AE39A /* CoreDataWorkers */,
 				B1B73F9B25681B84000AE39A /* CoreDataStorage.swift */,
 			);
@@ -254,6 +354,8 @@
 			children = (
 				B1C2A14C256EC7380092A482 /* PrintheadInstructions */,
 				B1B73FA325681E9E000AE39A /* ServerSettings.swift */,
+				B19906DD2570317C00F40211 /* SetTemperatureInstructions.swift */,
+				B133159D257284EB00952072 /* TemperatureFrame.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -261,9 +363,8 @@
 		B1BF681E256C45BF00C16BDB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B1C2A152256EC76A0092A482 /* PrintheadInstructions */,
-				B1BF681F256C45DB00C16BDB /* ServerManager.swift */,
-				B1BF6824256C4C8000C16BDB /* ServerSettingsManager.swift */,
+				B19906D5257030BC00F40211 /* Server */,
+				B19906D4257030B000F40211 /* Printer */,
 				B1470B21256ECC4D0015CCB7 /* ApiCallExecutor.swift */,
 			);
 			path = Protocols;
@@ -273,6 +374,10 @@
 			isa = PBXGroup;
 			children = (
 				B1BF682A256C4E1200C16BDB /* MockServerManager.swift */,
+				B19906A72570014900F40211 /* MockPrinterInformationProvider.swift */,
+				B19906D125702F4600F40211 /* MockPrinterManager.swift */,
+				B1DAEDCE2570365D00CB0560 /* MockPrinterTemperatureManager.swift */,
+				B1B562C325728B1500BB5939 /* MockPrinterTemperatureProvider.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -382,18 +487,28 @@
 			files = (
 				B1470B19256EC8990015CCB7 /* HomingAxis.swift in Sources */,
 				B1B73FAC256820C6000AE39A /* CoreDataAutoSaveExecutor.swift in Sources */,
+				B19906C72570292D00F40211 /* PrinterCommuncationManager.swift in Sources */,
 				B1C2A150256EC7640092A482 /* PrintheadInstructionSet.swift in Sources */,
+				B133159E257284EB00952072 /* TemperatureFrame.swift in Sources */,
+				B1B562C925728D9300BB5939 /* ProcessStatus.swift in Sources */,
+				B1B562C425728B1500BB5939 /* MockPrinterTemperatureProvider.swift in Sources */,
 				B1470B22256ECC4D0015CCB7 /* ApiCallExecutor.swift in Sources */,
 				B1B73FB325682373000AE39A /* CoreDataRetrieveServerSettings.swift in Sources */,
 				B1C2A146256EC3B00092A482 /* PrintheadMoveInstructions.swift in Sources */,
 				B1B73FA825681ECA000AE39A /* SquidPrintDataModel.xcdatamodeld in Sources */,
 				B1B73F852568041D000AE39A /* CoreDataExecutor.swift in Sources */,
 				B1B73F76256802B0000AE39A /* GenericError.swift in Sources */,
+				B19906CC25702C9900F40211 /* PrinterApiCaller.swift in Sources */,
 				B11F3AE1256AE19600618DFD /* CoreDataServerSettingsManager.swift in Sources */,
 				B10437BB256AEEE000104F64 /* Context+Utilities.swift in Sources */,
 				B1470B25256ECEA60015CCB7 /* PrinterError.swift in Sources */,
+				B19906B9257025F500F40211 /* DefaultPrinterInformationProvider.swift in Sources */,
 				B1BF6820256C45DB00C16BDB /* ServerManager.swift in Sources */,
+				B19906D72570310900F40211 /* PrinterTemperatureManager.swift in Sources */,
 				B10437B7256AEE1000104F64 /* CoreDataRetrieveServers.swift in Sources */,
+				B13315972572847400952072 /* DefaultPrinterTemperatureProvider.swift in Sources */,
+				B19906B6257025CA00F40211 /* DefaultPrinterTemperatureManager.swift in Sources */,
+				B19906D225702F4600F40211 /* MockPrinterManager.swift in Sources */,
 				B1C2A14A256EC3FC0092A482 /* MoveAxis.swift in Sources */,
 				B1E5B855256EE766008A975F /* ServerCommunicationStatus.swift in Sources */,
 				B190F268256961C900D7A67C /* PublisherUtilities.swift in Sources */,
@@ -403,18 +518,27 @@
 				B11F3AE5256AE2DA00618DFD /* ServerStatus.swift in Sources */,
 				B1B73FA425681E9E000AE39A /* ServerSettings.swift in Sources */,
 				B1B73F9C25681B84000AE39A /* CoreDataStorage.swift in Sources */,
-				B1470B1F256ECB6E0015CCB7 /* ServerMovementManager.swift in Sources */,
+				B1470B1F256ECB6E0015CCB7 /* PrinterMovementManager.swift in Sources */,
+				B1B562BF25728A6000BB5939 /* PrinterTemperatureProvider.swift in Sources */,
 				B1BF6825256C4C8000C16BDB /* ServerSettingsManager.swift in Sources */,
 				B1B73F7225680291000AE39A /* CoreDataRetriever.swift in Sources */,
+				B19906C0257027FB00F40211 /* DefaultPrinterManager.swift in Sources */,
 				B1470B1C256EC8DC0015CCB7 /* PrintheadHomingInstructions.swift in Sources */,
+				B19906BD257027D600F40211 /* PrinterManager.swift in Sources */,
 				B1B73F9425681B0D000AE39A /* CoreDataWriteServerSettings.swift in Sources */,
+				B19906DE2570317C00F40211 /* SetTemperatureInstructions.swift in Sources */,
+				B19906A5256FFFD200F40211 /* PrinterInformationProvider.swift in Sources */,
+				B1DAEDCF2570365D00CB0560 /* MockPrinterTemperatureManager.swift in Sources */,
 				B1327F68256CE3D100286CA4 /* ServerCommunicationManager.swift in Sources */,
 				B1B73F9125680A67000AE39A /* DefaultServerManager.swift in Sources */,
 				B10437AB256AE5EF00104F64 /* ErrorHandler.swift in Sources */,
+				B19906A82570014900F40211 /* MockPrinterInformationProvider.swift in Sources */,
 				B10437B3256AED0000104F64 /* ServersManager.swift in Sources */,
+				B19906DB2570315500F40211 /* HeatedPart.swift in Sources */,
 				B1B73F8925680447000AE39A /* CoreDataWriter.swift in Sources */,
 				B10437AF256AE99D00104F64 /* Log+Completion.swift in Sources */,
 				B1B73FB025682224000AE39A /* CoreDataError.swift in Sources */,
+				B1DEBAB52573DF45003D64A6 /* PrinterContinuousInformationProvider.swift in Sources */,
 				B1BF682B256C4E1200C16BDB /* MockServerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
