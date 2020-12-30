@@ -23,6 +23,7 @@
 		B190F27325696EA200D7A67C /* UnderConstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F27225696EA200D7A67C /* UnderConstructionView.swift */; };
 		B19906AC2570026000F40211 /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906AB2570026000F40211 /* TemperatureViewModel.swift */; };
 		B19906B4257016B500F40211 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19906B3257016B500F40211 /* GraphView.swift */; };
+		B1A75F7D257809060048417B /* MultiWidgetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A75F7C257809060048417B /* MultiWidgetContainer.swift */; };
 		B1B73F7E256802F1000AE39A /* SquidPrintLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; };
 		B1B73F7F256802F1000AE39A /* SquidPrintLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B73FB62568298D000AE39A /* ServiceContainer.swift */; };
@@ -86,6 +87,7 @@
 		B190F27225696EA200D7A67C /* UnderConstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionView.swift; sourceTree = "<group>"; };
 		B19906AB2570026000F40211 /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
 		B19906B3257016B500F40211 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		B1A75F7C257809060048417B /* MultiWidgetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiWidgetContainer.swift; sourceTree = "<group>"; };
 		B1B73F7D256802F1000AE39A /* SquidPrintLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SquidPrintLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B73FB62568298D000AE39A /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
 		B1B73FBB25682C3B000AE39A /* ServerSettingsView_Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSettingsView_Backup.swift; sourceTree = "<group>"; };
@@ -254,20 +256,21 @@
 			children = (
 				B1C2A13E256EAAE80092A482 /* Movement */,
 				B1E1DFC3256EA9480040689E /* Temperature */,
-				B1E1DFB9256E90590040689E /* Helper */,
+				B1E1DFB9256E90590040689E /* Utility */,
 				B1E1DFA7256DA7200040689E /* HotEndAnimation.swift */,
 				B1E1DFAA256E79BE0040689E /* ProgressWidget.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
 		};
-		B1E1DFB9256E90590040689E /* Helper */ = {
+		B1E1DFB9256E90590040689E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				B1E1DFBA256E90650040689E /* WidgetPreviewer.swift */,
 				B1E1DFBE256E992A0040689E /* WidgetHolder.swift */,
+				B1A75F7C257809060048417B /* MultiWidgetContainer.swift */,
 			);
-			path = Helper;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		B1E1DFC0256E99C90040689E /* Extensions */ = {
@@ -521,6 +524,7 @@
 				B10437CD256AFC5500104F64 /* InputRow.swift in Sources */,
 				B10437C6256AF9DF00104F64 /* ServersViewModel.swift in Sources */,
 				B1E1DFA8256DA7200040689E /* HotEndAnimation.swift in Sources */,
+				B1A75F7D257809060048417B /* MultiWidgetContainer.swift in Sources */,
 				B1BF6816256C278200C16BDB /* ServerSettingsViewModel_Backup.swift in Sources */,
 				B1DAEDD62570459100CB0560 /* StandaloneTemperatureGraphWidgetModel.swift in Sources */,
 				B1B73FB72568298D000AE39A /* ServiceContainer.swift in Sources */,

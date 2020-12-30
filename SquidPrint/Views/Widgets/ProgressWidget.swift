@@ -10,7 +10,7 @@ import SquidPrintLogic
 
 struct ProgressWidget: View {
     var body: some View {
-        HStack {
+        MultiWidgetContainer(spacing: .oneTwo, leading: {
             Circle()
                 .stroke(Color.green, lineWidth: 10)
                 .frame(width: 100, height: 100)
@@ -21,6 +21,7 @@ struct ProgressWidget: View {
                         .bold()
                         .foregroundColor(.green)
                 )
+        }, trailing: {
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
                     Text("Print time")
@@ -48,9 +49,8 @@ struct ProgressWidget: View {
                     Text("12.2 / 22mm")
                 }
             }
-            .frame(maxHeight: .infinity)
-        }
-        .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+//            .frame(maxHeight: .infinity)
+        })
     }
 }
 
